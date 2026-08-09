@@ -2,16 +2,30 @@
   "name": "eaglecast",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@11.18.0",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint .",
+    "geo:audit": "node docs/geo-audit.mjs",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "eslint . && tsc --noEmit && prettier --check ."
   },
   "dependencies": {
+    "eslint-config-prettier": "^10.1.8",
+    "framer-motion": "^12.43.0",
+    "lucide-react": "^1.28.0",
     "next": "16.2.12",
+    "prettier": "^3.9.6",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
