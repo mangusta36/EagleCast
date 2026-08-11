@@ -8,16 +8,17 @@ export interface FaqItem {
 export const FAQS: FaqItem[] = [
   {
     id: "faq-1",
-    question: "Can I try eaglecast free before buying a subscription package?",
+    question:
+      "Can I try EagleCast TV free before buying a subscription package?",
     answer:
-      "Yes. eaglecast offers a free trial so you can test channel quality, sports streams, and device compatibility before choosing a plan. Click Start Free Trial to receive setup details directly through support.",
+      "Yes. EagleCast TV offers a trial so you can test channel quality, sports streams, and device compatibility before choosing a plan. Click Get Trial to receive setup details directly through support.",
     category: "trial",
   },
   {
     id: "faq-2",
     question: "Which devices and streaming apps are supported?",
     answer:
-      "eaglecast supports common IPTV app workflows across Smart TVs, Firestick and Fire TV devices, Android phones and tablets, iPhones and iPads, compatible boxes, Windows PCs, and Mac devices.",
+      "EagleCast TV supports common IPTV app workflows across Smart TVs, Firestick and Fire TV devices, Android phones and tablets, iPhones and iPads, compatible boxes, Windows PCs, and Mac devices.",
     category: "compatibility",
   },
   {
@@ -29,9 +30,9 @@ export const FAQS: FaqItem[] = [
   },
   {
     id: "faq-4",
-    question: "Does eaglecast support 4K Ultra HD and sports streams?",
+    question: "Does EagleCast TV support 4K Ultra HD and sports streams?",
     answer:
-      "eaglecast is 4K-ready where source availability, device capability, app performance, and internet speed all support higher-resolution playback.",
+      "EagleCast TV is 4K-ready where source availability, device capability, app performance, and internet speed all support higher-resolution playback.",
     category: "compatibility",
   },
   {

@@ -1,7 +1,14 @@
 "use client";
 
 import React from "react";
-import { Tv, Flame, Film, Sparkles, MonitorSmartphone, Zap } from "lucide-react";
+import {
+  Tv,
+  Flame,
+  Film,
+  Sparkles,
+  MonitorSmartphone,
+  Zap,
+} from "lucide-react";
 
 export function TrustBar() {
   const items = [

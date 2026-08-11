@@ -23,9 +23,7 @@ export function WhatsappFloating() {
           <span className="text-[10px] font-bold uppercase tracking-wider text-[#059669]">
             24/7 WHATSAPP SETUP
           </span>
-          <span className="text-xs font-bold text-ink">
-            Start 24h Free Trial
-          </span>
+          <span className="text-xs font-bold text-ink">Get Trial</span>
         </div>
       </a>
 
@@ -38,7 +36,7 @@ export function WhatsappFloating() {
           className="inline-flex min-w-0 items-center justify-center gap-2 rounded-lg bg-[#25D366] px-3 py-3 text-xs font-bold text-white transition hover:bg-[#20bd5a]"
         >
           <Zap className="h-4 w-4 shrink-0 fill-current" />
-          <span>START FREE TRIAL</span>
+          <span>Get Trial</span>
         </a>
         <Link
           href="/#packages"

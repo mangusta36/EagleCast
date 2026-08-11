@@ -67,9 +67,24 @@ export const PRODUCTS: Product[] = [
       "/images/lifestyle-hand-case.png",
     ],
     colors: [
-      { id: "stealth-black", name: "Stealth Black", hex: "#1A1A1A", image: "/images/case-titan-black.png" },
-      { id: "cognac-tan", name: "Cognac Leather Accent", hex: "#9E5829", image: "/images/case-leather-tan.png" },
-      { id: "titanium-clear", name: "Titanium Clear", hex: "#D1D5DB", image: "/images/case-clear-magsafe.png" },
+      {
+        id: "stealth-black",
+        name: "Stealth Black",
+        hex: "#1A1A1A",
+        image: "/images/case-titan-black.png",
+      },
+      {
+        id: "cognac-tan",
+        name: "Cognac Leather Accent",
+        hex: "#9E5829",
+        image: "/images/case-leather-tan.png",
+      },
+      {
+        id: "titanium-clear",
+        name: "Titanium Clear",
+        hex: "#D1D5DB",
+        image: "/images/case-clear-magsafe.png",
+      },
     ],
     devices: DEVICES,
     description:
@@ -111,8 +126,18 @@ export const PRODUCTS: Product[] = [
       "/images/lifestyle-hand-case.png",
     ],
     colors: [
-      { id: "cognac-tan", name: "Cognac Tan", hex: "#9E5829", image: "/images/case-leather-tan.png" },
-      { id: "stealth-black", name: "Obsidian Black", hex: "#1A1A1A", image: "/images/case-titan-black.png" },
+      {
+        id: "cognac-tan",
+        name: "Cognac Tan",
+        hex: "#9E5829",
+        image: "/images/case-leather-tan.png",
+      },
+      {
+        id: "stealth-black",
+        name: "Obsidian Black",
+        hex: "#1A1A1A",
+        image: "/images/case-titan-black.png",
+      },
     ],
     devices: DEVICES,
     description:
@@ -153,8 +178,18 @@ export const PRODUCTS: Product[] = [
       "/images/hero-caset-composition.png",
     ],
     colors: [
-      { id: "crystal-clear", name: "Crystal Clear", hex: "#E5E7EB", image: "/images/case-clear-magsafe.png" },
-      { id: "stealth-black", name: "Obsidian Frame", hex: "#1A1A1A", image: "/images/case-titan-black.png" },
+      {
+        id: "crystal-clear",
+        name: "Crystal Clear",
+        hex: "#E5E7EB",
+        image: "/images/case-clear-magsafe.png",
+      },
+      {
+        id: "stealth-black",
+        name: "Obsidian Frame",
+        hex: "#1A1A1A",
+        image: "/images/case-titan-black.png",
+      },
     ],
     devices: DEVICES,
     description:
@@ -195,8 +230,18 @@ export const PRODUCTS: Product[] = [
       "/images/lifestyle-hand-case.png",
     ],
     colors: [
-      { id: "matte-black", name: "Matte Black", hex: "#1A1A1A", image: "/images/case-titan-black.png" },
-      { id: "sage-green", name: "Alpine Sage", hex: "#4B6354", image: "/images/case-titan-black.png" },
+      {
+        id: "matte-black",
+        name: "Matte Black",
+        hex: "#1A1A1A",
+        image: "/images/case-titan-black.png",
+      },
+      {
+        id: "sage-green",
+        name: "Alpine Sage",
+        hex: "#4B6354",
+        image: "/images/case-titan-black.png",
+      },
     ],
     devices: DEVICES,
     description:
@@ -237,7 +282,12 @@ export const PRODUCTS: Product[] = [
       "/images/hero-caset-composition.png",
     ],
     colors: [
-      { id: "carbon-black", name: "Kevlar Carbon Weave", hex: "#262626", image: "/images/case-titan-black.png" },
+      {
+        id: "carbon-black",
+        name: "Kevlar Carbon Weave",
+        hex: "#262626",
+        image: "/images/case-titan-black.png",
+      },
     ],
     devices: DEVICES,
     description:
@@ -262,10 +312,34 @@ export const PRODUCTS: Product[] = [
 ];
 
 export const CATEGORIES = [
-  { id: "all", label: "All Cases", description: "Explore the full Elgale Caset flagship lineup." },
-  { id: "protective", label: "Armor & Drop Protection", description: "Maximum shock absorption certified up to 15ft." },
-  { id: "leather", label: "Luxe Leather", description: "Top-grain Florentine leather that patinas with time." },
-  { id: "clear", label: "Ultra-Clear MagSafe", description: "100% optical clarity with anti-yellowing tech." },
-  { id: "minimal", label: "Ultra Minimalist", description: "0.8mm thin profile for weightless protection." },
-  { id: "magsafe", label: "MagSafe Series", description: "Optimized for wireless power and magnetic mounts." },
+  {
+    id: "all",
+    label: "All Cases",
+    description: "Explore the full Elgale Caset flagship lineup.",
+  },
+  {
+    id: "protective",
+    label: "Armor & Drop Protection",
+    description: "Maximum shock absorption certified up to 15ft.",
+  },
+  {
+    id: "leather",
+    label: "Luxe Leather",
+    description: "Top-grain Florentine leather that patinas with time.",
+  },
+  {
+    id: "clear",
+    label: "Ultra-Clear MagSafe",
+    description: "100% optical clarity with anti-yellowing tech.",
+  },
+  {
+    id: "minimal",
+    label: "Ultra Minimalist",
+    description: "0.8mm thin profile for weightless protection.",
+  },
+  {
+    id: "magsafe",
+    label: "MagSafe Series",
+    description: "Optimized for wireless power and magnetic mounts.",
+  },
 ];

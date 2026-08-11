@@ -32,7 +32,7 @@ export const FOOTER_NAV = {
     { label: "Help & FAQ", href: "/faq" },
   ],
   business: [
-    { label: "About eaglecast", href: "/about" },
+    { label: "About EagleCast TV", href: "/about" },
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Terms of Service", href: "/terms-and-conditions" },
     { label: "Support", href: "/contact" },

@@ -10,17 +10,20 @@ export function BenefitStory() {
     {
       icon: ShieldCheck,
       title: "Impact Defense Without Bulk",
-      description: "Our patent-pending CornerSpring™ geometry dissipates 92% of drop shock energy while keeping the case profile under 1.4mm.",
+      description:
+        "Our patent-pending CornerSpring™ geometry dissipates 92% of drop shock energy while keeping the case profile under 1.4mm.",
     },
     {
       icon: Layers,
       title: "Precision Tactile Feel",
-      description: "Custom anodized aluminum buttons provide sharp click feedback, paired with a anti-slip micro-textured perimeter grip.",
+      description:
+        "Custom anodized aluminum buttons provide sharp click feedback, paired with a anti-slip micro-textured perimeter grip.",
     },
     {
       icon: Zap,
       title: "Instant N52 MagSafe Alignment",
-      description: "Integrated 1,200g magnetic core aligns perfectly with MagSafe chargers, car mounts, and wallets without removing your case.",
+      description:
+        "Integrated 1,200g magnetic core aligns perfectly with MagSafe chargers, car mounts, and wallets without removing your case.",
     },
   ];
 
@@ -43,7 +46,8 @@ export function BenefitStory() {
                   DESIGNED IN NEW YORK
                 </span>
                 <p className="text-white font-bold text-lg mt-2">
-                  &ldquo;The most comfortable phone case I&apos;ve ever owned.&rdquo;
+                  &ldquo;The most comfortable phone case I&apos;ve ever
+                  owned.&rdquo;
                 </p>
               </div>
             </div>
@@ -59,7 +63,9 @@ export function BenefitStory() {
                 Designed for everyday protection & uncompromising style.
               </h2>
               <p className="text-slate-400 text-sm sm:text-base mt-3">
-                Most phone cases force you to choose between bulky plastic tanks or flimsy covers. Elgale Caset delivers military protection inside an ultra-refined aesthetic.
+                Most phone cases force you to choose between bulky plastic tanks
+                or flimsy covers. Elgale Caset delivers military protection
+                inside an ultra-refined aesthetic.
               </p>
             </div>
 
@@ -72,7 +78,9 @@ export function BenefitStory() {
                       <Icon className="w-6 h-6" />
                     </div>
                     <div>
-                      <h3 className="text-base font-bold text-white mb-1">{b.title}</h3>
+                      <h3 className="text-base font-bold text-white mb-1">
+                        {b.title}
+                      </h3>
                       <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                         {b.description}
                       </p>
@@ -83,7 +91,10 @@ export function BenefitStory() {
             </div>
 
             <div className="pt-2">
-              <Link href="/shop" className="btn-primary bg-blue-600 hover:bg-blue-500 text-white shadow-xl group">
+              <Link
+                href="/shop"
+                className="btn-primary bg-blue-600 hover:bg-blue-500 text-white shadow-xl group"
+              >
                 <span>Explore the Full Lineup</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>

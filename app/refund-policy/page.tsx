@@ -3,8 +3,9 @@ import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Refund Policy | eaglecast",
-  description: "Refund and support policy for eaglecast IPTV packages.",
+  title: "EagleCast TV Refund Policy and Support Terms",
+  description:
+    "Read the EagleCast TV refund policy for eligibility, request timing, technical support steps, exclusions and how approved refunds are processed.",
   pathname: "/refund-policy",
 });
 
@@ -20,16 +21,16 @@ export default function RefundPolicyPage() {
             1. Trial Before Purchase
           </h2>
           <p>
-            eaglecast encourages viewers to request a free trial before choosing
-            a package so device compatibility, app setup, and playback can be
+            EagleCast TV encourages viewers to request a trial before choosing a
+            package so device compatibility, app setup, and playback can be
             checked first.
           </p>
 
           <h2 className="text-lg font-bold text-ink">2. Support Review</h2>
           <p>
-            If you experience an issue after purchase, contact eaglecast support
-            with your device, app, connection type, package, and error details
-            so the team can review the setup path.
+            If you experience an issue after purchase, contact EagleCast TV
+            support with your device, app, connection type, package, and error
+            details so the team can review the setup path.
           </p>
 
           <h2 className="text-lg font-bold text-ink">3. Refund Questions</h2>
@@ -42,7 +43,7 @@ export default function RefundPolicyPage() {
 
         <div className="pt-6">
           <Link href="/contact" className="btn-primary text-xs py-2.5 px-5">
-            Contact eaglecast support
+            Contact EagleCast TV support
           </Link>
         </div>
       </div>

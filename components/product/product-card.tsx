@@ -25,7 +25,9 @@ export function ProductCard({ product }: ProductCardProps) {
   };
 
   const discountPercent = product.originalPrice
-    ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
+    ? Math.round(
+        ((product.originalPrice - product.price) / product.originalPrice) * 100,
+      )
     : 0;
 
   return (
@@ -53,7 +55,10 @@ export function ProductCard({ product }: ProductCardProps) {
       </div>
 
       {/* Product Image Stage */}
-      <Link href={`/product/${product.slug}`} className="block relative aspect-square bg-slate-50/80 overflow-hidden p-6">
+      <Link
+        href={`/product/${product.slug}`}
+        className="block relative aspect-square bg-slate-50/80 overflow-hidden p-6"
+      >
         <Image
           src={selectedColor.image || product.mainImage}
           alt={product.name}
@@ -71,8 +76,12 @@ export function ProductCard({ product }: ProductCardProps) {
             <div className="flex items-center text-amber-400">
               <Star className="w-3.5 h-3.5 fill-current" />
             </div>
-            <span className="text-xs font-bold text-slate-800">{product.rating}</span>
-            <span className="text-xs text-slate-400">({product.reviewCount})</span>
+            <span className="text-xs font-bold text-slate-800">
+              {product.rating}
+            </span>
+            <span className="text-xs text-slate-400">
+              ({product.reviewCount})
+            </span>
           </div>
 
           {/* Title */}
@@ -81,11 +90,15 @@ export function ProductCard({ product }: ProductCardProps) {
               {product.name}
             </h3>
           </Link>
-          <p className="text-xs text-slate-500 line-clamp-1 mt-0.5">{product.tagline}</p>
+          <p className="text-xs text-slate-500 line-clamp-1 mt-0.5">
+            {product.tagline}
+          </p>
 
           {/* Color Swatches */}
           <div className="flex items-center gap-2 mt-3">
-            <span className="text-[11px] font-semibold text-slate-400">Colors:</span>
+            <span className="text-[11px] font-semibold text-slate-400">
+              Colors:
+            </span>
             <div className="flex items-center gap-1.5">
               {product.colors.map((color) => (
                 <button
@@ -108,12 +121,18 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
           <div>
             <div className="flex items-baseline gap-1.5">
-              <span className="text-lg font-extrabold text-slate-900">${product.price.toFixed(2)}</span>
+              <span className="text-lg font-extrabold text-slate-900">
+                ${product.price.toFixed(2)}
+              </span>
               {product.originalPrice && (
-                <span className="text-xs text-slate-400 line-through">${product.originalPrice.toFixed(2)}</span>
+                <span className="text-xs text-slate-400 line-through">
+                  ${product.originalPrice.toFixed(2)}
+                </span>
               )}
             </div>
-            <span className="text-[10px] text-emerald-700 font-semibold">In Stock • Fast Shipping</span>
+            <span className="text-[10px] text-emerald-700 font-semibold">
+              In Stock • Fast Shipping
+            </span>
           </div>
 
           <button

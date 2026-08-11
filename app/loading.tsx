@@ -2,7 +2,7 @@ export default function Loading() {
   return (
     <section className="bg-canvas" aria-busy="true" aria-live="polite">
       <div className="site-container min-h-[60vh] py-16 sm:py-20 lg:py-24">
-        <p className="sr-only">Loading eaglecast content…</p>
+        <p className="sr-only">Loading EagleCast TV content…</p>
         <div className="animate-pulse" aria-hidden="true">
           <div className="h-3 w-28 rounded-full bg-brand-soft" />
           <div className="mt-6 h-11 max-w-2xl rounded-xl bg-line/70 sm:h-14" />

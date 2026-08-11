@@ -3,9 +3,9 @@ import { FaqSection } from "@/components/sections/faq-section";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Help & FAQ | eaglecast",
+  title: "EagleCast TV Help & Frequently Asked Questions",
   description:
-    "Find answers about eaglecast free trials, supported devices, setup, package access, and reseller options.",
+    "Find clear answers about EagleCast TV trials, supported devices, IPTV setup, package access, payments, support options and the reseller program.",
   pathname: "/faq",
 });
 

@@ -6,9 +6,9 @@ import { pricingPlans } from "@/data/pricing";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Free Trial | eaglecast",
+  title: "EagleCast TV Free IPTV Trial | Test Before You Choose",
   description:
-    "Request 48 hours of eaglecast access and try live TV, sports, movies, catch-up, and multi-screen viewing before choosing a plan.",
+    "Request an EagleCast TV free IPTV trial to test live TV, sports, movies, catch-up and multi-screen viewing on your device before selecting a plan.",
   pathname: "/free-trial",
 });
 
@@ -32,7 +32,7 @@ const steps = [
   },
   {
     number: "3",
-    title: "Explore for 48 hours",
+    title: "Explore before you subscribe",
     body: "Try the full package, then decide whether one of the listed subscription terms fits.",
   },
 ] as const;
@@ -48,11 +48,11 @@ export default async function FreeTrialPage({
   const planSlug = Array.isArray(params.plan) ? params.plan[0] : params.plan;
   const selectedPlan = pricingPlans.find((plan) => plan.slug === planSlug);
   const subject = selectedPlan
-    ? `48-hour eaglecast trial request — ${selectedPlan.name}`
-    : "48-hour eaglecast trial request";
+    ? `EagleCast TV trial request — ${selectedPlan.name}`
+    : "EagleCast TV trial request";
   const body = selectedPlan
-    ? `Hello eaglecast team,\n\nI would like to request the 48-hour free trial. I am interested in the ${selectedPlan.name} plan (${selectedPlan.price} one-time payment) if the trial is a good fit.\n\nMy preferred device is: `
-    : "Hello eaglecast team,\n\nI would like to request the 48-hour free trial.\n\nMy preferred device is: ";
+    ? `Hello EagleCast TV team,\n\nI would like to request the EagleCast TV trial. I am interested in the ${selectedPlan.name} plan (${selectedPlan.price} one-time payment) if the trial is a good fit.\n\nMy preferred device is: `
+    : "Hello EagleCast TV team,\n\nI would like to request the EagleCast TV trial.\n\nMy preferred device is: ";
   const trialEmailHref = `mailto:${contactInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
   return (
@@ -61,14 +61,14 @@ export default async function FreeTrialPage({
         <div className="site-container grid gap-12 py-14 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16 lg:py-24">
           <div>
             <p className="inline-flex items-center gap-2.5 text-[13px] font-semibold text-brand before:h-2 before:w-2 before:rounded-full before:bg-emerald">
-              48-hour free trial
+              EagleCast TV trial
             </p>
             <h1 className="mt-5 max-w-xl text-4xl font-semibold leading-[1.04] tracking-[-0.045em] text-ink sm:text-5xl lg:text-6xl">
-              See how eaglecast fits your screens.
+              See how EagleCast TV fits your screens.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-8 text-ink-muted sm:text-lg">
-              Try the full package for 48 hours before choosing a paid term.
-              Request access directly from the eaglecast support team.
+              Try the full package before choosing a paid term. Request access
+              directly from the EagleCast TV support team.
             </p>
 
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">

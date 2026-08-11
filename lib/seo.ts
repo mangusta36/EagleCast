@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import { SITE_URL } from "@/data/seo";
 
 const DEFAULT_TITLE =
-  "eaglecast | IPTV Streaming, Live TV, Sports & Entertainment";
+  "EagleCast TV | IPTV Streaming, Live TV, Sports & Entertainment";
 const DEFAULT_DESCRIPTION =
-  "Explore eaglecast for live TV, sports, movies, supported devices, and a practical free-trial path before you choose a longer subscription.";
-const SITE_URL = "https://www.eaglecast.tv";
+  "Explore EagleCast TV for live TV, sports, movies, supported devices, and a practical trial path before you choose a longer subscription.";
 
 interface MetadataOptions {
   title?: string;
@@ -33,7 +33,7 @@ export function buildMetadata(options: MetadataOptions = {}): Metadata {
       title,
       description,
       url: canonical,
-      siteName: "eaglecast",
+      siteName: "EagleCast TV",
       images: [
         {
           url: image,

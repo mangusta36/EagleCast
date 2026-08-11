@@ -1,10 +1,15 @@
-import { CircleDollarSign, Headphones, MonitorSmartphone, ShieldCheck } from "lucide-react";
+import {
+  CircleDollarSign,
+  Headphones,
+  MonitorSmartphone,
+  ShieldCheck,
+} from "lucide-react";
 
 const items = [
   {
     icon: ShieldCheck,
     title: "Try before you subscribe",
-    body: "Full service access for 48 hours",
+    body: "Full service access before you subscribe",
   },
   {
     icon: MonitorSmartphone,
@@ -25,7 +30,10 @@ const items = [
 
 export function TrustStrip() {
   return (
-    <section className="border-y border-line bg-panel" aria-label="Service highlights">
+    <section
+      className="border-y border-line bg-panel"
+      aria-label="Service highlights"
+    >
       <div className="site-container py-7 sm:py-8">
         <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
           {items.map((item, index) => {
@@ -40,7 +48,9 @@ export function TrustStrip() {
                 </span>
                 <div>
                   <p className="text-sm font-semibold text-ink">{item.title}</p>
-                  <p className="mt-0.5 text-xs leading-5 text-ink-muted">{item.body}</p>
+                  <p className="mt-0.5 text-xs leading-5 text-ink-muted">
+                    {item.body}
+                  </p>
                 </div>
               </li>
             );

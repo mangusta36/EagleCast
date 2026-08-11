@@ -7,13 +7,19 @@ import { useCart } from "@/components/cart/cart-context";
 import { Shield, Sparkles, ShoppingBag, Check, Star } from "lucide-react";
 
 export function ProductShowcase() {
-  const titanProduct = PRODUCTS.find((p) => p.id === "titan-armor-magsafe") || PRODUCTS[0];
+  const titanProduct =
+    PRODUCTS.find((p) => p.id === "titan-armor-magsafe") || PRODUCTS[0];
   const { addItem } = useCart();
   const [selectedDevice, setSelectedDevice] = useState(DEVICES[0]);
   const [added, setAdded] = useState(false);
 
   const handleAddToCart = () => {
-    addItem(titanProduct, selectedDevice, titanProduct.colors[0].name, titanProduct.colors[0].hex);
+    addItem(
+      titanProduct,
+      selectedDevice,
+      titanProduct.colors[0].name,
+      titanProduct.colors[0].hex,
+    );
     setAdded(true);
     setTimeout(() => setAdded(false), 1500);
   };
@@ -57,21 +63,29 @@ export function ProductShowcase() {
             </h2>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-              15 FT drop certification. Air-cushioned CornerSpring™ geometry. Integrated N52 Neodymium magnet core. Designed for those who demand maximum protection without compromise.
+              15 FT drop certification. Air-cushioned CornerSpring™ geometry.
+              Integrated N52 Neodymium magnet core. Designed for those who
+              demand maximum protection without compromise.
             </p>
 
             {/* Spec Highlights Grid */}
             <div className="grid grid-cols-2 gap-4 py-3 border-y border-slate-800">
               <div>
-                <span className="text-xs text-slate-400 font-medium">Drop Rating</span>
+                <span className="text-xs text-slate-400 font-medium">
+                  Drop Rating
+                </span>
                 <p className="text-sm font-bold text-white flex items-center gap-1 mt-0.5">
-                  <Shield className="w-4 h-4 text-emerald-400" /> 15 FT Military Certified
+                  <Shield className="w-4 h-4 text-emerald-400" /> 15 FT Military
+                  Certified
                 </p>
               </div>
               <div>
-                <span className="text-xs text-slate-400 font-medium">MagSafe Array</span>
+                <span className="text-xs text-slate-400 font-medium">
+                  MagSafe Array
+                </span>
                 <p className="text-sm font-bold text-white flex items-center gap-1 mt-0.5">
-                  <Sparkles className="w-4 h-4 text-amber-400" /> N52 Neodymium Core
+                  <Sparkles className="w-4 h-4 text-amber-400" /> N52 Neodymium
+                  Core
                 </p>
               </div>
             </div>
@@ -98,12 +112,18 @@ export function ProductShowcase() {
             <div className="pt-2 flex flex-col sm:flex-row items-center gap-4">
               <div>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-black text-white">${titanProduct.price.toFixed(2)}</span>
+                  <span className="text-3xl font-black text-white">
+                    ${titanProduct.price.toFixed(2)}
+                  </span>
                   {titanProduct.originalPrice && (
-                    <span className="text-base text-slate-500 line-through">${titanProduct.originalPrice.toFixed(2)}</span>
+                    <span className="text-base text-slate-500 line-through">
+                      ${titanProduct.originalPrice.toFixed(2)}
+                    </span>
                   )}
                 </div>
-                <span className="text-xs text-emerald-400 font-bold">In Stock • Ships Same Day</span>
+                <span className="text-xs text-emerald-400 font-bold">
+                  In Stock • Ships Same Day
+                </span>
               </div>
 
               <button
@@ -118,7 +138,9 @@ export function ProductShowcase() {
                 ) : (
                   <>
                     <ShoppingBag className="w-5 h-5" />
-                    <span>Quick Buy Now — ${titanProduct.price.toFixed(2)}</span>
+                    <span>
+                      Quick Buy Now — ${titanProduct.price.toFixed(2)}
+                    </span>
                   </>
                 )}
               </button>

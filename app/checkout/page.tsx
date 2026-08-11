@@ -4,7 +4,13 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "@/components/cart/cart-context";
-import { ShieldCheck, Lock, CheckCircle2, ArrowRight, ArrowLeft } from "lucide-react";
+import {
+  ShieldCheck,
+  Lock,
+  CheckCircle2,
+  ArrowRight,
+  ArrowLeft,
+} from "lucide-react";
 
 export default function CheckoutPage() {
   const { items, subtotal, isFreeShipping, clearCart } = useCart();
@@ -26,7 +32,9 @@ export default function CheckoutPage() {
   const [isCompleted, setIsCompleted] = useState(false);
   const [orderId, setOrderId] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
@@ -58,27 +66,37 @@ export default function CheckoutPage() {
                 Thank you for your order!
               </h1>
               <p className="text-sm text-slate-500 mt-2">
-                Order confirmation <strong>#{orderId}</strong> has been sent to <strong>{form.email || "your email"}</strong>.
+                Order confirmation <strong>#{orderId}</strong> has been sent to{" "}
+                <strong>{form.email || "your email"}</strong>.
               </p>
             </div>
 
             <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200 text-left text-xs space-y-2 text-slate-600">
               <div className="flex justify-between">
                 <span>Shipping Address:</span>
-                <span className="font-bold text-slate-900">{form.address || "123 Main St"}, {form.city || "New York"}</span>
+                <span className="font-bold text-slate-900">
+                  {form.address || "123 Main St"}, {form.city || "New York"}
+                </span>
               </div>
               <div className="flex justify-between">
                 <span>Estimated Delivery:</span>
-                <span className="font-bold text-emerald-700">2–3 Business Days (Express Dispatch)</span>
+                <span className="font-bold text-emerald-700">
+                  2–3 Business Days (Express Dispatch)
+                </span>
               </div>
               <div className="flex justify-between">
                 <span>Total Amount Paid:</span>
-                <span className="font-bold text-slate-900">${finalTotal.toFixed(2)}</span>
+                <span className="font-bold text-slate-900">
+                  ${finalTotal.toFixed(2)}
+                </span>
               </div>
             </div>
 
             <div className="pt-4">
-              <Link href="/shop" className="btn-primary w-full justify-center text-sm py-3.5">
+              <Link
+                href="/shop"
+                className="btn-primary w-full justify-center text-sm py-3.5"
+              >
                 Continue Shopping
               </Link>
             </div>
@@ -92,8 +110,12 @@ export default function CheckoutPage() {
     return (
       <div className="py-20 bg-slate-50 min-h-screen flex items-center justify-center">
         <div className="site-container max-w-md text-center space-y-4">
-          <h1 className="text-2xl font-bold text-slate-900">Your cart is empty</h1>
-          <p className="text-sm text-slate-500">Please add items to your cart before checking out.</p>
+          <h1 className="text-2xl font-bold text-slate-900">
+            Your cart is empty
+          </h1>
+          <p className="text-sm text-slate-500">
+            Please add items to your cart before checking out.
+          </p>
           <Link href="/shop" className="btn-primary text-sm">
             Browse Flagship Cases
           </Link>
@@ -106,15 +128,22 @@ export default function CheckoutPage() {
     <div className="py-10 md:py-16 bg-slate-50 min-h-screen">
       <div className="site-container">
         <div className="mb-8 flex items-center justify-between">
-          <Link href="/shop" className="text-xs font-bold text-slate-600 hover:text-slate-900 flex items-center gap-1">
+          <Link
+            href="/shop"
+            className="text-xs font-bold text-slate-600 hover:text-slate-900 flex items-center gap-1"
+          >
             <ArrowLeft className="w-4 h-4" /> Back to Store
           </Link>
           <div className="flex items-center gap-1.5 text-xs text-emerald-700 font-bold">
-            <Lock className="w-4 h-4 text-emerald-600" /> 256-Bit SSL Encrypted Checkout
+            <Lock className="w-4 h-4 text-emerald-600" /> 256-Bit SSL Encrypted
+            Checkout
           </div>
         </div>
 
-        <form onSubmit={handlePlaceOrder} className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <form
+          onSubmit={handlePlaceOrder}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start"
+        >
           {/* Left Form Column */}
           <div className="lg:col-span-7 space-y-8 bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-xs">
             {/* Express Checkout */}
@@ -139,16 +168,24 @@ export default function CheckoutPage() {
                 </button>
               </div>
               <div className="relative py-2 text-center">
-                <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-slate-200" /></div>
-                <span className="relative bg-white px-3 text-xs text-slate-400 font-semibold uppercase">Or continue with shipping</span>
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-slate-200" />
+                </div>
+                <span className="relative bg-white px-3 text-xs text-slate-400 font-semibold uppercase">
+                  Or continue with shipping
+                </span>
               </div>
             </div>
 
             {/* Contact Info */}
             <div className="space-y-4">
-              <h2 className="text-lg font-bold text-slate-900">Contact Information</h2>
+              <h2 className="text-lg font-bold text-slate-900">
+                Contact Information
+              </h2>
               <div>
-                <label className="text-xs font-semibold text-slate-700 block mb-1">Email Address</label>
+                <label className="text-xs font-semibold text-slate-700 block mb-1">
+                  Email Address
+                </label>
                 <input
                   type="email"
                   name="email"
@@ -163,10 +200,14 @@ export default function CheckoutPage() {
 
             {/* Shipping Address */}
             <div className="space-y-4">
-              <h2 className="text-lg font-bold text-slate-900">Shipping Address</h2>
+              <h2 className="text-lg font-bold text-slate-900">
+                Shipping Address
+              </h2>
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="text-xs font-semibold text-slate-700 block mb-1">First Name</label>
+                  <label className="text-xs font-semibold text-slate-700 block mb-1">
+                    First Name
+                  </label>
                   <input
                     type="text"
                     name="firstName"
@@ -178,7 +219,9 @@ export default function CheckoutPage() {
                   />
                 </div>
                 <div>
-                  <label className="text-xs font-semibold text-slate-700 block mb-1">Last Name</label>
+                  <label className="text-xs font-semibold text-slate-700 block mb-1">
+                    Last Name
+                  </label>
                   <input
                     type="text"
                     name="lastName"
@@ -192,7 +235,9 @@ export default function CheckoutPage() {
               </div>
 
               <div>
-                <label className="text-xs font-semibold text-slate-700 block mb-1">Street Address</label>
+                <label className="text-xs font-semibold text-slate-700 block mb-1">
+                  Street Address
+                </label>
                 <input
                   type="text"
                   name="address"
@@ -206,7 +251,9 @@ export default function CheckoutPage() {
 
               <div className="grid grid-cols-3 gap-3">
                 <div>
-                  <label className="text-xs font-semibold text-slate-700 block mb-1">City</label>
+                  <label className="text-xs font-semibold text-slate-700 block mb-1">
+                    City
+                  </label>
                   <input
                     type="text"
                     name="city"
@@ -218,7 +265,9 @@ export default function CheckoutPage() {
                   />
                 </div>
                 <div>
-                  <label className="text-xs font-semibold text-slate-700 block mb-1">State</label>
+                  <label className="text-xs font-semibold text-slate-700 block mb-1">
+                    State
+                  </label>
                   <input
                     type="text"
                     name="state"
@@ -230,7 +279,9 @@ export default function CheckoutPage() {
                   />
                 </div>
                 <div>
-                  <label className="text-xs font-semibold text-slate-700 block mb-1">Zip Code</label>
+                  <label className="text-xs font-semibold text-slate-700 block mb-1">
+                    Zip Code
+                  </label>
                   <input
                     type="text"
                     name="zip"
@@ -246,9 +297,13 @@ export default function CheckoutPage() {
 
             {/* Payment Details */}
             <div className="space-y-4 pt-4 border-t border-slate-200">
-              <h2 className="text-lg font-bold text-slate-900">Payment Information</h2>
+              <h2 className="text-lg font-bold text-slate-900">
+                Payment Information
+              </h2>
               <div>
-                <label className="text-xs font-semibold text-slate-700 block mb-1">Card Number</label>
+                <label className="text-xs font-semibold text-slate-700 block mb-1">
+                  Card Number
+                </label>
                 <input
                   type="text"
                   name="cardNumber"
@@ -262,7 +317,9 @@ export default function CheckoutPage() {
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="text-xs font-semibold text-slate-700 block mb-1">Expiration (MM/YY)</label>
+                  <label className="text-xs font-semibold text-slate-700 block mb-1">
+                    Expiration (MM/YY)
+                  </label>
                   <input
                     type="text"
                     name="cardExp"
@@ -274,7 +331,9 @@ export default function CheckoutPage() {
                   />
                 </div>
                 <div>
-                  <label className="text-xs font-semibold text-slate-700 block mb-1">Security CVC</label>
+                  <label className="text-xs font-semibold text-slate-700 block mb-1">
+                    Security CVC
+                  </label>
                   <input
                     type="text"
                     name="cardCvc"
@@ -288,7 +347,10 @@ export default function CheckoutPage() {
               </div>
             </div>
 
-            <button type="submit" className="w-full btn-primary py-4 text-base font-bold shadow-xl justify-center">
+            <button
+              type="submit"
+              className="w-full btn-primary py-4 text-base font-bold shadow-xl justify-center"
+            >
               <span>Complete Order — ${finalTotal.toFixed(2)}</span>
               <ArrowRight className="w-5 h-5" />
             </button>
@@ -304,12 +366,23 @@ export default function CheckoutPage() {
               {items.map((item) => (
                 <div key={item.cartItemId} className="flex gap-3 items-center">
                   <div className="w-14 h-14 relative bg-slate-50 rounded-xl border border-slate-200 overflow-hidden shrink-0">
-                    <Image src={item.product.mainImage} alt={item.product.name} fill className="object-contain p-1" />
+                    <Image
+                      src={item.product.mainImage}
+                      alt={item.product.name}
+                      fill
+                      className="object-contain p-1"
+                    />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h4 className="text-xs font-bold text-slate-900 truncate">{item.product.name}</h4>
-                    <p className="text-[11px] text-slate-500">{item.selectedDevice} • {item.selectedColor}</p>
-                    <span className="text-xs text-slate-400">Qty: {item.quantity}</span>
+                    <h4 className="text-xs font-bold text-slate-900 truncate">
+                      {item.product.name}
+                    </h4>
+                    <p className="text-[11px] text-slate-500">
+                      {item.selectedDevice} • {item.selectedColor}
+                    </p>
+                    <span className="text-xs text-slate-400">
+                      Qty: {item.quantity}
+                    </span>
                   </div>
                   <span className="text-xs font-bold text-slate-900">
                     ${(item.product.price * item.quantity).toFixed(2)}
@@ -321,12 +394,16 @@ export default function CheckoutPage() {
             <div className="space-y-2 text-xs text-slate-600 pt-4 border-t border-slate-100">
               <div className="flex justify-between">
                 <span>Subtotal</span>
-                <span className="font-semibold text-slate-900">${subtotal.toFixed(2)}</span>
+                <span className="font-semibold text-slate-900">
+                  ${subtotal.toFixed(2)}
+                </span>
               </div>
               <div className="flex justify-between">
                 <span>Shipping</span>
                 <span className="font-semibold text-emerald-700">
-                  {isFreeShipping ? "FREE Express" : `$${shippingCost.toFixed(2)}`}
+                  {isFreeShipping
+                    ? "FREE Express"
+                    : `$${shippingCost.toFixed(2)}`}
                 </span>
               </div>
               <div className="flex justify-between text-base font-extrabold text-slate-950 pt-2 border-t border-slate-200">
@@ -341,7 +418,8 @@ export default function CheckoutPage() {
                 <span>30-Day Money-Back Guarantee</span>
               </div>
               <p className="text-[11px] leading-relaxed">
-                If your case doesn&apos;t fit perfectly or meet your expectations, return it within 30 days for a full refund.
+                If your case doesn&apos;t fit perfectly or meet your
+                expectations, return it within 30 days for a full refund.
               </p>
             </div>
           </div>

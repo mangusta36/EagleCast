@@ -50,7 +50,7 @@ export function Header() {
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">
                 <span className="font-extrabold text-lg md:text-xl tracking-tight text-ink leading-none">
-                  eaglecast
+                  EagleCast TV
                 </span>
               </div>
               <span className="text-[10px] tracking-widest text-ink-subtle font-semibold uppercase -mt-0.5">
@@ -72,7 +72,7 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Primary Free Trial Action */}
+          {/* Primary Get Trial Action */}
           <div className="flex w-10 items-center justify-end gap-3 md:w-auto">
             <Link
               href="/#packages"
@@ -117,7 +117,7 @@ export function Header() {
               className="w-full btn-emerald justify-center text-sm py-3"
             >
               <Zap className="w-4 h-4 fill-current" />
-              <span>Get 24h Free Trial</span>
+              <span>Get Trial</span>
             </a>
             <Link
               href="/reseller"

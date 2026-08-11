@@ -20,9 +20,11 @@ function validate(formData: FormData): FormErrors {
   const message = String(values.message ?? "").trim();
 
   if (name.length < 2) errors.name = "Please enter your name.";
-  if (!/^\S+@\S+\.\S+$/.test(email)) errors.email = "Please enter a valid email address.";
+  if (!/^\S+@\S+\.\S+$/.test(email))
+    errors.email = "Please enter a valid email address.";
   if (subject.length < 2) errors.subject = "Please add a short subject.";
-  if (message.length < 10) errors.message = "Please share at least a few details.";
+  if (message.length < 10)
+    errors.message = "Please share at least a few details.";
 
   return errors;
 }
@@ -57,7 +59,9 @@ export function ContactForm() {
       .filter(Boolean)
       .join("\n");
 
-    setStatus("Your email draft is ready. Review it in your email app before sending.");
+    setStatus(
+      "Your email draft is ready. Review it in your email app before sending.",
+    );
     window.location.href = `mailto:${contactInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 
@@ -65,10 +69,15 @@ export function ContactForm() {
     <section className="bg-canvas">
       <div className="site-container grid gap-12 py-14 sm:py-16 lg:grid-cols-[0.78fr_1.22fr] lg:gap-20 lg:py-20">
         <div className="max-w-md">
-          <p className="text-sm font-semibold text-brand">Choose a contact route</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-ink">Talk to the eaglecast team</h2>
+          <p className="text-sm font-semibold text-brand">
+            Choose a contact route
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-ink">
+            Talk to the EagleCast TV team
+          </h2>
           <p className="mt-4 text-base leading-8 text-ink-muted">
-            Email is the direct route for trial requests, setup help, billing questions, and technical support.
+            Email is the direct route for trial requests, setup help, billing
+            questions, and technical support.
           </p>
 
           <div className="mt-9 divide-y divide-line border-y border-line">
@@ -77,11 +86,18 @@ export function ContactForm() {
                 <Mail size={18} aria-hidden="true" />
               </span>
               <div>
-                <h3 className="text-sm font-semibold text-ink">Support email</h3>
-                <a href={`mailto:${contactInfo.email}`} className="mt-1 block text-sm font-semibold text-brand hover:text-brand-strong">
+                <h3 className="text-sm font-semibold text-ink">
+                  Support email
+                </h3>
+                <a
+                  href={`mailto:${contactInfo.email}`}
+                  className="mt-1 block text-sm font-semibold text-brand hover:text-brand-strong"
+                >
                   {contactInfo.email}
                 </a>
-                <p className="mt-1 text-xs leading-5 text-ink-muted">Trial, billing, setup, and technical questions.</p>
+                <p className="mt-1 text-xs leading-5 text-ink-muted">
+                  Trial, billing, setup, and technical questions.
+                </p>
               </div>
             </div>
 
@@ -90,8 +106,12 @@ export function ContactForm() {
                 <Clock size={18} aria-hidden="true" />
               </span>
               <div>
-                <h3 className="text-sm font-semibold text-ink">{contactInfo.hours}</h3>
-                <p className="mt-1 text-xs leading-5 text-ink-muted">Include your device and account reference when relevant.</p>
+                <h3 className="text-sm font-semibold text-ink">
+                  {contactInfo.hours}
+                </h3>
+                <p className="mt-1 text-xs leading-5 text-ink-muted">
+                  Include your device and account reference when relevant.
+                </p>
               </div>
             </div>
 
@@ -100,25 +120,35 @@ export function ContactForm() {
                 <Send size={18} aria-hidden="true" />
               </span>
               <div>
-                <h3 className="text-sm font-semibold text-ink">Telegram news channel</h3>
+                <h3 className="text-sm font-semibold text-ink">
+                  Telegram news channel
+                </h3>
                 <a
                   href={contactInfo.telegram}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-1 block text-sm font-semibold text-brand hover:text-brand-strong"
                 >
-                  @eaglecastnews
+                  @EagleCast TVnews
                 </a>
-                <p className="mt-1 text-xs leading-5 text-ink-muted">Announcements and service updates—not a support inbox.</p>
+                <p className="mt-1 text-xs leading-5 text-ink-muted">
+                  Announcements and service updates—not a support inbox.
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="contact-form" className="rounded-[1.5rem] border border-line bg-panel p-6 shadow-card sm:p-8 lg:p-9">
-          <h2 className="text-2xl font-semibold text-ink">Prepare an email to support</h2>
+        <div
+          id="contact-form"
+          className="rounded-[1.5rem] border border-line bg-panel p-6 shadow-card sm:p-8 lg:p-9"
+        >
+          <h2 className="text-2xl font-semibold text-ink">
+            Prepare an email to support
+          </h2>
           <p className="mt-2 text-sm leading-7 text-ink-muted">
-            Complete the fields below and we will open a draft in your email app. Nothing is sent from this website.
+            Complete the fields below and we will open a draft in your email
+            app. Nothing is sent from this website.
           </p>
 
           <form onSubmit={handleSubmit} className="mt-7 space-y-5" noValidate>
@@ -149,7 +179,12 @@ export function ContactForm() {
               </Field>
             </div>
 
-            <Field label="Subject" name="subject" error={errors.subject} required>
+            <Field
+              label="Subject"
+              name="subject"
+              error={errors.subject}
+              required
+            >
               <input
                 id="subject"
                 name="subject"
@@ -160,7 +195,12 @@ export function ContactForm() {
               />
             </Field>
 
-            <Field label="Message" name="message" error={errors.message} required>
+            <Field
+              label="Message"
+              name="message"
+              error={errors.message}
+              required
+            >
               <textarea
                 id="message"
                 name="message"
@@ -173,8 +213,16 @@ export function ContactForm() {
             </Field>
 
             <label className="block" htmlFor="orderReference">
-              <span className="mb-2 block text-sm font-medium text-ink">Order or account reference <span className="text-ink-subtle">(optional)</span></span>
-              <input id="orderReference" name="orderReference" autoComplete="off" className={inputBase} />
+              <span className="mb-2 block text-sm font-medium text-ink">
+                Order or account reference{" "}
+                <span className="text-ink-subtle">(optional)</span>
+              </span>
+              <input
+                id="orderReference"
+                name="orderReference"
+                autoComplete="off"
+                className={inputBase}
+              />
             </label>
 
             <div className="flex flex-col gap-4 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">
@@ -186,12 +234,23 @@ export function ContactForm() {
                 Open email draft
               </button>
               <p className="text-xs leading-5 text-ink-muted sm:max-w-56 sm:text-right">
-                Please review our <Link href="/privacy-policy" className="font-semibold text-brand">privacy policy</Link>.
+                Please review our{" "}
+                <Link
+                  href="/privacy-policy"
+                  className="font-semibold text-brand"
+                >
+                  privacy policy
+                </Link>
+                .
               </p>
             </div>
 
             {status ? (
-              <p className={`text-sm ${Object.keys(errors).length ? "text-coral" : "text-mint-strong"}`} role="status" aria-live="polite">
+              <p
+                className={`text-sm ${Object.keys(errors).length ? "text-coral" : "text-mint-strong"}`}
+                role="status"
+                aria-live="polite"
+              >
                 {status}
               </p>
             ) : null}
@@ -218,11 +277,20 @@ function Field({
   return (
     <label className="block" htmlFor={name}>
       <span className="mb-2 block text-sm font-medium text-ink">
-        {label} {required ? <span className="text-coral" aria-hidden="true">*</span> : null}
+        {label}{" "}
+        {required ? (
+          <span className="text-coral" aria-hidden="true">
+            *
+          </span>
+        ) : null}
         {required ? <span className="sr-only">(required)</span> : null}
       </span>
       {children}
-      {error ? <span id={`${name}-error`} className="mt-1.5 block text-sm text-coral">{error}</span> : null}
+      {error ? (
+        <span id={`${name}-error`} className="mt-1.5 block text-sm text-coral">
+          {error}
+        </span>
+      ) : null}
     </label>
   );
 }

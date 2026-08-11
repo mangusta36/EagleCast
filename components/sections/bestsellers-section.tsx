@@ -23,7 +23,8 @@ export function BestsellersSection() {
               Most Wanted Cases
             </h2>
             <p className="text-sm md:text-base text-slate-600 max-w-xl mt-2">
-              Our highest-rated protective designs, engineered for MagSafe speed, tactical grip, and daily phone defense.
+              Our highest-rated protective designs, engineered for MagSafe
+              speed, tactical grip, and daily phone defense.
             </p>
           </div>
 

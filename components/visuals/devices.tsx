@@ -56,7 +56,7 @@ function Laptop() {
           <div className="flex items-center justify-between gap-3 pb-3">
             <span className="flex items-center gap-1.5 text-[10px] font-semibold text-ink">
               <Mark />
-              eaglecast
+              EagleCast TV
             </span>
             <span className="rounded-full bg-brand-soft px-2 py-1 text-[7px] font-semibold text-brand-strong">
               Channel guide
@@ -86,7 +86,7 @@ function Phone() {
       <div className="mx-auto mb-2 h-1 w-9 rounded-full bg-midnight/20" />
       <div className="mb-2.5 flex items-center justify-center gap-1 text-[9px] font-semibold text-ink">
         <Mark />
-        eaglecast
+        EagleCast TV
       </div>
       <div className="grid grid-cols-2 gap-1.5">
         {tiles.map((tile, index) => (

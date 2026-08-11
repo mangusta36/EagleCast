@@ -7,6 +7,7 @@ import { renderRichText } from "@/components/blog/rich-text";
 import { ArticleCard } from "@/components/sections/article-card";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { blogPosts, getBlogPost } from "@/data/blog";
+import { SITE_URL } from "@/data/seo";
 import { buildMetadata } from "@/lib/seo";
 
 interface BlogPostPageProps {
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   }
 
   return buildMetadata({
-    title: `${post.seoTitle} | eaglecast`,
+    title: `${post.seoTitle} | EagleCast TV`,
     description: post.metaDescription,
     pathname: `/blog/${post.slug}`,
     image: post.featuredImage.src,
@@ -45,7 +46,7 @@ function getArticleJsonLd(slug: string) {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.metaDescription,
-    image: `https://www.eaglecast.tv${post.featuredImage.src}`,
+    image: `${SITE_URL}${post.featuredImage.src}`,
     datePublished: new Date(post.publishedAt).toISOString(),
     dateModified: new Date(post.updatedAt).toISOString(),
     author: {
@@ -54,13 +55,13 @@ function getArticleJsonLd(slug: string) {
     },
     publisher: {
       "@type": "Organization",
-      name: "eaglecast",
+      name: "EagleCast TV",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.eaglecast.tv/icon.svg",
+        url: `${SITE_URL}/icon.svg`,
       },
     },
-    mainEntityOfPage: "https://www.eaglecast.tv/blog/" + post.slug,
+    mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
     articleSection: post.category,
   };
 }

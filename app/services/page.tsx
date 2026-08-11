@@ -15,9 +15,9 @@ import { services } from "@/data/services";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Services | eaglecast",
+  title: "EagleCast TV IPTV Services & Streaming Features",
   description:
-    "Explore eaglecast features for live TV with EPG, sports and PPV, movies and series, catch-up, replay, multi-screen viewing, and support.",
+    "Explore EagleCast TV IPTV services for live TV with EPG, sports and PPV, movies and series, catch-up, replay, multi-screen viewing and setup support.",
   pathname: "/services",
 });
 
@@ -33,7 +33,7 @@ const servicePresentation: Record<
   "Sports and PPV": {
     icon: Trophy,
     body: "Watch local and international sports alongside the PPV events included in the service offering.",
-    detail: "Part of the full eaglecast package",
+    detail: "Part of the full EagleCast TV package",
   },
   "Live TV with EPG": {
     icon: Tv,
@@ -60,9 +60,9 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="What is included"
         title="The viewing features that come with every plan"
-        description="eaglecast combines live TV, sports, movies, catch-up, multi-screen access, and support under the same core service."
+        description="EagleCast TV combines live TV, sports, movies, catch-up, multi-screen access, and support under the same core service."
       >
-        <ButtonLink href="/free-trial">Request a free trial</ButtonLink>
+        <ButtonLink href="/free-trial">Get Trial</ButtonLink>
         <ButtonLink href="/pricing" variant="outlineLight">
           Compare plans
         </ButtonLink>
@@ -104,7 +104,7 @@ export default function ServicesPage() {
           <SectionHeading
             eyebrow="Feature overview"
             title="Four parts of the everyday experience"
-            description="Each feature below is listed as part of the same eaglecast service and is available across the published plan terms."
+            description="Each feature below is listed as part of the same EagleCast TV service and is available across the published plan terms."
           />
 
           <div className="mt-12 grid gap-x-12 gap-y-0 md:grid-cols-2 lg:gap-x-20">
@@ -157,8 +157,8 @@ export default function ServicesPage() {
               Setup, billing, and technical questions have a clear route.
             </h2>
             <p className="mt-4 text-base leading-8 text-ink-muted">
-              eaglecast lists support as available through its official support
-              contact options.
+              EagleCast TV lists support as available through its official
+              support contact options.
             </p>
           </div>
           <ButtonLink href="/contact">Contact support</ButtonLink>

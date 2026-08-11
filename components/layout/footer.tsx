@@ -18,7 +18,7 @@ export function Footer() {
                 <Tv className="w-4 h-4" />
               </div>
               <span className="font-extrabold text-xl text-ink tracking-tight">
-                eaglecast
+                EagleCast TV
               </span>
             </Link>
             <p className="text-xs leading-relaxed text-ink-subtle">
@@ -96,9 +96,7 @@ export function Footer() {
 
         {/* Bottom copyright */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-ink-subtle">
-          <p>
-            © {new Date().getFullYear()} eaglecast. All rights reserved.
-          </p>
+          <p>© {new Date().getFullYear()} EagleCast TV. All rights reserved.</p>
           <div className="flex items-center gap-4 text-ink-subtle">
             <span>Support: {contactInfo.email}</span>
             <span>•</span>

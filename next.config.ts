@@ -6,6 +6,16 @@ const nextConfig: NextConfig = {
       { source: "/about-us", destination: "/about", permanent: true },
       { source: "/best-iptv-subscription-plans", destination: "/pricing", permanent: true },
       { source: "/best-iptv-subscription-plans-for-usa-and-canada", destination: "/pricing", permanent: true },
+      {
+        source: "/blog/how-to-do-bitcoin-btc-with-paypal-cashapp-venmo-or-shakepay-complete-guide-2026",
+        destination: "/blog/how-to-choose-iptv-provider",
+        permanent: true,
+      },
+      {
+        source: "/blog/key-facts-about-eaglecast-tv-where-it-excels",
+        destination: "/blog/how-to-choose-iptv-provider",
+        permanent: true,
+      },
       { source: "/getting-started-with-eaglecast-tv-plan", destination: "/free-trial", permanent: true },
       { source: "/getting-started-with-eagle-cast-tv", destination: "/free-trial", permanent: true },
       { source: "/contact-eaglecast", destination: "/contact", permanent: true },

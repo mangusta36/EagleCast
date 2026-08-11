@@ -2,8 +2,9 @@ import React from "react";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Terms & Conditions | eaglecast",
-  description: "Terms of service and purchase conditions for eaglecast.",
+  title: "EagleCast TV Terms and Conditions of Service",
+  description:
+    "Review the EagleCast TV terms and conditions for account use, purchases, service access, acceptable use, intellectual property and governing terms.",
   pathname: "/terms-and-conditions",
 });
 
@@ -16,9 +17,9 @@ export default function TermsPage() {
 
         <div className="space-y-4 border-t border-line pt-6 text-sm leading-relaxed text-ink-muted">
           <p>
-            Welcome to eaglecast. By accessing the website, requesting a trial,
-            choosing a package, or contacting support, you agree to these Terms
-            and Conditions.
+            Welcome to EagleCast TV. By accessing the website, requesting a
+            trial, choosing a package, or contacting support, you agree to these
+            Terms and Conditions.
           </p>
           <h2 className="text-lg font-bold text-ink">Service Availability</h2>
           <p>

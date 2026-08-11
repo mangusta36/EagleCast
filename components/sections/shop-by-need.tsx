@@ -3,7 +3,13 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, ShieldAlert, Sparkles, Feather, Magnet } from "lucide-react";
+import {
+  ArrowUpRight,
+  ShieldAlert,
+  Sparkles,
+  Feather,
+  Magnet,
+} from "lucide-react";
 
 export function ShopByNeed() {
   const categories = [
@@ -11,7 +17,8 @@ export function ShopByNeed() {
       id: "protective",
       title: "Extreme Protection",
       tagline: "15 FT Military Drop Certified",
-      description: "Air-cushioned CornerSpring™ corner armor for maximum shock resistance.",
+      description:
+        "Air-cushioned CornerSpring™ corner armor for maximum shock resistance.",
       image: "/images/case-titan-black.png",
       icon: ShieldAlert,
       href: "/shop?category=protective",
@@ -20,7 +27,8 @@ export function ShopByNeed() {
       id: "leather",
       title: "Luxe Leather",
       tagline: "Top-Grain European Patina",
-      description: "Hand-finished Florentine leather with aluminum button accents.",
+      description:
+        "Hand-finished Florentine leather with aluminum button accents.",
       image: "/images/case-leather-tan.png",
       icon: Sparkles,
       href: "/shop?category=leather",
@@ -29,7 +37,8 @@ export function ShopByNeed() {
       id: "clear",
       title: "Ultra-Clear MagSafe",
       tagline: "Anti-Yellowing Guarantee",
-      description: "100% optical clarity with embedded German Bayer UV polymers.",
+      description:
+        "100% optical clarity with embedded German Bayer UV polymers.",
       image: "/images/case-clear-magsafe.png",
       icon: Magnet,
       href: "/shop?category=clear",
@@ -38,7 +47,8 @@ export function ShopByNeed() {
       id: "minimal",
       title: "Ultra Minimalist",
       tagline: "0.8mm Thin Profile",
-      description: "Weightless 19g feather construction designed to feel invisible.",
+      description:
+        "Weightless 19g feather construction designed to feel invisible.",
       image: "/images/hero-caset-composition.png",
       icon: Feather,
       href: "/shop?category=minimal",
@@ -56,7 +66,9 @@ export function ShopByNeed() {
             Shop by Protection Style
           </h2>
           <p className="text-sm md:text-base text-slate-600 mt-2">
-            Whether you prioritize heavy impact armor, timeless leather patina, or ultra-thin minimalism, we have engineered the ideal case for your device.
+            Whether you prioritize heavy impact armor, timeless leather patina,
+            or ultra-thin minimalism, we have engineered the ideal case for your
+            device.
           </p>
         </div>
 
@@ -94,7 +106,9 @@ export function ShopByNeed() {
                   <h3 className="text-lg font-bold text-slate-950 group-hover:text-blue-600 transition-colors">
                     {cat.title}
                   </h3>
-                  <p className="text-xs text-slate-500 mt-1 line-clamp-2">{cat.description}</p>
+                  <p className="text-xs text-slate-500 mt-1 line-clamp-2">
+                    {cat.description}
+                  </p>
                 </div>
               </Link>
             );

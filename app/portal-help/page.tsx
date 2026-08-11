@@ -1,11 +1,12 @@
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ButtonLink } from "@/components/ui/button-link";
+import { SITE_URL } from "@/data/seo";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "eaglecast Portal Help | IPTV Setup & Access Guide",
+  title: "EagleCast TV Portal Help | IPTV Setup & Access Guide",
   description:
-    "Learn what the eaglecast portal means in practice, where customers receive portal details, and what to do if portal access is not loading.",
+    "Learn what the EagleCast TV portal means in practice, where customers receive portal details, and what to do if portal access is not loading.",
   pathname: "/portal-help",
 });
 
@@ -13,14 +14,14 @@ export default function PortalHelpPage() {
   const portalHelpJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "eaglecast Portal Help",
-    url: "https://www.eaglecast.tv/portal-help",
+    name: "EagleCast TV Portal Help",
+    url: `${SITE_URL}/portal-help`,
     description:
-      "Explanation of what eaglecast portal details mean, where customers receive them, and how to recover them through support.",
+      "Explanation of what EagleCast TV portal details mean, where customers receive them, and how to recover them through support.",
     about: {
       "@type": "Organization",
-      name: "eaglecast",
-      url: "https://www.eaglecast.tv",
+      name: "EagleCast TV",
+      url: SITE_URL,
     },
   };
 
@@ -40,10 +41,10 @@ export default function PortalHelpPage() {
               Portal Help
             </p>
             <h1 className="mt-4 text-4xl font-semibold leading-[1.08] tracking-[-0.04em] text-ink sm:text-5xl">
-              eaglecast Portal Setup &amp; Help
+              EagleCast TV Portal Setup &amp; Help
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-8 text-ink-muted sm:text-lg">
-              Customers searching for an eaglecast portal are usually looking
+              Customers searching for an EagleCast TV portal are usually looking
               for setup information or the portal details provided with their
               subscription. This page explains the concept at a high level
               without exposing private server addresses, usernames, or
@@ -55,15 +56,15 @@ export default function PortalHelpPage() {
                 Direct answer
               </p>
               <h2 className="mt-3 text-2xl font-semibold text-ink">
-                Where do I find my eaglecast portal details?
+                Where do I find my EagleCast TV portal details?
               </h2>
               <p className="mt-3 text-sm leading-7 text-ink-muted">
-                eaglecast portal details are provided during activation or
+                EagleCast TV portal details are provided during activation or
                 through the official support workflow when a compatible player
                 or box needs portal-style setup. If you cannot find those
-                details or the portal is not working, contact eaglecast support
-                instead of guessing at old server values or searching for
-                private infrastructure online.
+                details or the portal is not working, contact EagleCast TV
+                support instead of guessing at old server values or searching
+                for private infrastructure online.
               </p>
             </div>
           </div>
@@ -74,7 +75,7 @@ export default function PortalHelpPage() {
         <div className="site-container section-pad">
           <SectionHeading
             eyebrow="Portal basics"
-            title="What the eaglecast portal means in practice"
+            title="What the EagleCast TV portal means in practice"
             description="A portal is a setup endpoint used by some compatible IPTV players and boxes. Customers receive the information they need during the official setup workflow."
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -120,7 +121,9 @@ export default function PortalHelpPage() {
             </article>
           </div>
           <div className="mt-10 flex flex-wrap gap-3">
-            <ButtonLink href="/contact">Contact eaglecast support</ButtonLink>
+            <ButtonLink href="/contact">
+              Contact EagleCast TV support
+            </ButtonLink>
             <ButtonLink href="/login-help" variant="outlineLight">
               Login help
             </ButtonLink>

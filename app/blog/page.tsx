@@ -5,9 +5,9 @@ import { blogPosts } from "@/data/blog";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "IPTV Guides, Setup Help & Streaming Advice | eaglecast",
+  title: "IPTV Guides, Setup Help & Streaming Advice | EagleCast TV",
   description:
-    "Explore eaglecast guides covering IPTV basics, setup, devices, troubleshooting, streaming quality, buying advice, and reseller topics.",
+    "Read practical IPTV guides on setup, devices, buffering, internet speed, EPGs, provider selection, buying advice and reseller topics from EagleCast TV.",
   pathname: "/blog",
 });
 
@@ -19,12 +19,12 @@ export default function BlogPage() {
       <section className="bg-canvas">
         <div className="site-container py-16 sm:py-20 lg:py-24">
           <div className="max-w-3xl">
-            <Eyebrow>eaglecast guides</Eyebrow>
+            <Eyebrow>EagleCast TV guides</Eyebrow>
             <h1 className="mt-5 text-4xl font-semibold leading-[1.08] tracking-[-0.04em] text-ink sm:text-5xl lg:text-6xl">
               IPTV Guides, Setup Help &amp; Streaming Advice
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-8 text-ink-muted sm:text-lg">
-              eaglecast publishes practical IPTV guides for understanding the
+              EagleCast TV publishes practical IPTV guides for understanding the
               technology, choosing devices, setting up apps, improving streaming
               quality, and making smarter purchase decisions.
             </p>
@@ -48,7 +48,7 @@ export default function BlogPage() {
         <div className="site-container section-pad">
           <SectionHeading
             eyebrow="Editorial archive"
-            title="More eaglecast blog guides"
+            title="More EagleCast TV blog guides"
             description="Read the rest of the cornerstone collection for setup, troubleshooting, device comparisons, streaming quality, provider research, and reseller topics."
           />
           <div className="mt-12 grid gap-x-10 gap-y-12 md:grid-cols-2 xl:grid-cols-3">

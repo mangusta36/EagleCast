@@ -16,7 +16,8 @@ export function ProblemSolution() {
             Stop risking your $1,200 device with cheap cases.
           </h2>
           <p className="text-sm md:text-base text-slate-600 mt-2">
-            See how standard market cases compare against Elgale Caset precision engineering.
+            See how standard market cases compare against Elgale Caset precision
+            engineering.
           </p>
         </div>
 
@@ -34,19 +35,31 @@ export function ProblemSolution() {
             <ul className="space-y-3.5 text-sm text-slate-700">
               <li className="flex items-start gap-2.5">
                 <span className="w-2 h-2 rounded-full bg-red-500 mt-2 shrink-0" />
-                <span><strong>Expensive Repair Risks:</strong> A single drop onto asphalt can cause $400+ screen & rear glass repair costs.</span>
+                <span>
+                  <strong>Expensive Repair Risks:</strong> A single drop onto
+                  asphalt can cause $400+ screen & rear glass repair costs.
+                </span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="w-2 h-2 rounded-full bg-red-500 mt-2 shrink-0" />
-                <span><strong>Slippery Grip:</strong> Glossy cheap plastics slip out of hand during daily use.</span>
+                <span>
+                  <strong>Slippery Grip:</strong> Glossy cheap plastics slip out
+                  of hand during daily use.
+                </span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="w-2 h-2 rounded-full bg-red-500 mt-2 shrink-0" />
-                <span><strong>Discoloration & Yellowing:</strong> Clear cases absorb skin oil and sunlight, turning dingy yellow.</span>
+                <span>
+                  <strong>Discoloration & Yellowing:</strong> Clear cases absorb
+                  skin oil and sunlight, turning dingy yellow.
+                </span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="w-2 h-2 rounded-full bg-red-500 mt-2 shrink-0" />
-                <span><strong>Weak MagSafe Magnets:</strong> Phone disconnects from car mounts over bumps.</span>
+                <span>
+                  <strong>Weak MagSafe Magnets:</strong> Phone disconnects from
+                  car mounts over bumps.
+                </span>
               </li>
             </ul>
           </div>
@@ -63,24 +76,39 @@ export function ProblemSolution() {
             <ul className="space-y-3.5 text-sm text-slate-700">
               <li className="flex items-start gap-2.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-600 mt-2 shrink-0" />
-                <span><strong>15 FT Drop Certification:</strong> CornerSpring™ air bumpers absorb brutal impacts effortlessly.</span>
+                <span>
+                  <strong>15 FT Drop Certification:</strong> CornerSpring™ air
+                  bumpers absorb brutal impacts effortlessly.
+                </span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-600 mt-2 shrink-0" />
-                <span><strong>Tactile Anti-Slip Feel:</strong> Micro-textured side edges ensure a secure, effortless grip.</span>
+                <span>
+                  <strong>Tactile Anti-Slip Feel:</strong> Micro-textured side
+                  edges ensure a secure, effortless grip.
+                </span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-600 mt-2 shrink-0" />
-                <span><strong>Guaranteed Clarity / Rich Leather:</strong> Anti-UV Bayer polymers & European full-grain leather.</span>
+                <span>
+                  <strong>Guaranteed Clarity / Rich Leather:</strong> Anti-UV
+                  Bayer polymers & European full-grain leather.
+                </span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-600 mt-2 shrink-0" />
-                <span><strong>1,200g N52 Magnetic Core:</strong> Locks firmly to chargers, wallets, and magnetic mounts.</span>
+                <span>
+                  <strong>1,200g N52 Magnetic Core:</strong> Locks firmly to
+                  chargers, wallets, and magnetic mounts.
+                </span>
               </li>
             </ul>
 
             <div className="mt-8 pt-4 border-t border-emerald-200/80">
-              <Link href="/shop" className="btn-primary w-full justify-center bg-slate-900 text-white shadow-lg">
+              <Link
+                href="/shop"
+                className="btn-primary w-full justify-center bg-slate-900 text-white shadow-lg"
+              >
                 <span>Choose Your Elgale Case</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>

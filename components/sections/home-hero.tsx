@@ -6,7 +6,7 @@ import { ArrowRight, Zap } from "lucide-react";
 import { contactInfo } from "@/data/contact";
 
 const trustItems = [
-  "eaglecast Setup",
+  "EagleCast TV Setup",
   "Fast Activation",
   "4K Ready",
   "Device Options",
@@ -17,7 +17,7 @@ export function HomeHero() {
     <section className="relative isolate min-h-[640px] overflow-hidden border-b border-line bg-canvas md:min-h-[680px]">
       <Image
         src="/images/hero-living-room.webp"
-        alt="Modern living room television setup for eaglecast IPTV streaming"
+        alt="Modern living room television setup for EagleCast TV IPTV streaming"
         fill
         priority
         sizes="100vw"
@@ -30,21 +30,21 @@ export function HomeHero() {
         <div className="w-full max-w-[42rem]">
           <p className="flex items-center gap-2 text-[12px] font-black uppercase tracking-[0.16em] text-brand">
             <span className="h-px w-8 bg-gold" aria-hidden="true" />
-            Stream with eaglecast
+            Stream with EagleCast TV
           </p>
 
           <h1 className="mt-6 max-w-[12ch] text-4xl font-black leading-[1.02] tracking-tight text-ink sm:text-6xl lg:text-7xl">
-            eaglecast.
+            EagleCast TV.
             <span className="block text-brand-strong">
               Live TV, Sports & Entertainment.
             </span>
           </h1>
 
           <p className="mt-5 max-w-xl text-base leading-7 text-[#475569] sm:text-lg">
-            eaglecast is an IPTV streaming service for watching live TV, sports,
-            movies, series, and catch-up entertainment on compatible devices.
-            Request a free trial, confirm your setup with eaglecast support, and
-            test the experience before choosing a package.
+            EagleCast TV is an IPTV streaming service for watching live TV,
+            sports, movies, series, and catch-up entertainment on compatible
+            devices. Get Trial, confirm your setup with EagleCast TV support,
+            and test the experience before choosing a package.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">

@@ -4,9 +4,9 @@ import { buildMetadata } from "@/lib/seo";
 import { ArrowRight, Headphones, MonitorPlay, ShieldCheck } from "lucide-react";
 
 export const metadata = buildMetadata({
-  title: "About eaglecast | Premium IPTV Streaming",
+  title: "About EagleCast TV | IPTV Streaming Service",
   description:
-    "Learn about eaglecast IPTV, device setup support, free-trial onboarding, live TV, sports, movies, and series.",
+    "See how EagleCast TV combines IPTV streaming, device setup support and trial-first onboarding for live TV, sports, movies and series across supported screens.",
   pathname: "/about",
 });
 
@@ -16,14 +16,14 @@ export default function AboutPage() {
       <div className="site-container max-w-4xl space-y-16">
         <div className="text-center space-y-4">
           <span className="rounded-full border border-blue-400/30 bg-canvas-alt px-3.5 py-1 text-xs font-extrabold uppercase tracking-widest text-brand">
-            About eaglecast
+            About EagleCast TV
           </span>
           <h1 className="text-4xl md:text-5xl font-extrabold text-ink tracking-tight">
             Premium IPTV built around trial-first setup.
           </h1>
           <p className="text-base md:text-lg text-ink-muted max-w-2xl mx-auto leading-relaxed">
-            eaglecast helps viewers test live TV, sports, movies, and series on
-            their own devices before choosing a package.
+            EagleCast TV helps viewers test live TV, sports, movies, and series
+            on their own devices before choosing a package.
           </p>
         </div>
 
@@ -60,7 +60,7 @@ export default function AboutPage() {
 
         <div className="text-center pt-8 border-t border-line">
           <Link href="/#packages" className="btn-primary py-4 px-8 text-base">
-            <span>Explore eaglecast packages</span>
+            <span>Explore EagleCast TV packages</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

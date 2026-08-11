@@ -35,23 +35,23 @@ const guideSections: Record<string, readonly GuideSection[]> = {
       id: "support-options",
       title: "Use the published support options",
       paragraphs: [
-        "eaglecast lists support as available 24/7 for setup, billing, and technical assistance. The contact page brings the support email and message form together.",
+        "EagleCast TV lists support as available 24/7 for setup, billing, and technical assistance. The contact page brings the support email and message form together.",
       ],
     },
     {
       id: "trial-check",
       title: "Review the service during the trial",
       paragraphs: [
-        "The 48-hour free trial gives you access to the full package before choosing a paid term. Use it to review eaglecast on the screen you expect to use most often.",
+        "The EagleCast TV trial gives you access to the full package before choosing a paid term. Use it to review EagleCast TV on the screen you expect to use most often.",
       ],
     },
   ],
   "getting-started-with-eaglecast-tv": [
     {
       id: "request-trial",
-      title: "Begin with the 48-hour free trial",
+      title: "Begin with the EagleCast TV trial",
       paragraphs: [
-        "Request trial access from the eaglecast support team before choosing a paid plan. The trial covers the full package, including live TV, sports, movies, catch-up, and multi-screen viewing.",
+        "Request trial access from the EagleCast TV support team before choosing a paid plan. The trial covers the full package, including live TV, sports, movies, catch-up, and multi-screen viewing.",
       ],
     },
     {
@@ -75,21 +75,21 @@ const guideSections: Record<string, readonly GuideSection[]> = {
       id: "what-it-does",
       title: "What catch-up and replay add",
       paragraphs: [
-        "eaglecast lists catch-up and replay access for up to two days. The feature is intended for returning to content you missed instead of relying only on the live moment.",
+        "EagleCast TV lists catch-up and replay access for up to two days. The feature is intended for returning to content you missed instead of relying only on the live moment.",
       ],
     },
     {
       id: "where-it-fits",
       title: "Where the feature fits in the service",
       paragraphs: [
-        "Catch-up appears alongside live TV with EPG, sports and PPV, movies and series, and multi-screen access in the full eaglecast package. It is listed as included across the published plan terms.",
+        "Catch-up appears alongside live TV with EPG, sports and PPV, movies and series, and multi-screen access in the full EagleCast TV package. It is listed as included across the published plan terms.",
       ],
     },
     {
       id: "need-help",
       title: "Get help with a specific device",
       paragraphs: [
-        "For setup or technical questions about a supported screen, use the eaglecast contact page. Support is listed as available 24/7.",
+        "For setup or technical questions about a supported screen, use the EagleCast TV contact page. Support is listed as available 24/7.",
       ],
     },
   ],
@@ -108,8 +108,8 @@ export async function generateMetadata({ params }: TutorialPageProps) {
   }
 
   return buildMetadata({
-    title: `${tutorial.title} | eaglecast`,
-    description: tutorial.excerpt,
+    title: tutorial.seoTitle,
+    description: tutorial.metaDescription,
     pathname: `/tutorials/${tutorial.slug}`,
   });
 }
@@ -227,14 +227,14 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
               <p className="mt-2 text-sm leading-6 text-ink-muted">
                 {supportGuide
                   ? "Support is available for setup, billing, and technical questions."
-                  : "Request the 48-hour trial before choosing a paid term."}
+                  : "Request an EagleCast TV trial before choosing a paid term."}
               </p>
             </div>
             <ButtonLink
               href={supportGuide ? "/contact" : "/free-trial"}
               withArrow
             >
-              {supportGuide ? "Contact support" : "Request a free trial"}
+              {supportGuide ? "Contact support" : "Get Trial"}
             </ButtonLink>
           </div>
         </div>

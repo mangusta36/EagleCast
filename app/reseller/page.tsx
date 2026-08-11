@@ -15,17 +15,18 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { buildWhatsappUrl } from "@/data/contact";
 import { FAQS } from "@/data/faqs";
+import { SITE_URL } from "@/data/seo";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "IPTV Reseller Program | eaglecast",
+  title: "EagleCast TV IPTV Reseller Program & Support",
   description:
-    "Start or grow your IPTV reselling business with eaglecast reseller access, customer workflows, setup guidance, renewals, and WhatsApp support.",
+    "Start or grow your IPTV reselling business with EagleCast TV reseller access, customer workflows, setup guidance, renewals, and WhatsApp support.",
   pathname: "/reseller",
 });
 
 const resellerWhatsappUrl = buildWhatsappUrl(
-  "Hi eaglecast, I'm interested in your reseller program and would like more information about getting started.",
+  "Hi EagleCast TV, I'm interested in your reseller program and would like more information about getting started.",
 );
 
 const audience = [
@@ -52,12 +53,12 @@ const benefits = [
   "Credit package purchase workflow",
   "Customer trial, renewal, and onboarding support",
   "Device and setup guidance for common IPTV apps",
-  "eaglecast technical backing when needed",
+  "EagleCast TV technical backing when needed",
 ] as const;
 
 const steps = [
   {
-    title: "Contact eaglecast",
+    title: "Contact EagleCast TV",
     body: "Speak with us on WhatsApp and tell us what kind of reseller setup you need.",
   },
   {
@@ -78,7 +79,7 @@ const trustItems = [
   },
   {
     title: "Setup knowledge",
-    body: "Use eaglecast guidance for Smart TVs, Firestick, Android, iOS, PC, and Mac devices.",
+    body: "Use EagleCast TV guidance for Smart TVs, Firestick, Android, iOS, PC, and Mac devices.",
     icon: Smartphone,
   },
   {
@@ -92,25 +93,25 @@ const resellerFaqs = [
   ...FAQS.filter((faq) => faq.category === "reseller"),
   {
     id: "reseller-get-started",
-    question: "How do I become an eaglecast reseller?",
+    question: "How do I become an EagleCast TV reseller?",
     answer:
-      "Contact eaglecast on WhatsApp and tell us you are interested in reseller access. We will explain the available setup and credit package workflow.",
+      "Contact EagleCast TV on WhatsApp and tell us you are interested in reseller access. We will explain the available setup and credit package workflow.",
   },
   {
     id: "reseller-experience",
     question: "Do I need IPTV experience?",
     answer:
-      "Experience helps, but new resellers can contact eaglecast for guidance before getting started.",
+      "Experience helps, but new resellers can contact EagleCast TV for guidance before getting started.",
   },
   {
     id: "reseller-pricing",
     question: "How do I get reseller pricing?",
     answer:
-      "Reseller pricing depends on the setup and credit package. Ask eaglecast directly on WhatsApp for current reseller options.",
+      "Reseller pricing depends on the setup and credit package. Ask EagleCast TV directly on WhatsApp for current reseller options.",
   },
   {
     id: "reseller-contact-before-buying",
-    question: "Can I contact eaglecast before buying?",
+    question: "Can I contact EagleCast TV before buying?",
     answer:
       "Yes. WhatsApp is the best way to ask questions about reseller access before you purchase or set anything up.",
   },
@@ -118,13 +119,13 @@ const resellerFaqs = [
     id: "reseller-setup-help",
     question: "Can I get help with customer setup?",
     answer:
-      "Yes. eaglecast provides setup and device guidance that can help with customer onboarding.",
+      "Yes. EagleCast TV provides setup and device guidance that can help with customer onboarding.",
   },
   {
     id: "reseller-devices",
     question: "Which devices can my customers use?",
     answer:
-      "eaglecast supports common IPTV app workflows across Smart TVs, Firestick and Fire TV devices, Android phones and tablets, iPhones and iPads, compatible boxes, Windows PCs, and Mac devices.",
+      "EagleCast TV supports common IPTV app workflows across Smart TVs, Firestick and Fire TV devices, Android phones and tablets, iPhones and iPads, compatible boxes, Windows PCs, and Mac devices.",
   },
 ] as const;
 
@@ -152,14 +153,14 @@ export default function ResellerPage() {
   const resellerJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "eaglecast Reseller Program",
-    url: "https://www.eaglecast.tv/reseller",
+    name: "EagleCast TV Reseller Program",
+    url: `${SITE_URL}/reseller`,
     description:
-      "Overview of the eaglecast reseller program, who it is for, what it provides, and how to contact eaglecast to get started.",
+      "Overview of the EagleCast TV reseller program, who it is for, what it provides, and how to contact EagleCast TV to get started.",
     about: {
       "@type": "Organization",
-      name: "eaglecast",
-      url: "https://www.eaglecast.tv",
+      name: "EagleCast TV",
+      url: SITE_URL,
     },
   };
 
@@ -175,28 +176,28 @@ export default function ResellerPage() {
       <section className="bg-canvas">
         <div className="site-container grid gap-10 py-16 sm:py-20 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-16 lg:py-24">
           <div className="max-w-3xl">
-            <Eyebrow>eaglecast reseller</Eyebrow>
+            <Eyebrow>EagleCast TV reseller</Eyebrow>
             <h1 className="mt-5 text-4xl font-semibold leading-[1.08] tracking-[-0.035em] text-ink sm:text-5xl lg:text-6xl">
-              Start Your IPTV Reselling Business with eaglecast
+              Start Your IPTV Reselling Business with EagleCast TV
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-8 text-ink-muted sm:text-lg">
               Sell IPTV subscriptions to your own customers with reseller
-              access, setup guidance, and support from eaglecast.
+              access, setup guidance, and support from EagleCast TV.
             </p>
             <div className="mt-8 rounded-lg border border-line bg-panel p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand">
                 Direct answer
               </p>
               <h2 className="mt-3 text-2xl font-semibold text-ink">
-                What is the eaglecast reseller program?
+                What is the EagleCast TV reseller program?
               </h2>
               <p className="mt-3 text-sm leading-7 text-ink-muted">
-                The eaglecast reseller program is for people or small businesses
-                that want reseller access for customer onboarding, renewals, and
-                account workflows. It provides a practical route for managing
-                customer subscriptions with setup guidance and direct support.
-                To get started, contact eaglecast on WhatsApp and explain the
-                kind of reseller setup you need.
+                The EagleCast TV reseller program is for people or small
+                businesses that want reseller access for customer onboarding,
+                renewals, and account workflows. It provides a practical route
+                for managing customer subscriptions with setup guidance and
+                direct support. To get started, contact EagleCast TV on WhatsApp
+                and explain the kind of reseller setup you need.
               </p>
             </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -239,7 +240,7 @@ export default function ResellerPage() {
         <div className="site-container section-pad">
           <SectionHeading
             eyebrow="Who it is for"
-            title="Who is eaglecast reseller for?"
+            title="Who is EagleCast TV reseller for?"
             description="Reseller access is for people who want a direct way to serve their own IPTV customers."
           />
           <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -267,7 +268,7 @@ export default function ResellerPage() {
         <div className="site-container section-pad grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <SectionHeading
             eyebrow="What you get"
-            title="What You Get as an eaglecast reseller"
+            title="What You Get as an EagleCast TV reseller"
             description="The reseller program is centered on panel access, customer account workflows, and direct setup support."
           />
           <div className="grid gap-4 sm:grid-cols-2">
@@ -327,7 +328,7 @@ export default function ResellerPage() {
               </h2>
               <p className="mt-4 text-base leading-8 text-ink-muted">
                 Reseller options can depend on the setup and requirements. Ask
-                eaglecast directly for current reseller pricing and package
+                EagleCast TV directly for current reseller pricing and package
                 details.
               </p>
             </div>
@@ -341,8 +342,8 @@ export default function ResellerPage() {
       <section className="bg-canvas-alt">
         <div className="site-container section-pad">
           <SectionHeading
-            eyebrow="Why eaglecast"
-            title="Why Work with eaglecast?"
+            eyebrow="Why EagleCast TV"
+            title="Why Work with EagleCast TV?"
             description="You get a clear communication route and practical support for the customer workflows resellers use most."
           />
           <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -371,7 +372,7 @@ export default function ResellerPage() {
           <SectionHeading
             eyebrow="Reseller FAQ"
             title="Questions before you start"
-            description="Here are the key details to understand before you ask eaglecast about reseller access."
+            description="Here are the key details to understand before you ask EagleCast TV about reseller access."
           />
           <div className="mt-10 divide-y divide-line border-y border-line">
             {resellerFaqs.map((faq) => (
@@ -399,11 +400,11 @@ export default function ResellerPage() {
                 Ready to Start Reselling?
               </p>
               <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.035em] text-ink sm:text-4xl">
-                Talk with eaglecast before you get started.
+                Talk with EagleCast TV before you get started.
               </h2>
               <p className="mt-4 text-base leading-8 text-ink-muted">
-                Talk with eaglecast directly and we&apos;ll help you understand
-                the reseller options before you get started.
+                Talk with EagleCast TV directly and we&apos;ll help you
+                understand the reseller options before you get started.
               </p>
             </div>
             <WhatsappButton className="w-full sm:w-auto">

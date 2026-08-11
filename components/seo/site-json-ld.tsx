@@ -1,42 +1,40 @@
 import { contactInfo } from "@/data/contact";
-import { siteMetadata } from "@/data/seo";
-
-const siteUrl = siteMetadata.metadataBase;
+import { siteMetadata, SITE_URL } from "@/data/seo";
 
 const siteStructuredData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Organization",
-      "@id": `${siteUrl}/#organization`,
-      name: "eaglecast",
-      url: siteUrl,
-      logo: `${siteUrl}/icon.svg`,
+      "@id": `${SITE_URL}/#organization`,
+      name: "EagleCast TV",
+      url: SITE_URL,
+      logo: `${SITE_URL}/icon.svg`,
       email: contactInfo.email,
       sameAs: [contactInfo.telegram],
     },
     {
       "@type": "WebSite",
-      "@id": `${siteUrl}/#website`,
-      name: "eaglecast",
-      url: siteUrl,
+      "@id": `${SITE_URL}/#website`,
+      name: "EagleCast TV",
+      url: SITE_URL,
       description: siteMetadata.description,
       publisher: {
-        "@id": `${siteUrl}/#organization`,
+        "@id": `${SITE_URL}/#organization`,
       },
     },
     {
       "@type": "Service",
-      "@id": `${siteUrl}/#service`,
-      name: "eaglecast",
+      "@id": `${SITE_URL}/#service`,
+      name: "EagleCast TV",
       serviceType: "IPTV service",
-      url: siteUrl,
+      url: SITE_URL,
       description: siteMetadata.description,
       provider: {
-        "@id": `${siteUrl}/#organization`,
+        "@id": `${SITE_URL}/#organization`,
       },
       isRelatedTo: {
-        "@id": `${siteUrl}/#website`,
+        "@id": `${SITE_URL}/#website`,
       },
       areaServed: [
         {

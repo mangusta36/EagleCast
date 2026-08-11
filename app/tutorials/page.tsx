@@ -7,9 +7,9 @@ import { tutorials } from "@/data/tutorials";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Tutorials | eaglecast",
+  title: "EagleCast TV IPTV Tutorials & Setup Guides",
   description:
-    "Browse eaglecast guides about getting started, catch-up and replay, and finding support for common streaming issues.",
+    "Browse EagleCast TV IPTV tutorials for getting started, troubleshooting common streaming issues, using catch-up and replay, and finding setup support.",
   pathname: "/tutorials",
 });
 
@@ -20,10 +20,10 @@ export default function TutorialsPage() {
     <>
       <PageHero
         eyebrow="Guides and support"
-        title="Practical reading for getting started with eaglecast"
-        description="Review the free-trial path, supported service features, and the support routes available when you need help."
+        title="Practical reading for getting started with EagleCast TV"
+        description="Review the trial path, supported service features, and the support routes available when you need help."
       >
-        <ButtonLink href="/free-trial">Request a free trial</ButtonLink>
+        <ButtonLink href="/free-trial">Get Trial</ButtonLink>
         <ButtonLink href="/contact" variant="outlineLight">
           Contact support
         </ButtonLink>
@@ -44,7 +44,7 @@ export default function TutorialsPage() {
           <SectionHeading
             eyebrow="More guides"
             title="Explore the support library"
-            description="Read the remaining guides about initial access and the viewing features listed by eaglecast."
+            description="Read the remaining guides about initial access and the viewing features listed by EagleCast TV."
           />
           <div className="mt-12 grid gap-10 md:grid-cols-2 md:gap-12">
             {rest.map((tutorial) => (

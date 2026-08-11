@@ -4,7 +4,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 export const metadata: Metadata = {
   title: "Page not found",
   description:
-    "The page you requested could not be found. Return to the eaglecast homepage or explore our service pages.",
+    "The page you requested could not be found. Return to the EagleCast TV homepage or explore our service pages.",
   robots: {
     index: false,
     follow: true,
@@ -28,7 +28,7 @@ export default function NotFound() {
           </h1>
           <p className="mt-5 max-w-xl text-base leading-8 text-ink-muted sm:text-lg">
             The address may be out of date or the page may have moved. Return to
-            eaglecast, compare plans, or contact support.
+            EagleCast TV, compare plans, or contact support.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <ButtonLink href="/" withArrow>

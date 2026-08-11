@@ -30,7 +30,9 @@ export function FinalCta() {
         </h2>
 
         <p className="text-base sm:text-lg text-slate-300 max-w-xl mx-auto leading-relaxed">
-          Upgrade to military-grade drop defense, Florentine leather craftsmanship, and seamless MagSafe charging today. Backed by our 30-day money-back guarantee.
+          Upgrade to military-grade drop defense, Florentine leather
+          craftsmanship, and seamless MagSafe charging today. Backed by our
+          30-day money-back guarantee.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
@@ -51,10 +53,12 @@ export function FinalCta() {
 
         <div className="flex items-center justify-center gap-6 text-xs text-slate-400 font-semibold pt-6">
           <span className="flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-emerald-400" /> Free 2-Day US Shipping
+            <ShieldCheck className="w-4 h-4 text-emerald-400" /> Free 2-Day US
+            Shipping
           </span>
           <span className="flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-emerald-400" /> 30-Day Easy Returns
+            <ShieldCheck className="w-4 h-4 text-emerald-400" /> 30-Day Easy
+            Returns
           </span>
         </div>
       </div>

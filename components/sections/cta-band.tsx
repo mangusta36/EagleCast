@@ -15,7 +15,7 @@ export function CtaBand() {
               See it on your own screen
             </p>
             <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.035em] text-white sm:text-4xl">
-              Try the full eaglecast service for 48 hours.
+              Try EagleCast TV before you subscribe.
             </h2>
             <p className="mt-4 max-w-xl text-base leading-8 text-white/75">
               Explore live TV, sports, movies, and catch-up before you decide
@@ -28,7 +28,7 @@ export function CtaBand() {
           </div>
           <div className="relative mt-8 flex flex-col gap-3 sm:flex-row lg:mt-0 lg:shrink-0 lg:flex-col">
             <ButtonLink href="/free-trial" variant="light">
-              Request your free trial
+              Get Trial
             </ButtonLink>
             <ButtonLink href="/pricing" variant="outlineLight">
               Compare plans

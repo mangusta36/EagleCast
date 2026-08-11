@@ -19,7 +19,7 @@ export function Features() {
           <SectionHeading
             eyebrow="What you get"
             title="The essentials are included in every plan"
-            description="Choose a term, not a feature tier. Every listed plan includes the same core eaglecast experience."
+            description="Choose a term, not a feature tier. Every listed plan includes the same core EagleCast TV experience."
           />
           <ButtonLink
             href="/services"

@@ -19,7 +19,7 @@ export function FaqSection() {
             FREQUENTLY ASKED QUESTIONS
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mt-3">
-            eaglecast IPTV FAQ
+            EagleCast TV IPTV FAQ
           </h2>
           <p className="text-sm md:text-base text-slate-300 mt-2">
             Quick answers about IPTV streaming, apps, devices, trials, playback,
@@ -73,7 +73,7 @@ export function FaqSection() {
             <span>Still have a question? Our support team is online 24/7</span>
           </div>
           <p className="text-xs text-slate-400">
-            Email eaglecast support or request setup help through WhatsApp.
+            Email EagleCast TV support or request setup help through WhatsApp.
           </p>
         </div>
       </div>

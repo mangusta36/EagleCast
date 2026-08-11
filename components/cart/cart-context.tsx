@@ -17,7 +17,12 @@ interface CartContextType {
   isCartOpen: boolean;
   openCart: () => void;
   closeCart: () => void;
-  addItem: (product: Product, selectedDevice: string, selectedColor: string, selectedColorHex: string) => void;
+  addItem: (
+    product: Product,
+    selectedDevice: string,
+    selectedColor: string,
+    selectedColorHex: string,
+  ) => void;
   removeItem: (cartItemId: string) => void;
   updateQuantity: (cartItemId: string, newQuantity: number) => void;
   clearCart: () => void;
@@ -66,7 +71,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     product: Product,
     selectedDevice: string,
     selectedColor: string,
-    selectedColorHex: string
+    selectedColorHex: string,
   ) => {
     const cartItemId = `${product.id}-${selectedDevice}-${selectedColor}`;
 
@@ -74,7 +79,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       const existing = prevItems.find((item) => item.cartItemId === cartItemId);
       if (existing) {
         return prevItems.map((item) =>
-          item.cartItemId === cartItemId ? { ...item, quantity: item.quantity + 1 } : item
+          item.cartItemId === cartItemId
+            ? { ...item, quantity: item.quantity + 1 }
+            : item,
         );
       }
       return [
@@ -94,7 +101,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   };
 
   const removeItem = (cartItemId: string) => {
-    setItems((prevItems) => prevItems.filter((item) => item.cartItemId !== cartItemId));
+    setItems((prevItems) =>
+      prevItems.filter((item) => item.cartItemId !== cartItemId),
+    );
   };
 
   const updateQuantity = (cartItemId: string, newQuantity: number) => {
@@ -103,17 +112,30 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       return;
     }
     setItems((prevItems) =>
-      prevItems.map((item) => (item.cartItemId === cartItemId ? { ...item, quantity: newQuantity } : item))
+      prevItems.map((item) =>
+        item.cartItemId === cartItemId
+          ? { ...item, quantity: newQuantity }
+          : item,
+      ),
     );
   };
 
   const clearCart = () => setItems([]);
 
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
-  const subtotal = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
+  const subtotal = items.reduce(
+    (sum, item) => sum + item.product.price * item.quantity,
+    0,
+  );
   const isFreeShipping = subtotal >= FREE_SHIPPING_THRESHOLD;
-  const amountNeededForFreeShipping = Math.max(0, FREE_SHIPPING_THRESHOLD - subtotal);
-  const freeShippingProgress = Math.min(100, (subtotal / FREE_SHIPPING_THRESHOLD) * 100);
+  const amountNeededForFreeShipping = Math.max(
+    0,
+    FREE_SHIPPING_THRESHOLD - subtotal,
+  );
+  const freeShippingProgress = Math.min(
+    100,
+    (subtotal / FREE_SHIPPING_THRESHOLD) * 100,
+  );
 
   return (
     <CartContext.Provider

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/data/blog";
+import { SITE_URL } from "@/data/seo";
 import { tutorials } from "@/data/tutorials";
 
 const routes = [
@@ -24,6 +25,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogRoutes = blogPosts.map(({ slug }) => `/blog/${slug}`);
 
   return [...routes, ...tutorialRoutes, ...blogRoutes].map((route) => ({
-    url: `https://www.eaglecast.tv${route}`,
+    url: `${SITE_URL}${route}`,
   }));
 }

@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "eaglecast",
-    short_name: "eaglecast",
+    name: "EagleCast TV",
+    short_name: "EagleCast TV",
     description: "IPTV streaming, live TV, sports, and device support",
     start_url: "/",
     display: "standalone",

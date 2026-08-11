@@ -38,9 +38,9 @@ export const PRICING_PLANS: PricingPlan[] = [
     ],
     ctaText: "Get 3 Months",
     ctaHref: buildWhatsappUrl(
-      "Hello, I want to get the 3-Month eaglecast Plan",
+      "Hello, I want to get the 3-Month EagleCast TV Plan",
     ),
-    whatsappMsg: "Hello, I want to get the 3-Month eaglecast plan ($37)",
+    whatsappMsg: "Hello, I want to get the 3-Month EagleCast TV plan ($37)",
   },
   {
     slug: "6-months",
@@ -62,9 +62,9 @@ export const PRICING_PLANS: PricingPlan[] = [
     ],
     ctaText: "Get 6 Months",
     ctaHref: buildWhatsappUrl(
-      "Hello, I want to get the 6-Month eaglecast Plan",
+      "Hello, I want to get the 6-Month EagleCast TV Plan",
     ),
-    whatsappMsg: "Hello, I want to get the 6-Month eaglecast plan ($49)",
+    whatsappMsg: "Hello, I want to get the 6-Month EagleCast TV plan ($49)",
   },
   {
     slug: "12-months",
@@ -89,9 +89,9 @@ export const PRICING_PLANS: PricingPlan[] = [
     ],
     ctaText: "Get 1 Year Best Deal",
     ctaHref: buildWhatsappUrl(
-      "Hello, I want to get the 12-Month eaglecast Plan",
+      "Hello, I want to get the 12-Month EagleCast TV Plan",
     ),
-    whatsappMsg: "Hello, I want to get the 12-Month eaglecast plan ($67)",
+    whatsappMsg: "Hello, I want to get the 12-Month EagleCast TV plan ($67)",
   },
   {
     slug: "24-months",
@@ -115,9 +115,9 @@ export const PRICING_PLANS: PricingPlan[] = [
     ],
     ctaText: "Get 2 Years Pass",
     ctaHref: buildWhatsappUrl(
-      "Hello, I want to get the 24-Month eaglecast Plan",
+      "Hello, I want to get the 24-Month EagleCast TV Plan",
     ),
-    whatsappMsg: "Hello, I want to get the 24-Month eaglecast plan ($110)",
+    whatsappMsg: "Hello, I want to get the 24-Month EagleCast TV plan ($110)",
   },
 ];
 

@@ -67,13 +67,13 @@ export interface BlogPost {
   relatedSlugs: readonly string[];
 }
 
-const editorialAuthor = "eaglecast Editorial Team";
+const editorialAuthor = "EagleCast TV Editorial Team";
 
 export const blogPosts: readonly BlogPost[] = [
   {
     slug: "what-is-iptv",
     title: "What Is IPTV? How Internet Protocol Television Works in 2026",
-    seoTitle: "What Is IPTV? How Internet Protocol Television Works in 2026",
+    seoTitle: "What Is IPTV? How IPTV Works",
     excerpt:
       "A clear, practical explanation of what IPTV means, how internet television works, the devices and apps it relies on, and what to evaluate before you subscribe.",
     deck: "IPTV uses internet protocol networks to deliver live television, on-demand video, and catch-up features to compatible apps and devices. The details matter because setup quality, internet stability, device choice, and provider support all affect the experience more than the acronym itself.",
@@ -136,7 +136,7 @@ export const blogPosts: readonly BlogPost[] = [
           description:
             "If you want to confirm how a service behaves on the television, stick, or box you actually plan to use, start with a trial before committing to a longer term.",
           href: "/free-trial",
-          label: "Start Free Trial",
+          label: "Get Trial",
         },
       },
       {
@@ -176,7 +176,7 @@ export const blogPosts: readonly BlogPost[] = [
         title: "How to evaluate a service before you commit",
         paragraphs: [
           "A good evaluation starts with your own use case. Make a list of the devices you expect to watch on, the rooms where you use them, the type of content that matters most, and the number of people who may stream at the same time. Then test the app navigation, guide behavior, picture stability, login flow, and general responsiveness on those real conditions. That practical test is more useful than reading generic feature lists or chasing exaggerated review claims.",
-          "You should also compare plan terms, support responsiveness, and setup clarity. For example, eaglecast offers both [packages](/pricing) and a [free-trial option](/free-trial), which gives a buyer a way to test compatibility before choosing a longer access term. That kind of sequence is useful because it moves the decision from abstract marketing into actual hands-on viewing. The final goal is not to find a perfect service in theory. It is to find a service that performs reliably in your household.",
+          "You should also compare plan terms, support responsiveness, and setup clarity. For example, EagleCast TV offers both [packages](/pricing) and a [free-trial option](/free-trial), which gives a buyer a way to test compatibility before choosing a longer access term. That kind of sequence is useful because it moves the decision from abstract marketing into actual hands-on viewing. The final goal is not to find a perfect service in theory. It is to find a service that performs reliably in your household.",
         ],
       },
       {
@@ -255,8 +255,7 @@ export const blogPosts: readonly BlogPost[] = [
     slug: "iptv-vs-cable-streaming",
     title:
       "IPTV vs Cable, Satellite and Streaming Services: What’s the Difference?",
-    seoTitle:
-      "IPTV vs Cable, Satellite and Streaming Services: What’s the Difference?",
+    seoTitle: "IPTV vs Cable and Streaming: Key Differences",
     excerpt:
       "A grounded comparison of IPTV, cable, satellite, and app-based streaming so you can see how delivery method, device flexibility, internet dependence, and overall viewing workflow actually differ.",
     deck: "IPTV, cable, satellite, and standalone streaming apps can all put television on your screen, but they do it in very different ways. Once you compare infrastructure, latency, mobility, hardware, and support needs, the better fit usually becomes clearer.",
@@ -266,7 +265,7 @@ export const blogPosts: readonly BlogPost[] = [
     author: editorialAuthor,
     readingTime: "17 min read",
     metaDescription:
-      "Compare IPTV with cable, satellite, and streaming services to understand differences in setup, devices, picture quality, internet dependence, and viewing flexibility.",
+      "Compare IPTV vs cable, satellite and streaming services across setup, devices, picture quality, internet needs, flexibility and everyday viewing.",
     primaryKeyword: "IPTV vs cable",
     featuredImage: {
       src: "/images/blog/iptv-vs-cable-streaming.jpg",
@@ -362,7 +361,7 @@ export const blogPosts: readonly BlogPost[] = [
         title: "Mobility, travel, and device flexibility",
         paragraphs: [
           "Internet-based systems usually win on mobility. IPTV and streaming apps can often be accessed on multiple device categories, which makes it easier to move between a living room television, a travel device, and a laptop. Cable and satellite are more rooted in home installation and room-specific hardware. That can be perfectly fine for households that only watch in one place, but it is less convenient for viewers who want more fluid access.",
-          "Flexibility is not only about leaving the house. It also matters inside the house. Some people watch primarily on a bedroom television, others on a main living room screen, others on tablets during travel or work breaks. IPTV aligns well with those patterns when the device ecosystem and connection rules match the household's needs. That is one reason why trial access can be useful before choosing from [eaglecast packages](/pricing).",
+          "Flexibility is not only about leaving the house. It also matters inside the house. Some people watch primarily on a bedroom television, others on a main living room screen, others on tablets during travel or work breaks. IPTV aligns well with those patterns when the device ecosystem and connection rules match the household's needs. That is one reason why trial access can be useful before choosing from [EagleCast TV packages](/pricing).",
         ],
       },
       {
@@ -418,7 +417,7 @@ export const blogPosts: readonly BlogPost[] = [
         title: "A better decision checklist",
         paragraphs: [
           "Before choosing, make a short list. How important is live television compared with on-demand viewing? Do you need portability? Will multiple people watch at the same time? Is your home internet stable where the television is located? Are you comfortable setting up and maintaining apps? Those questions usually narrow the options faster than comparing slogans or generic review scores.",
-          "If IPTV is still the direction you are exploring, continue with [What IPTV actually is](/blog/what-is-iptv), review the [recommended internet speed for IPTV](/blog/internet-speed-for-iptv), and use our buying checklist for [choosing a reliable IPTV provider](/blog/how-to-choose-iptv-provider). If you are already close to buying, compare the published [eaglecast Packages](/pricing) only after you know the device and network side makes sense.",
+          "If IPTV is still the direction you are exploring, continue with [What IPTV actually is](/blog/what-is-iptv), review the [recommended internet speed for IPTV](/blog/internet-speed-for-iptv), and use our buying checklist for [choosing a reliable IPTV provider](/blog/how-to-choose-iptv-provider). If you are already close to buying, compare the published [EagleCast TV Packages](/pricing) only after you know the device and network side makes sense.",
         ],
       },
       {
@@ -482,8 +481,7 @@ export const blogPosts: readonly BlogPost[] = [
     slug: "best-devices-for-iptv",
     title:
       "Best Devices for IPTV in 2026: Smart TVs, Fire TV, Android TV and More",
-    seoTitle:
-      "Best Devices for IPTV in 2026: Smart TVs, Fire TV, Android TV and More",
+    seoTitle: "Best Devices for IPTV: TVs, Sticks and Boxes",
     excerpt:
       "A device-by-device guide to choosing the right screen for IPTV, from Smart TVs and Fire TV sticks to Android TV boxes, phones, tablets, and desktop computers.",
     deck: "The best IPTV device is not automatically the most expensive one. It is the one that combines stable playback, easy app support, good remote navigation, and the right network setup for the place you actually watch.",
@@ -493,7 +491,7 @@ export const blogPosts: readonly BlogPost[] = [
     author: editorialAuthor,
     readingTime: "18 min read",
     metaDescription:
-      "Compare the best devices for IPTV in 2026, including Smart TVs, Fire TV, Android TV, Apple TV, phones, tablets, and desktop computers.",
+      "Compare the best devices for IPTV, including Smart TVs, Fire TV, Android TV, Apple TV, phones, tablets and computers, with practical buying factors.",
     primaryKeyword: "best devices for IPTV",
     featuredImage: {
       src: "/images/blog/best-devices-for-iptv.jpg",
@@ -614,7 +612,7 @@ export const blogPosts: readonly BlogPost[] = [
           description:
             "A real trial on your own television, stick, or box tells you more than any spec sheet can. Check playback, guide behavior, and navigation before choosing a longer subscription term.",
           href: "/free-trial",
-          label: "Try eaglecast",
+          label: "Try EagleCast TV",
         },
       },
       {
@@ -693,7 +691,7 @@ export const blogPosts: readonly BlogPost[] = [
   {
     slug: "how-to-set-up-iptv-smart-tv",
     title: "How to Set Up IPTV on a Smart TV: Complete Step-by-Step Guide",
-    seoTitle: "How to Set Up IPTV on a Smart TV: Complete Step-by-Step Guide",
+    seoTitle: "Smart TV IPTV Setup: Step-by-Step Guide",
     excerpt:
       "A platform-neutral Smart TV IPTV setup guide covering preparation, apps, credentials, guide data, playback testing, and the most common problems people hit on modern televisions.",
     deck: "The best Smart TV setup process starts with the basics: confirm the operating system, use an authorized player from an official app source when available, verify your network, and test the guide and playback on the exact television you plan to use every day.",
@@ -757,7 +755,7 @@ export const blogPosts: readonly BlogPost[] = [
         paragraphs: [
           "Typing with a TV remote is slow, which is exactly why mistakes happen. Double-check every character, especially anything case-sensitive or any long URL-like field. If the app supports a simple login flow, use it carefully and confirm each field before saving. If it supports guide integration or a second configuration step, keep the data organized instead of trying to remember it from memory midway through setup.",
           "Credential errors often look like app or network errors at first. A blank guide, a failed connection, or an empty channel list can come from one wrong character. That is why a patient first pass usually saves more time than rushed troubleshooting later. If you are unsure what each field means, contact the provider rather than guessing. It is easier to correct setup logic early than to unravel bad assumptions after the configuration spreads across multiple menus.",
-          "If you are specifically trying to recover credentials or understand where your access details should be used, the [eaglecast login help page](/login-help) explains the normal customer workflow without pretending there is a public website dashboard.",
+          "If you are specifically trying to recover credentials or understand where your access details should be used, the [EagleCast TV login help page](/login-help) explains the normal customer workflow without pretending there is a public website dashboard.",
         ],
       },
       {
@@ -773,7 +771,7 @@ export const blogPosts: readonly BlogPost[] = [
           description:
             "A short real-world test on your own Smart TV is the fastest way to confirm whether the app, guide, and network all work comfortably together.",
           href: "/free-trial",
-          label: "Test eaglecast on Your TV",
+          label: "Test EagleCast TV on Your TV",
         },
       },
       {
@@ -818,7 +816,7 @@ export const blogPosts: readonly BlogPost[] = [
           "The television's age also changes how you interpret the symptoms. Newer sets may simply need a cleaner setup sequence and a stable connection. Older sets may technically complete the setup while still feeling noticeably heavy under real use. That difference matters because it changes the right next step. If the television is the weak link, more patience with the same built-in platform may not bring a better result. A stronger external device may.",
           "It is also worth testing the service when the household is behaving normally. A successful midday setup does not always predict a strong evening result if the living room network becomes busier later. This is why a realistic trial is more valuable than a quick technical confirmation. The goal is not just to make the app open. It is to confirm the setup stays comfortable during the circumstances that actually matter to the viewer.",
           "Once you know the pattern, the solution usually becomes clearer. Network instability points you toward [check your internet speed requirements](/blog/internet-speed-for-iptv) and wireless comparison. Device-platform friction points you toward [compare IPTV devices](/blog/best-devices-for-iptv). Playback instability across all rooms points you toward broader support and troubleshooting. Clear observations create clear next steps.",
-          "When the sticking point is not the television itself but missing setup details, use [eaglecast support](/contact) or the [portal help page](/portal-help) instead of guessing at old values or reusing partial information from another device.",
+          "When the sticking point is not the television itself but missing setup details, use [EagleCast TV support](/contact) or the [portal help page](/portal-help) instead of guessing at old values or reusing partial information from another device.",
         ],
       },
       {
@@ -896,7 +894,7 @@ export const blogPosts: readonly BlogPost[] = [
   {
     slug: "how-to-set-up-iptv-fire-tv",
     title: "How to Set Up IPTV on Fire TV Stick in 2026",
-    seoTitle: "How to Set Up IPTV on Fire TV Stick in 2026",
+    seoTitle: "Fire TV IPTV Setup: Step-by-Step Guide",
     excerpt:
       "A practical Fire TV IPTV setup guide that covers preparation, supported app installation methods, credentials, EPG behavior, device maintenance, and when to upgrade hardware.",
     deck: "Fire TV devices are popular because they can upgrade a television quickly, but the setup still depends on supported apps, clean account entry, enough free space, and a network path that remains stable under real viewing conditions.",
@@ -968,7 +966,7 @@ export const blogPosts: readonly BlogPost[] = [
           description:
             "Try the service with your own remote, television, and home network before choosing a longer term. That makes it easier to judge navigation, guide behavior, and stability honestly.",
           href: "/free-trial",
-          label: "Start Free Trial",
+          label: "Get Trial",
         },
       },
       {
@@ -1119,7 +1117,7 @@ export const blogPosts: readonly BlogPost[] = [
   {
     slug: "fix-iptv-buffering",
     title: "IPTV Buffering? 15 Ways to Diagnose and Fix Streaming Problems",
-    seoTitle: "IPTV Buffering? 15 Ways to Diagnose and Fix Streaming Problems",
+    seoTitle: "Fix IPTV Buffering: 15 Practical Solutions",
     excerpt:
       "A structured troubleshooting guide for IPTV buffering, freezing, and lag that helps you separate internet issues, device issues, app issues, and provider-side symptoms.",
     deck: "Buffering rarely has one universal cause. It can come from weak Wi-Fi, peak-hour congestion, device limits, app instability, guide overhead, or provider-side conditions. The fastest fix usually comes from diagnosing the category first instead of repeating random restarts.",
@@ -1129,7 +1127,7 @@ export const blogPosts: readonly BlogPost[] = [
     author: editorialAuthor,
     readingTime: "19 min read",
     metaDescription:
-      "Learn 15 practical ways to diagnose IPTV buffering, freezing, lag, and unstable playback across networks, devices, and app setups.",
+      "Fix IPTV buffering with 15 practical checks for internet speed, Wi-Fi, Ethernet, devices and apps, plus a step-by-step troubleshooting process.",
     primaryKeyword: "IPTV buffering",
     featuredImage: {
       src: "/images/blog/fix-iptv-buffering.jpg",
@@ -1246,7 +1244,7 @@ export const blogPosts: readonly BlogPost[] = [
         title: "15. Contact support with useful diagnostic details",
         paragraphs: [
           "By the time you contact support, the most helpful message includes the device type, app name or version when relevant, whether the issue affects all streams or specific ones, the connection type, and the time pattern. That gives support something actionable instead of a vague complaint. It also helps you avoid repeating the same basic checks in a frustrating loop.",
-          "A strong support message turns you from a frustrated user into a clear reporter of facts. If you need that next step, use [eaglecast support](/contact) with the details you gathered. If the issue may involve account entry rather than pure playback, the [login help page](/login-help) can help you separate those two paths before you reach out. The goal is not to prove anyone wrong. It is to move the diagnosis forward as efficiently as possible.",
+          "A strong support message turns you from a frustrated user into a clear reporter of facts. If you need that next step, use [EagleCast TV support](/contact) with the details you gathered. If the issue may involve account entry rather than pure playback, the [login help page](/login-help) can help you separate those two paths before you reach out. The goal is not to prove anyone wrong. It is to move the diagnosis forward as efficiently as possible.",
         ],
         cta: {
           variant: "support",
@@ -1254,7 +1252,7 @@ export const blogPosts: readonly BlogPost[] = [
           description:
             "Share your device, app, network type, and the troubleshooting steps you already ran so support can focus on the real bottleneck faster.",
           href: "/contact",
-          label: "Contact eaglecast Support",
+          label: "Contact EagleCast TV Support",
         },
       },
       {
@@ -1378,8 +1376,7 @@ export const blogPosts: readonly BlogPost[] = [
     slug: "internet-speed-for-iptv",
     title:
       "How Much Internet Speed Do You Need for IPTV? HD, Full HD and 4K Explained",
-    seoTitle:
-      "How Much Internet Speed Do You Need for IPTV? HD, Full HD and 4K Explained",
+    seoTitle: "Internet Speed for IPTV: HD, Full HD and 4K",
     excerpt:
       "A realistic guide to IPTV speed requirements, bandwidth planning, Wi-Fi behavior, and why stable delivery matters more than a single impressive speed test result.",
     deck: "The speed required for IPTV depends on stream quality, household traffic, device location, and network consistency. Peak Mbps figures help, but the viewing result depends just as much on latency, jitter, packet loss, and the path to the actual screen.",
@@ -1617,8 +1614,7 @@ export const blogPosts: readonly BlogPost[] = [
   {
     slug: "what-is-iptv-epg",
     title: "What Is an IPTV EPG? A Complete Guide to Electronic Program Guides",
-    seoTitle:
-      "What Is an IPTV EPG? A Complete Guide to Electronic Program Guides",
+    seoTitle: "What Is an IPTV EPG? Guide and Fixes",
     excerpt:
       "A practical guide to IPTV electronic program guides, including what guide data does, why time or schedule information goes wrong, and how to troubleshoot missing EPG behavior.",
     deck: "An IPTV EPG is the schedule and now/next layer that helps a live TV service feel organized instead of chaotic. When it works well, channel browsing becomes much easier. When it fails, users lose context quickly.",
@@ -1628,7 +1624,7 @@ export const blogPosts: readonly BlogPost[] = [
     author: editorialAuthor,
     readingTime: "16 min read",
     metaDescription:
-      "Learn what an IPTV EPG is, how guide data works, why EPG issues happen, and how to troubleshoot missing schedules and time mismatches.",
+      "Learn what an IPTV EPG is, how electronic program guide data works, why schedules go missing and how to troubleshoot refresh and time-zone issues.",
     primaryKeyword: "IPTV EPG",
     featuredImage: {
       src: "/images/blog/what-is-iptv-epg.jpg",
@@ -1822,8 +1818,7 @@ export const blogPosts: readonly BlogPost[] = [
     slug: "iptv-reseller-guide",
     title:
       "How to Start an IPTV Reseller Business: Practical Guide for Beginners",
-    seoTitle:
-      "How to Start an IPTV Reseller Business: Practical Guide for Beginners",
+    seoTitle: "IPTV Reseller Guide: How to Start a Business",
     excerpt:
       "A realistic beginner guide to IPTV reselling that covers workflows, customer onboarding, support expectations, pricing discipline, and how to evaluate a provider carefully.",
     deck: "IPTV reselling is closer to running a service business than chasing a shortcut. Success depends on onboarding, communication, customer support, records, device knowledge, and choosing a provider whose workflows you can actually support responsibly.",
@@ -1890,9 +1885,9 @@ export const blogPosts: readonly BlogPost[] = [
         ],
         cta: {
           variant: "reseller",
-          title: "Interested in becoming an eaglecast reseller?",
+          title: "Interested in becoming an EagleCast TV reseller?",
           description:
-            "If you want to explore reseller access, onboarding support, and the workflows eaglecast uses, the reseller page is the right place to start the conversation.",
+            "If you want to explore reseller access, onboarding support, and the workflows EagleCast TV uses, the reseller page is the right place to start the conversation.",
           href: "/reseller",
           label: "Explore Reseller",
         },
@@ -1934,7 +1929,7 @@ export const blogPosts: readonly BlogPost[] = [
         title: "How to evaluate a provider before becoming a reseller",
         paragraphs: [
           "Before joining a reseller program, evaluate the provider as if your own brand depends on it, because it does. Ask about onboarding support, account workflows, renewal handling, device guidance, and the speed of support communication. Look for evidence that the process is organized enough for you to build customer trust on top of it.",
-          "If you are comparing options, use the same mindset buyers should use in [how to choose an IPTV provider](/blog/how-to-choose-iptv-provider): test the real workflow, look for transparency, and avoid impossible claims. If you want a place to continue the conversation directly, [talk with eaglecast about reseller access](/reseller) rather than guessing at the model from a few isolated phrases.",
+          "If you are comparing options, use the same mindset buyers should use in [how to choose an IPTV provider](/blog/how-to-choose-iptv-provider): test the real workflow, look for transparency, and avoid impossible claims. If you want a place to continue the conversation directly, [talk with EagleCast TV about reseller access](/reseller) rather than guessing at the model from a few isolated phrases.",
         ],
       },
       {
@@ -1962,7 +1957,7 @@ export const blogPosts: readonly BlogPost[] = [
         title: "Reselling works best when operations stay simple",
         paragraphs: [
           "The strongest beginner reseller businesses usually keep the process simple: qualify the customer's device, guide the setup clearly, document renewals, and stay realistic about support expectations. Complexity should be earned over time, not added all at once because a panel offers more features than you need on day one.",
-          "That discipline makes the business easier to scale and easier to trust. It also makes it much easier to decide whether [the eaglecast reseller program](/reseller) matches the kind of workflow you want to build.",
+          "That discipline makes the business easier to scale and easier to trust. It also makes it much easier to decide whether [the EagleCast TV reseller program](/reseller) matches the kind of workflow you want to build.",
         ],
       },
       {
@@ -2033,8 +2028,7 @@ export const blogPosts: readonly BlogPost[] = [
     slug: "how-to-choose-iptv-provider",
     title:
       "How to Choose an IPTV Provider: 12 Things to Check Before You Subscribe",
-    seoTitle:
-      "How to Choose an IPTV Provider: 12 Things to Check Before You Subscribe",
+    seoTitle: "How to Choose an IPTV Provider: 12 Checks",
     excerpt:
       "A purchase-decision guide to choosing an IPTV provider carefully, with a 12-point checklist covering trials, device compatibility, support, stability, usability, and trust.",
     deck: "Choosing an IPTV provider is not only about a feature list. It is about whether the service works on your devices, on your network, with the support and clarity you need when real setup and playback questions appear.",
@@ -2074,7 +2068,7 @@ export const blogPosts: readonly BlogPost[] = [
           description:
             "A real-world test tells you more than generic claims ever will, especially when you check setup, navigation, and playback in the room where you watch most.",
           href: "/free-trial",
-          label: "Try eaglecast",
+          label: "Try EagleCast TV",
         },
       },
       {
@@ -2091,7 +2085,7 @@ export const blogPosts: readonly BlogPost[] = [
         paragraphs: [
           "Setup help matters because even careful buyers can hit small blockers during first configuration. A provider that gives useful guidance reduces friction immediately. That does not mean hand-holding every tiny step forever. It means having a clear route when account details, app expectations, or network questions need clarification.",
           "The quality of setup support often predicts the quality of later support too. If the provider communicates clearly during onboarding, that is a positive sign. If everything feels vague until payment is complete, take that seriously.",
-          "A simple check is whether the provider has a visible support route and honest setup documentation. For example, [eaglecast support](/contact), [login help](/login-help), and [portal help](/portal-help) each cover a different support intent instead of forcing every customer question onto one vague sales page.",
+          "A simple check is whether the provider has a visible support route and honest setup documentation. For example, [EagleCast TV support](/contact), [login help](/login-help), and [portal help](/portal-help) each cover a different support intent instead of forcing every customer question onto one vague sales page.",
         ],
       },
       {
@@ -2124,7 +2118,7 @@ export const blogPosts: readonly BlogPost[] = [
         title: "11. Pricing and subscription length",
         paragraphs: [
           "Pricing should be evaluated together with term length, support quality, trial availability, and device fit. A longer subscription can look attractive until you realize you never tested the service on the real setup. That is why careful buyers use shorter validation first when possible and only move to longer terms after they understand the fit.",
-          "Published plan structure can still be useful for comparison, especially when you already know the setup works. Review [eaglecast Packages](/pricing) in that spirit: as a next step after compatibility and usability questions, not instead of them.",
+          "Published plan structure can still be useful for comparison, especially when you already know the setup works. Review [EagleCast TV Packages](/pricing) in that spirit: as a next step after compatibility and usability questions, not instead of them.",
         ],
       },
       {
@@ -2193,7 +2187,7 @@ export const blogPosts: readonly BlogPost[] = [
         title: "The best next step before you subscribe",
         paragraphs: [
           "The smartest buying move is usually simple: test the service on the device and connection you actually plan to use. That means the living room television, the real Wi-Fi or Ethernet path, and the viewing hours that matter in your household. A controlled real-world test tells you more than any generic ranking can.",
-          "From there, revisit [understand how IPTV works](/blog/what-is-iptv), [choose your device](/blog/best-devices-for-iptv), and [check your internet connection](/blog/internet-speed-for-iptv) if you need a deeper foundation. If you already feel ready, continue with the [free trial](/free-trial) or review [packages](/pricing) with a more informed eye.",
+          "From there, revisit [understand how IPTV works](/blog/what-is-iptv), [choose your device](/blog/best-devices-for-iptv), and [check your internet connection](/blog/internet-speed-for-iptv) if you need a deeper foundation. If you already feel ready, continue with the [trial](/free-trial) or review [packages](/pricing) with a more informed eye.",
         ],
       },
       {
@@ -2221,7 +2215,7 @@ export const blogPosts: readonly BlogPost[] = [
         title: "Use the checklist, then take one real next step",
         paragraphs: [
           "After you finish the checklist, do one concrete thing that reduces uncertainty: test the service, compare the device, review the guide, or confirm the support route. Real next steps beat more abstract reading once you are already close to a decision.",
-          "That is also why [Try eaglecast](/free-trial) and [review the packages](/pricing) belong near the end of the process, not at the beginning. They make the most sense after the decision is informed.",
+          "That is also why [Try EagleCast TV](/free-trial) and [review the packages](/pricing) belong near the end of the process, not at the beginning. They make the most sense after the decision is informed.",
         ],
       },
       {
@@ -2263,7 +2257,7 @@ export const blogPosts: readonly BlogPost[] = [
     ],
     faqs: [
       {
-        question: "Is a free trial always necessary?",
+        question: "Is a trial always necessary?",
         answer:
           "Not always, but it is one of the best ways to test compatibility and usability on your real setup before choosing a longer term.",
       },

@@ -25,12 +25,12 @@ export function TvGuide() {
   return (
     <div
       className="overflow-hidden rounded-[1.5rem] border border-line bg-panel p-3 shadow-card sm:p-4"
-      aria-label="Illustrative eaglecast viewing interface"
+      aria-label="Illustrative EagleCast TV viewing interface"
     >
       <div className="flex items-center justify-between px-2 pb-3 pt-1 text-ink">
         <div className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-brand" aria-hidden="true" />
-          <span className="text-xs font-semibold">eaglecast guide</span>
+          <span className="text-xs font-semibold">EagleCast TV guide</span>
         </div>
         <span className="rounded-full border border-[#BFDBFE] bg-[#EFF6FF] px-2.5 py-1 text-[10px] font-medium text-brand">
           Example interface

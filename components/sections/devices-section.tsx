@@ -13,7 +13,7 @@ const devices = [
   },
   {
     group: "Fire TV & streaming devices",
-    body: "Install eaglecast on Fire TV and popular streaming sticks in minutes.",
+    body: "Install EagleCast TV on Fire TV and popular streaming sticks in minutes.",
   },
   {
     group: "Desktop & laptop",
@@ -35,7 +35,7 @@ export function DevicesSection() {
               Watch on the screens you already own
             </h2>
             <p className="mt-4 text-lg leading-8 text-ink-muted">
-              eaglecast is designed for a real entertainment setup — start on
+              EagleCast TV is designed for a real entertainment setup — start on
               the big TV, switch to a tablet in the kitchen, and keep the same
               lineup on your phone when you head out.
             </p>

@@ -3,42 +3,43 @@ import { ContactForm } from "@/components/forms/contact-form";
 import { ButtonLink } from "@/components/ui/button-link";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { buildWhatsappUrl } from "@/data/contact";
+import { SITE_URL } from "@/data/seo";
 import { buildMetadata } from "@/lib/seo";
 
 const supportWhatsappUrl = buildWhatsappUrl(
-  "Hi eaglecast, I need help with setup, account details, or streaming support.",
+  "Hi EagleCast TV, I need help with setup, account details, or streaming support.",
 );
 
 export const metadata = buildMetadata({
-  title: "eaglecast Customer Service | Support & Setup Help",
+  title: "EagleCast TV Customer Service and IPTV Support",
   description:
-    "Get help with your eaglecast subscription, device setup, login details, portal questions, buffering issues, and reseller support through the official contact routes.",
+    "Contact EagleCast TV customer service for subscription, device setup, login, portal, buffering and reseller support through the official support options.",
   pathname: "/contact",
 });
 
 const supportFaqs = [
   {
-    question: "How do I contact eaglecast customer service?",
+    question: "How do I contact EagleCast TV customer service?",
     answer:
-      "Use the official email route on this page or chat with eaglecast on WhatsApp for setup and support questions.",
+      "Use the official email route on this page or chat with EagleCast TV on WhatsApp for setup and support questions.",
   },
   {
-    question: "Where do I find my eaglecast login details?",
+    question: "Where do I find my EagleCast TV login details?",
     answer:
       "Customers receive their login details during the activation or setup workflow. If you cannot find them, use login help or contact support.",
   },
   {
-    question: "What should I do if my eaglecast credentials do not work?",
+    question: "What should I do if my EagleCast TV credentials do not work?",
     answer:
       "Re-enter them carefully, confirm you are using the intended app or player, and contact support if they still fail.",
   },
   {
-    question: "Where do I get my eaglecast portal information?",
+    question: "Where do I get my EagleCast TV portal information?",
     answer:
       "Portal information is provided through the official setup workflow when it applies to the device or player you are using.",
   },
   {
-    question: "Can eaglecast help me set up my Smart TV?",
+    question: "Can EagleCast TV help me set up my Smart TV?",
     answer:
       "Yes. Setup help is available for Smart TV, Fire TV, Android, iOS, Windows, and compatible boxes.",
   },
@@ -53,14 +54,14 @@ export default function ContactPage() {
   const contactJsonLd = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    name: "eaglecast Customer Service",
-    url: "https://www.eaglecast.tv/contact",
+    name: "EagleCast TV Customer Service",
+    url: `${SITE_URL}/contact`,
     description:
-      "Official eaglecast customer support page for subscription help, device setup, login help, portal help, and streaming troubleshooting.",
+      "Official EagleCast TV customer support page for subscription help, device setup, login help, portal help, and streaming troubleshooting.",
     about: {
       "@type": "Organization",
-      name: "eaglecast",
-      url: "https://www.eaglecast.tv",
+      name: "EagleCast TV",
+      url: SITE_URL,
     },
   };
 
@@ -80,12 +81,13 @@ export default function ContactPage() {
               Customer Support
             </p>
             <h1 className="mt-4 text-4xl font-semibold leading-[1.08] tracking-[-0.04em] text-ink sm:text-5xl lg:text-6xl">
-              eaglecast Customer Service &amp; Support
+              EagleCast TV Customer Service &amp; Support
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-8 text-ink-muted sm:text-lg">
               Get help with package questions, activation details, device setup,
               login credentials, portal information, buffering issues, and
-              reseller support through the official eaglecast support channels.
+              reseller support through the official EagleCast TV support
+              channels.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
@@ -99,7 +101,7 @@ export default function ContactPage() {
                   aria-hidden="true"
                   className="fill-current"
                 />
-                Chat with eaglecast on WhatsApp
+                Chat with EagleCast TV on WhatsApp
               </a>
               <ButtonLink href="/login-help" variant="secondary">
                 Login help
@@ -114,10 +116,10 @@ export default function ContactPage() {
                 Direct answer
               </p>
               <h2 className="mt-3 text-2xl font-semibold text-ink">
-                How do I contact eaglecast customer service?
+                How do I contact EagleCast TV customer service?
               </h2>
               <p className="mt-3 text-sm leading-7 text-ink-muted">
-                The official way to contact eaglecast customer service is
+                The official way to contact EagleCast TV customer service is
                 through the support email on this page or the WhatsApp support
                 button above. Use those support routes for subscription
                 questions, device setup, login details, portal help, buffering
@@ -157,8 +159,8 @@ export default function ContactPage() {
                 Login / credentials help
               </h2>
               <p className="mt-3 text-sm leading-7 text-ink-muted">
-                Learn how eaglecast customers use their provided credentials and
-                where to request replacement details if needed.
+                Learn how EagleCast TV customers use their provided credentials
+                and where to request replacement details if needed.
               </p>
               <ButtonLink
                 href="/login-help"
@@ -232,7 +234,7 @@ export default function ContactPage() {
           <SectionHeading
             eyebrow="Support FAQ"
             title="Answers to common support questions"
-            description="These quick answers cover the customer-service questions that branded searchers usually mean when they look for eaglecast support."
+            description="These quick answers cover the customer-service questions that branded searchers usually mean when they look for EagleCast TV support."
           />
           <div className="mt-10 divide-y divide-line rounded-lg border border-line">
             {supportFaqs.map((faq) => (

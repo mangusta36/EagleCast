@@ -23,9 +23,9 @@ const instrument = localFont({
 });
 
 export const metadata: Metadata = buildMetadata({
-  title: "eaglecast | IPTV Streaming, Live TV, Sports & Entertainment",
+  title: "EagleCast TV | IPTV Streaming, Live TV, Sports & Entertainment",
   description:
-    "Discover eaglecast for live TV, sports, movies, supported devices, setup help, and a practical free-trial path.",
+    "Discover EagleCast TV for live TV, sports, movies, supported devices, setup help, and a practical trial path.",
   pathname: "/",
 });
 

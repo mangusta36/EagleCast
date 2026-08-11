@@ -2,9 +2,9 @@ import React from "react";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Privacy Policy | eaglecast",
+  title: "EagleCast TV Privacy Policy & Data Protection",
   description:
-    "Privacy policy and data protection principles for eaglecast customers.",
+    "Read the EagleCast TV privacy policy covering information collection, cookies, data use, sharing, security, retention and your privacy choices.",
   pathname: "/privacy-policy",
 });
 
@@ -17,7 +17,7 @@ export default function PrivacyPolicyPage() {
 
         <div className="space-y-4 border-t border-line pt-6 text-sm leading-relaxed text-ink-muted">
           <p>
-            eaglecast values your privacy. This Privacy Policy describes how
+            EagleCast TV values your privacy. This Privacy Policy describes how
             personal information may be collected, used, and protected when you
             request a trial, contact support, or choose a streaming package.
           </p>

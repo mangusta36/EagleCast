@@ -4,8 +4,8 @@ import Link from "next/link";
 const steps = [
   {
     number: "01",
-    title: "Request your free trial",
-    body: "Email the eaglecast team for 48 hours of full-package access before you pay.",
+    title: "Get Trial",
+    body: "Email the EagleCast TV team for trial access before you pay.",
   },
   {
     number: "02",
