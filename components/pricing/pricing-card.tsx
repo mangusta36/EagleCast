@@ -63,7 +63,6 @@ export function PricingCard({ plan }: PricingCardProps) {
 
       <div className="mt-auto pt-7">
         <div className="rounded-xl bg-panel-soft p-3.5 text-xs leading-5 text-ink-muted">
-          <p className="font-semibold text-ink">{plan.connectionCount}</p>
           <p>{plan.additionalConnectionPrice}</p>
         </div>
 

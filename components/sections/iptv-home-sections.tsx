@@ -126,9 +126,6 @@ export function PackagesSection() {
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-ink-subtle">
                 {plan.name}
               </p>
-              <h3 className="mt-3 text-xl font-black text-ink">
-                {plan.connectionCount}
-              </h3>
               <p className="mt-3 min-h-14 text-sm leading-6 text-ink-subtle">
                 {plan.description}
               </p>

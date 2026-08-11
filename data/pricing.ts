@@ -10,7 +10,6 @@ export interface PricingPlan {
   savings?: string;
   featured?: boolean;
   badge?: string;
-  connectionCount: string;
   additionalConnectionPrice: string;
   features: string[];
   ctaText: string;
@@ -26,7 +25,6 @@ export const PRICING_PLANS: PricingPlan[] = [
     price: "$37",
     monthlyEquivalent: "$12.33/mo",
     billingPeriod: "every 3 months",
-    connectionCount: "1 Device Included",
     additionalConnectionPrice: "+$10 for Extra Screen",
     features: [
       "6,000+ Premium Live TV Channels",
@@ -50,7 +48,6 @@ export const PRICING_PLANS: PricingPlan[] = [
     monthlyEquivalent: "$8.16/mo",
     billingPeriod: "every 6 months",
     savings: "Save 34% vs 3M rate",
-    connectionCount: "1 Device Included",
     additionalConnectionPrice: "+$15 for Extra Screen",
     features: [
       "6,000+ Premium Live TV Channels",
@@ -76,7 +73,6 @@ export const PRICING_PLANS: PricingPlan[] = [
     savings: "Save 55% vs short-term",
     featured: true,
     badge: "MOST POPULAR",
-    connectionCount: "1 Device Included",
     additionalConnectionPrice: "+$20 for Extra Screen",
     features: [
       "6,000+ Premium Live TV Channels",
@@ -102,7 +98,6 @@ export const PRICING_PLANS: PricingPlan[] = [
     billingPeriod: "every 2 years",
     savings: "Save 63% vs monthly",
     badge: "ULTIMATE SAVINGS",
-    connectionCount: "1 Device Included",
     additionalConnectionPrice: "+$30 for Extra Screen",
     features: [
       "6,000+ Premium Live TV Channels",
