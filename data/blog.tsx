@@ -1,3 +1,9 @@
+import { appleGuidePost } from "./blog-posts/apple-guide";
+import { appsShootoutPost } from "./blog-posts/apps-shootout";
+import { errorFixingGuidePost } from "./blog-posts/error-fixing-guide";
+import { tivimateGuidePost } from "./blog-posts/tivimate-guide";
+import { vpnGuidePost } from "./blog-posts/vpn-guide";
+
 export interface BlogTable {
   caption?: string;
   columns: readonly string[];
@@ -2734,6 +2740,11 @@ export const blogPosts: readonly BlogPost[] = [
       "best-devices-for-iptv",
     ],
   },
+  tivimateGuidePost,
+  appleGuidePost,
+  errorFixingGuidePost,
+  vpnGuidePost,
+  appsShootoutPost,
 ] as const;
 
 export function getBlogPost(slug: string) {

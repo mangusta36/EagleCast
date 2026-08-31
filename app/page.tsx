@@ -14,9 +14,9 @@ import {
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "EagleCast TV | Live IPTV Streaming Service",
+  title: "EagleCast TV | IPTV Streaming Service for Live TV, Sports & VOD",
   description:
-    "Stream live TV, sports, movies and series with EagleCast TV, plus catch-up, multi-screen access, device support and a trial before choosing a plan.",
+    "Discover EagleCast TV IPTV streaming for live channels, sports broadcasts, movies, series, and catch-up. Test setup with a trial across Smart TV, Firestick, and Android.",
   pathname: "/",
 });
 

@@ -4,9 +4,8 @@ import {
   ArrowRight,
   BriefcaseBusiness,
   Check,
-  CircleDollarSign,
   MessageCircle,
-  ShieldCheck,
+  Zap,
 } from "lucide-react";
 import { blogPosts } from "@/data/blog";
 import { contactInfo } from "@/data/contact";
@@ -15,79 +14,102 @@ import { PRICING_PLANS } from "@/data/pricing";
 const serviceItems = [
   [
     "Live TV Hub",
-    "Organized live channel access with a familiar guide workflow.",
+    "Organized live channel access covering international news, sports, and regional broadcasts with a familiar guide workflow.",
   ],
   [
     "Sports & Events",
-    "Prepare for match nights, PPV events, and live sports viewing.",
+    "Prepare for match nights, championship events, and live sports viewing with low-latency server routing.",
   ],
   [
     "Movies & Series",
-    "Browse entertainment categories for relaxed on-demand viewing.",
+    "Browse structured Video on Demand (VOD) entertainment libraries complete with poster art, ratings, and episode groupings.",
   ],
   [
     "Replay / VOD",
-    "Return to available content without relying only on the live moment.",
+    "Access time-shifted catch-up television to return to available broadcasts without relying only on the live moment.",
   ],
   [
     "EPG Program Guide",
-    "Move through channels and schedules with a structured guide.",
+    "Navigate channels, current showtimes, and upcoming programming with interactive XMLTV guide schedule grids.",
   ],
   [
     "Multi-device Access",
-    "Watch on Smart TV, Android, Firestick, iPhone, iPad, Windows, and boxes.",
+    "Watch on Smart TVs, Android TV, Firestick, iPhone, iPad, Windows PCs, and MAG set-top boxes.",
   ],
-  ["Reseller Workflows", "Support customer trials, renewals, and onboarding."],
+  [
+    "Reseller Workflows",
+    "Manage client account panels, issue trial lines, support renewals, and streamline customer onboarding.",
+  ],
   [
     "Setup Support",
-    "Get help with app choice, activation, troubleshooting, and renewals.",
+    "Get help with app selection, login input, portal activation, network calibration, and troubleshooting.",
   ],
 ] as const;
 
 const deviceItems = [
-  "Smart TV",
-  "Android",
-  "Firestick",
+  "Smart TV (Samsung/LG)",
+  "Android TV / Google TV",
+  "Firestick / Fire TV",
   "iPhone / iPad",
-  "Windows",
-  "MAG / TV Box",
+  "Windows PC",
+  "MAG / Formuler TV Box",
 ] as const;
 
 const trustItems = [
   [
-    "Live + VOD",
-    "Availability varies by package and region",
+    "Live + VOD Access",
+    "Structured channels and on-demand libraries",
     "text-brand-strong",
   ],
-  ["Guided setup", "Support for app and device preparation", "text-gold"],
-  ["4K-ready", "Where source and device support it", "text-brand-strong"],
-  ["5+ device families", "TV, mobile, laptop, sticks, boxes", "text-emerald"],
+  [
+    "Multi-Format Login",
+    "Support for Xtream Codes, M3U & MAC Portals",
+    "text-gold",
+  ],
+  [
+    "4K-Ready Playback",
+    "Where source and device hardware support it",
+    "text-brand-strong",
+  ],
+  [
+    "5+ Device Families",
+    "Smart TV, mobile, desktop, sticks, and boxes",
+    "text-emerald",
+  ],
 ] as const;
 
 const faqItems = [
   [
     "Can I try EagleCast TV before choosing a package?",
-    "Yes. Get Trial so support can confirm your app, internet connection, and preferred device before you choose a plan.",
+    "Yes. Request an EagleCast TV trial so our support team can confirm your preferred player application, device compatibility, and home internet connection before you select an official subscription plan.",
   ],
   [
     "Which devices work with EagleCast TV IPTV?",
-    "EagleCast TV supports common IPTV workflows for Smart TV, Android, Firestick-style devices, iOS, Windows, and compatible set-top boxes.",
+    "EagleCast TV supports common IPTV workflows across Smart TVs (Samsung Tizen, LG webOS, Android TV), Amazon Firestick, Android devices, iOS (iPhone/iPad), Windows computers, and MAG set-top boxes.",
+  ],
+  [
+    "What IPTV connection formats are supported by EagleCast TV?",
+    "EagleCast TV subscription lines support multi-format credential logins including Xtream Codes API (server URL, username, password), custom M3U/M3U8 playlist URLs, and Stalker MAC address portal links.",
   ],
   [
     "How does setup support work?",
-    "Share your device model, country, connection type, and preferred viewing categories. Support will point you toward the right setup path.",
+    "Share your device model, streaming application, and viewing priorities with support. Our technical team will guide you through app installation, credential entry, guide mapping, and player buffer settings.",
   ],
   [
     "Does EagleCast TV support 4K streaming?",
-    "EagleCast TV is 4K-ready where source availability, device capability, app performance, and internet speed all support higher-resolution playback.",
+    "EagleCast TV is 4K-ready where channel source availability, device GPU decoding, application settings, and home network throughput (25+ Mbps) support higher-resolution video playback.",
   ],
   [
-    "How many devices are included?",
-    "The listed packages include one device per subscription. Ask support about any current multi-device options before purchase.",
+    "What should I do if playback buffers or freezes?",
+    "First verify your home internet speed and latency. Use 5GHz Wi-Fi or Cat6 Ethernet, set custom public DNS servers (such as Cloudflare 1.1.1.1), enable hardware GPU decoding in your app, and follow our troubleshooting guide.",
+  ],
+  [
+    "How many devices are included per subscription?",
+    "Standard EagleCast TV packages include one active device connection per subscription line. Contact support if your household requires multi-screen options before purchase.",
   ],
   [
     "Does EagleCast TV offer reseller options?",
-    "Yes. EagleCast TV supports reseller-friendly workflows for onboarding, trials, renewals, and device guidance.",
+    "Yes. EagleCast TV provides reseller-friendly panel workflows for customer onboarding, trial generation, line renewals, and setup assistance.",
   ],
 ] as const;
 
@@ -100,11 +122,31 @@ export function PackagesSection() {
             EagleCast TV Packages
           </p>
           <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-tight tracking-tight text-ink">
-            Choose the plan that fits your viewing
+            Choose the plan that fits your viewing routine
           </h2>
           <p className="mt-4 text-base leading-7 text-ink-muted sm:text-lg">
-            Compare the available EagleCast TV packages, then use the trial to
-            confirm your setup before choosing.
+            Compare available EagleCast TV subscription packages, then test your
+            device setup with a trial before selecting your plan.
+          </p>
+          <p className="mt-3 text-sm leading-6 text-ink-subtle">
+            All plans include multi-format credential support (Xtream Codes API,
+            M3U playlists, MAC Portals), full access to live television and VOD
+            libraries, interactive EPG guide data, and direct technical support.
+            For custom duration inquiries or multi-screen setups, visit our{" "}
+            <Link
+              href="/pricing"
+              className="text-brand font-semibold hover:text-brand-strong"
+            >
+              pricing page
+            </Link>{" "}
+            or contact{" "}
+            <Link
+              href="/contact"
+              className="text-brand font-semibold hover:text-brand-strong"
+            >
+              EagleCast TV support
+            </Link>
+            .
           </p>
         </div>
 
@@ -176,23 +218,27 @@ export function EaglecastAtGlanceSection() {
   const factItems = [
     [
       "Service",
-      "IPTV streaming for live TV, sports, movies, series, and catch-up viewing.",
+      "IPTV streaming for live TV channels, sports broadcasts, movies, series, and catch-up viewing.",
+    ],
+    [
+      "Formats",
+      "Multi-format accounts supporting Xtream Codes API, M3U/M3U8 playlist URLs, and MAC address portals.",
     ],
     [
       "Devices",
-      "Smart TV, Android, Firestick, iPhone, iPad, Windows, and MAG / TV Box workflows.",
+      "Smart TV (Samsung/LG), Android TV, Firestick, iPhone, iPad, Windows PC, and MAG set-top boxes.",
     ],
     [
       "Trial",
-      "A trial is available so viewers can test setup before choosing a package.",
+      "A trial is available so viewers can test setup, app behavior, and network speeds before purchase.",
     ],
     [
       "Support",
-      "Customer support, login help, and portal help are available through the official support routes.",
+      "Customer support, login assistance, and portal help are accessible via official communication channels.",
     ],
     [
       "Reseller",
-      "Reseller options are available for onboarding, renewals, and customer account workflows.",
+      "Reseller panel options are available for account management, trial generation, and client renewals.",
     ],
   ] as const;
 
@@ -205,31 +251,77 @@ export function EaglecastAtGlanceSection() {
               What is EagleCast TV?
             </p>
             <h2 className="mt-4 text-[clamp(2rem,4.5vw,3rem)] font-black leading-tight tracking-tight text-ink">
-              A clear introduction to the EagleCast TV streaming service
+              A clear introduction to the EagleCast TV IPTV service
             </h2>
             <p className="mt-4 text-base leading-7 text-ink-muted sm:text-lg">
-              EagleCast TV is a subscription-based IPTV streaming service built
-              for people who want live TV, sports, movies, series, and catch-up
-              viewing in one place. Instead of relying on a cable box or
-              satellite installation, EagleCast TV works through compatible apps
-              and internet-connected devices, which gives viewers a more
-              flexible way to watch at home or while moving between screens.
+              EagleCast TV is a subscription-based Internet Protocol Television
+              (IPTV) streaming service built for viewers who want live TV,
+              sports events, movies, series, and catch-up entertainment in one
+              unified platform. Instead of relying on proprietary cable boxes or
+              satellite dish installations, EagleCast TV delivers video streams
+              directly over your broadband internet connection to compatible
+              applications on the screens you already own.
             </p>
             <p className="mt-4 text-base leading-7 text-ink-muted">
-              For most households, the real value is not only channel access. It
-              is the combination of live viewing, on-demand style browsing,
-              practical device support, and a setup path that can be tested
-              before purchase. That is why EagleCast TV puts the trial, device
-              guidance, and support conversation early in the process, so
-              viewers can confirm how the service behaves on the screen they
-              actually use.
+              Behind the scenes, IP video delivery relies on standardized network
+              protocols. EagleCast TV accounts support all major connection
+              methods—including dynamic Xtream Codes API database queries, custom
+              M3U and M3U8 playlist manifests, and hardware-bound Stalker MAC
+              address portals. Understanding how these connection formats work
+              helps viewers select the ideal setup for their hardware, as explained
+              in our detailed guide to{" "}
+              <Link
+                href="/blog/iptv-playlist-formats-m3u-xtream-codes-guide"
+                className="text-brand font-semibold hover:text-brand-strong"
+              >
+                IPTV playlist formats
+              </Link>
+              .
             </p>
             <p className="mt-4 text-base leading-7 text-ink-muted">
-              EagleCast TV also supports the broader workflows around the
-              service, including login help, portal help, renewals, and reseller
-              onboarding. Whether someone is brand new to IPTV or comparing a
-              better everyday setup, the goal is to make the service easier to
-              understand before they commit to a package.
+              For most households, evaluating a streaming provider requires
+              more than browsing a channel list. It involves verifying playback
+              stability, electronic program guide (EPG) accuracy, and customer
+              support assistance. That is why EagleCast TV provides a trial
+              option alongside comprehensive setup guides for{" "}
+              <Link
+                href="/login-help"
+                className="text-brand font-semibold hover:text-brand-strong"
+              >
+                login help
+              </Link>
+              ,{" "}
+              <Link
+                href="/portal-help"
+                className="text-brand font-semibold hover:text-brand-strong"
+              >
+                portal help
+              </Link>
+              , and{" "}
+              <Link
+                href="/services"
+                className="text-brand font-semibold hover:text-brand-strong"
+              >
+                service features
+              </Link>
+              .
+            </p>
+            <p className="mt-4 text-base leading-7 text-ink-muted">
+              Getting started is straightforward when supported by step-by-step documentation. Viewers can explore our comprehensive tutorial on{" "}
+              <Link
+                href="/tutorials/getting-started-with-eaglecast-tv"
+                className="text-brand font-semibold hover:text-brand-strong"
+              >
+                getting started with EagleCast TV
+              </Link>{" "}
+              to set up their streaming hardware, or review our{" "}
+              <Link
+                href="/tutorials/diy-troubleshooting-guide"
+                className="text-brand font-semibold hover:text-brand-strong"
+              >
+                DIY troubleshooting guide
+              </Link>{" "}
+              for network and buffer optimization.
             </p>
             <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
               <Link
@@ -242,25 +334,25 @@ export function EaglecastAtGlanceSection() {
                 href="/free-trial"
                 className="text-brand transition-colors hover:text-brand-strong"
               >
-                trial
+                Get Trial
               </Link>
               <Link
                 href="/contact"
                 className="text-brand transition-colors hover:text-brand-strong"
               >
-                EagleCast TV customer support
+                Customer Support
               </Link>
               <Link
                 href="/reseller"
                 className="text-brand transition-colors hover:text-brand-strong"
               >
-                EagleCast TV reseller options
+                Reseller Options
               </Link>
               <Link
                 href="/blog"
                 className="text-brand transition-colors hover:text-brand-strong"
               >
-                IPTV guides
+                IPTV Guides
               </Link>
             </div>
           </div>
@@ -305,15 +397,19 @@ export function WhyEagleCastSection() {
   const reasons = [
     [
       "Try before you commit",
-      "A trial helps confirm your device, app, and connection before you pick a package.",
+      "Use an EagleCast TV trial to test your device hardware, streaming app, and home network connection before committing to a package.",
     ],
     [
-      "Guided setup",
-      "Support helps viewers choose compatible apps, configure devices, and reduce avoidable friction.",
+      "Guided setup support",
+      "Our support team assists viewers with app selection, login inputs, portal binding, and buffer settings to eliminate setup friction.",
     ],
     [
-      "Watch on your screen",
-      "One streaming experience can support the living room TV, mobile viewing, and travel-friendly devices.",
+      "Watch across your screens",
+      "Enjoy a consistent viewing experience across living room Smart TVs, Firesticks, mobile phones, tablets, and desktop computers.",
+    ],
+    [
+      "EPG & Catch-up Replay",
+      "Stay connected to your favorite programming with interactive guide schedules and time-shifted catch-up television replay.",
     ],
   ] as const;
 
@@ -322,24 +418,39 @@ export function WhyEagleCastSection() {
       <div className="site-container section-pad">
         <div className="max-w-3xl">
           <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
-            Why viewers choose EagleCast TV
+            Why Viewers Choose EagleCast TV
           </p>
           <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-tight tracking-tight text-ink">
             A better IPTV experience starts with a better setup
           </h2>
           <p className="mt-4 text-base leading-7 text-ink-muted sm:text-lg">
-            EagleCast TV is designed around simple package choices, practical
-            setup preparation, and guidance for common device families.
+            EagleCast TV is designed around transparent plan choices, practical
+            setup preparation, multi-format login support, and dedicated guidance
+            for every major device family.
           </p>
           <p className="mt-4 text-base leading-7 text-ink-muted">
-            That matters because a good IPTV experience depends on more than a
-            plan name. EagleCast TV helps viewers connect the service to the
-            right device, test playback in real conditions, and get answers
-            about support, login, and trial steps before turning a trial into a
-            longer subscription.
+            Achieving smooth 4K streaming depends on multiple factors: backend
+            server infrastructure, client player app efficiency, local Wi-Fi
+            stability, and proper DNS configuration. EagleCast TV helps viewers
+            connect all these elements effectively. Learn more about self-service
+            troubleshooting in our{" "}
+            <Link
+              href="/tutorials/diy-troubleshooting-guide"
+              className="text-brand font-semibold hover:text-brand-strong"
+            >
+              DIY troubleshooting guide
+            </Link>{" "}
+            and discover how time-shifted viewing works in our{" "}
+            <Link
+              href="/tutorials/catchup-and-replay-explained"
+              className="text-brand font-semibold hover:text-brand-strong"
+            >
+              catchup and replay guide
+            </Link>
+            .
           </p>
         </div>
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 md:grid-cols-4">
           {reasons.map(([title, body], index) => (
             <article key={title} className="border-t border-line pt-6">
               <p className="text-4xl font-black tracking-tight text-brand/15">
@@ -366,25 +477,40 @@ export function IptvValueSection() {
             Complete IPTV Service
           </p>
           <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-tight tracking-tight text-ink">
-            Live TV, sports, movies and more in one service
+            Live TV, sports, movies and catch-up in one service
           </h2>
           <p className="mt-4 text-base leading-7 text-ink-muted sm:text-lg">
-            EagleCast TV is meant to cover the core viewing patterns that matter
-            most in a real household: live channels for everyday watching,
-            sports and event nights when timing matters, and entertainment
-            libraries for movies, series, and replay-based viewing. Keeping
-            those categories together inside one IPTV workflow makes it easier
-            to compare value across devices and routines instead of juggling
-            separate experiences.
+            EagleCast TV covers the core viewing habits of modern households:
+            live channels for everyday watching, sports broadcasts for match
+            nights, on-demand video libraries for movies and TV series, and
+            time-shifted catch-up television. Consolidating these categories into
+            one streamlined IPTV workflow eliminates the need for multiple
+            separate streaming subscriptions.
           </p>
           <p className="mt-4 text-base leading-7 text-ink-muted">
-            The better way to evaluate a service like EagleCast TV is to look at
-            how it performs across the content you actually care about. A
-            sports-first viewer may care most about stream stability and guide
-            navigation. A family may care more about how quickly the app opens,
-            whether movies and series are easy to browse, and how simple the
-            setup feels on the main TV. This section gives a practical picture
-            of the service areas viewers usually want to test first.
+            Whether you are exploring{" "}
+            <Link
+              href="/blog/what-is-iptv"
+              className="text-brand font-semibold hover:text-brand-strong"
+            >
+              what IPTV is
+            </Link>{" "}
+            or evaluating{" "}
+            <Link
+              href="/blog/iptv-vs-cable-streaming"
+              className="text-brand font-semibold hover:text-brand-strong"
+            >
+              IPTV vs cable streaming
+            </Link>
+            , understanding how channel guides and schedules operate is essential.
+            Our comprehensive guide to{" "}
+            <Link
+              href="/blog/what-is-iptv-epg"
+              className="text-brand font-semibold hover:text-brand-strong"
+            >
+              IPTV EPG
+            </Link>{" "}
+            explains how program guide schedule grids sync with player apps.
           </p>
         </div>
         <div className="mt-12 grid gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
@@ -420,50 +546,49 @@ export function DeviceTrustSection() {
             Device Compatibility
           </p>
           <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-tight tracking-tight text-ink">
-            Watch EagleCast TV on the devices you already use
+            Watch EagleCast TV on the devices you already own
           </h2>
           <p className="mt-4 max-w-xl text-base leading-7 text-ink-muted sm:text-lg">
-            Share your device during the trial request and support will guide
-            the right app and setup path.
+            Share your device during the trial request so support can recommend the
+            ideal application and installation walkthrough.
           </p>
           <p className="mt-4 max-w-xl text-base leading-7 text-ink-muted">
-            EagleCast TV supports common IPTV workflows for Smart TV apps,
-            Android devices, Firestick-style streaming hardware, iPhone and
-            iPad, Windows computers, and compatible TV boxes. That means many
-            viewers can start with the screen they already own instead of
-            rebuilding their setup from scratch.
+            EagleCast TV supports standard IPTV applications across Smart TVs
+            (Samsung Tizen, LG webOS, Android TV), Amazon Firestick / Fire TV
+            devices, Android smartphones and tablets, Apple iOS (iPhone & iPad),
+            Windows PCs, and MAG set-top boxes. Starting with your existing TV or
+            streaming device avoids purchasing unnecessary external hardware.
           </p>
           <p className="mt-4 max-w-xl text-base leading-7 text-ink-muted">
-            If you are deciding where to begin, the simplest approach is to test
-            the device you use most often, then compare setup guides for your
-            platform. You can review the{" "}
+            To choose the best setup for your screen, explore our detailed review of
+            the{" "}
             <Link
               href="/blog/best-devices-for-iptv"
-              className="text-brand hover:text-brand-strong"
+              className="text-brand font-semibold hover:text-brand-strong"
             >
               best devices for IPTV
             </Link>
-            , follow the{" "}
+            , follow our step-by-step{" "}
             <Link
               href="/blog/how-to-set-up-iptv-smart-tv"
-              className="text-brand hover:text-brand-strong"
+              className="text-brand font-semibold hover:text-brand-strong"
             >
               Smart TV setup guide
             </Link>
-            , or check the{" "}
+            , or consult our dedicated{" "}
             <Link
               href="/blog/how-to-set-up-iptv-fire-tv"
-              className="text-brand hover:text-brand-strong"
+              className="text-brand font-semibold hover:text-brand-strong"
             >
               Fire TV setup guide
             </Link>
-            before requesting an EagleCast TV trial.
+            .
           </p>
           <div className="mt-8 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-3">
             {deviceItems.map((device) => (
               <div
                 key={device}
-                className="rounded-lg border border-line bg-panel px-4 py-3 text-sm font-bold text-ink-muted shadow-sm transition hover:border-brand/45 hover:bg-[#EFF6FF]"
+                className="rounded-lg border border-line bg-panel px-4 py-3 text-xs font-bold text-ink-muted shadow-sm transition hover:border-brand/45 hover:bg-[#EFF6FF]"
               >
                 {device}
               </div>
@@ -491,23 +616,23 @@ export function HowItWorksSection() {
   const steps = [
     [
       "01",
-      "Choose how you want to watch",
-      "Start with the room, device, and type of viewing that matters most.",
+      "Choose your primary device",
+      "Select the room, television, or mobile screen you use most frequently.",
     ],
     [
       "02",
       "Test EagleCast TV with a trial",
-      "Use the trial to confirm login, guide behavior, and playback comfort.",
+      "Use the trial to verify credential login, guide loading, and stream quality.",
     ],
     [
       "03",
-      "Set up your compatible device",
-      "Follow the right app and device path with support if you need it.",
+      "Configure player app & network",
+      "Follow player setup guidance and optimize 5GHz Wi-Fi or Ethernet settings.",
     ],
     [
       "04",
-      "Choose the package that fits",
-      "Move to the plan that matches your routine once the setup works well.",
+      "Select a subscription package",
+      "Choose the 3, 6, 12, or 24-month package that fits your viewing routine.",
     ],
   ] as const;
 
@@ -516,7 +641,7 @@ export function HowItWorksSection() {
       <div className="site-container section-pad grid gap-10 lg:grid-cols-[0.82fr_1.18fr]">
         <div>
           <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
-            How EagleCast TV works
+            How EagleCast TV Works
           </p>
           <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-tight tracking-tight text-ink">
             A smoother IPTV setup starts with the right testing sequence
@@ -539,40 +664,42 @@ export function HowItWorksSection() {
           </div>
           <div className="space-y-5 text-base leading-8 text-ink-muted">
             <p>
-              EagleCast TV works best when viewers begin with the device and
-              room they actually use most. That keeps the trial grounded in real
-              conditions instead of ideal ones. Once the app is installed and
-              the login path is confirmed, test live TV, channel changes, guide
-              navigation, and normal viewing at the time of day when your
-              network is busiest. That tells you more than a feature list ever
-              will.
+              EagleCast TV works best when viewers begin with the device and room
+              they actually use most. That keeps your trial testing grounded in
+              real-world conditions. Once your player application is installed and
+              credentials are entered, test live channel switching, sports broadcasts,
+              and guide grids during peak household internet usage hours.
             </p>
             <p>
-              Streaming quality also depends on the connection feeding that
-              screen. A stable HD or 4K-capable setup usually needs more than
-              raw speed alone; router placement, Wi-Fi strength, and device
-              performance all shape the result. If you want clearer benchmarks,
-              review the guide on{" "}
+              Streaming performance depends directly on network infrastructure. A
+              stable 4K-ready setup requires consistent download throughput and low
+              latency. Review our technical guide on{" "}
               <Link
                 href="/blog/internet-speed-for-iptv"
-                className="text-brand hover:text-brand-strong"
+                className="text-brand font-semibold hover:text-brand-strong"
               >
                 internet speed for IPTV
               </Link>
-              . If playback is inconsistent, the{" "}
+              , follow our complete manual to{" "}
+              <Link
+                href="/blog/how-to-optimize-home-network-for-iptv-streaming"
+                className="text-brand font-semibold hover:text-brand-strong"
+              >
+                optimize your home network
+              </Link>
+              , and learn how to resolve stream freezing in our{" "}
               <Link
                 href="/blog/fix-iptv-buffering"
-                className="text-brand hover:text-brand-strong"
+                className="text-brand font-semibold hover:text-brand-strong"
               >
                 IPTV buffering guide
               </Link>
-              walks through the most common fixes.
+              .
             </p>
             <p>
-              After the first successful EagleCast TV session, keep a short note
-              of the device, app, and connection type that worked well. That
-              makes future support, renewals, and household setup changes much
-              easier to manage.
+              After your initial setup is confirmed, save your account details and
+              preferred player configuration. This ensures future line renewals, support
+              inquiries, and multi-device additions proceed smoothly.
             </p>
           </div>
         </div>
@@ -583,10 +710,10 @@ export function HowItWorksSection() {
 
 export function ResellerCtaSection() {
   const points = [
-    "Customer onboarding",
-    "Trial workflows",
-    "Renewal support",
-    "Device guidance",
+    "Customer account panels",
+    "Trial generation workflows",
+    "Subscription renewals",
+    "Device setup guidance",
   ] as const;
 
   return (
@@ -599,30 +726,27 @@ export function ResellerCtaSection() {
                 EagleCast TV Reseller
               </p>
               <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-tight tracking-tight text-ink">
-                Build your IPTV business with a cleaner workflow
+                Build your IPTV business with an organized workflow
               </h2>
               <p className="mt-4 text-base leading-7 text-[#475569] sm:text-lg">
-                Use a polished streaming brand foundation for trials, renewals,
-                setup questions, and customer onboarding.
+                Use a structured streaming brand foundation for customer trials,
+                subscription renewals, setup guidance, and account management.
               </p>
               <p className="mt-4 text-base leading-7 text-[#475569]">
-                The EagleCast TV reseller flow is designed for people who need a
-                cleaner process around customer communication rather than vague
-                promises. That includes explaining device compatibility, helping
-                new users begin with a trial, guiding them toward the right
-                setup article, and keeping renewals and portal questions inside
-                a more organized support path.
+                The EagleCast TV reseller program is built for partners who need
+                a transparent, reliable framework for managing customer
+                accounts. Instead of dealing with ambiguous support lines, our
+                reseller panel enables clean customer onboarding, rapid trial
+                creation, line management, and structured device setup help.
               </p>
               <p className="mt-4 text-base leading-7 text-[#475569]">
-                For teams handling multiple users, that structure can make the
-                difference between reactive troubleshooting and a repeatable
-                onboarding routine. The goal is to help resellers present
-                EagleCast TV more clearly, support customers more consistently,
-                and reduce avoidable setup confusion from the start.
+                Whether managing a few client accounts or building a dedicated customer
+                base, our reseller tools help you deliver consistent support, guide
+                app installations, and handle renewals efficiently.
               </p>
               <Link href="/reseller" className="btn-secondary mt-8">
                 <BriefcaseBusiness size={18} aria-hidden="true" />
-                Explore Reseller
+                Explore Reseller Options
               </Link>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -652,15 +776,13 @@ export function GuidesSection() {
               EagleCast TV Guides & Resources
             </p>
             <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-tight tracking-tight text-ink">
-              Popular EagleCast TV setup guides
+              Popular EagleCast TV setup & optimization guides
             </h2>
             <p className="mt-4 text-base leading-7 text-ink-muted">
-              These guides answer the questions most viewers ask before or just
-              after starting with EagleCast TV: what IPTV is, how it compares
-              with cable, which devices are easiest to use, how to set up a
-              Smart TV, and what to check when buffering interrupts playback.
-              They are written to help with real viewing decisions, not just
-              search terms.
+              Our educational guides answer key questions about IPTV streaming:
+              connection formats (Xtream Codes API, M3U, MAC Portals), home network
+              optimization, electronic program guides, Smart TV setup, Firestick
+              configuration, and buffer troubleshooting.
             </p>
           </div>
           <Link
@@ -675,30 +797,30 @@ export function GuidesSection() {
             />
           </Link>
         </div>
-        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
-          {blogPosts.slice(0, 5).map((post) => (
+        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {blogPosts.slice(0, 6).map((post) => (
             <article
               key={post.slug}
-              className="overflow-hidden rounded-lg border border-line bg-panel shadow-card transition hover:border-line-strong hover:shadow-soft"
+              className="overflow-hidden rounded-lg border border-line bg-panel shadow-card transition hover:border-line-strong hover:shadow-soft flex flex-col"
             >
               <div className="relative aspect-[16/9] bg-panel">
                 <Image
                   src={post.featuredImage.src}
                   alt={post.featuredImage.alt}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 20vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-white/10" />
               </div>
-              <div className="p-5">
+              <div className="p-5 flex flex-col flex-1">
                 <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-strong">
                   {post.category} · {post.readingTime}
                 </p>
                 <h3 className="mt-3 line-clamp-2 text-lg font-black leading-6 text-ink">
                   {post.title}
                 </h3>
-                <p className="mt-3 line-clamp-3 text-sm leading-6 text-ink-subtle">
+                <p className="mt-3 line-clamp-3 text-sm leading-6 text-ink-subtle flex-1">
                   {post.excerpt}
                 </p>
                 <Link
@@ -729,14 +851,9 @@ export function HomeFaqSection() {
             EagleCast TV IPTV FAQ
           </h2>
           <p className="mt-4 text-base leading-7 text-ink-muted">
-            Quick answers about IPTV streaming, apps, devices, trials, playback,
-            packages, support, and reseller options.
-          </p>
-          <p className="mt-4 text-base leading-7 text-ink-muted">
-            This EagleCast TV FAQ covers the questions people usually ask while
-            comparing the service, testing a trial, setting up a device,
-            troubleshooting internet issues, or deciding whether reseller
-            support fits their workflow.
+            Frequently asked questions about IPTV streaming, player applications,
+            supported devices, connection formats, trial setup, buffer troubleshooting,
+            and reseller options.
           </p>
         </div>
         <div className="mx-auto mt-10 max-w-4xl divide-y divide-line rounded-lg border border-line bg-panel shadow-card">
@@ -775,7 +892,7 @@ export function TrialFlowSection() {
               Try EagleCast TV before you subscribe.
             </h2>
             <p className="mt-2 text-sm leading-6 text-ink-muted">
-              Send your device and viewing priorities so support can guide the
+              Share your device and viewing priorities so support can guide your
               setup path.
             </p>
           </div>
@@ -798,27 +915,32 @@ export function FinalConversionCta() {
   return (
     <section className="bg-canvas-alt">
       <div className="site-container py-14">
-        <div className="rounded-lg border border-line bg-panel p-6 text-center md:p-10">
-          <p className="flex items-center justify-center gap-2 text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
-            <ShieldCheck size={16} aria-hidden="true" />
-            Trial-first setup
+        <div className="rounded-lg border border-brand/20 bg-panel p-8 text-center shadow-card md:p-12">
+          <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
+            Ready to Start?
           </p>
-          <h2 className="mx-auto mt-4 max-w-3xl text-3xl font-black tracking-tight text-ink sm:text-4xl">
-            Ready to test EagleCast TV on your screen?
+          <h2 className="mt-4 text-3xl font-black tracking-tight text-ink sm:text-4xl">
+            Stream Live TV, Sports & Entertainment with EagleCast TV
           </h2>
-          <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-ink-muted">
+            Request your trial line today to test setup on your Smart TV,
+            Firestick, Android, or set-top box before selecting a package.
+          </p>
+          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <a
               href={contactInfo.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-emerald"
+              className="btn-emerald min-h-12 px-8 text-sm uppercase tracking-wide"
             >
-              <MessageCircle size={18} aria-hidden="true" />
-              Get Trial
+              <Zap size={18} className="fill-current" aria-hidden="true" />
+              Get Trial Now
             </a>
-            <Link href="/#packages" className="btn-secondary">
-              <CircleDollarSign size={18} aria-hidden="true" />
-              Compare Packages
+            <Link
+              href="/#packages"
+              className="btn-secondary min-h-12 px-8 text-sm uppercase tracking-wide"
+            >
+              View Packages
             </Link>
           </div>
         </div>

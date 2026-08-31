@@ -27,24 +27,31 @@ export function HomeHero() {
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0)_48%,rgba(255,255,255,0.78)_100%)]" />
 
       <div className="site-container flex min-h-[640px] items-center py-16 md:min-h-[680px] md:py-20">
-        <div className="w-full max-w-[42rem]">
+        <div className="w-full max-w-[44rem]">
           <p className="flex items-center gap-2 text-[12px] font-black uppercase tracking-[0.16em] text-brand">
             <span className="h-px w-8 bg-gold" aria-hidden="true" />
             Stream with EagleCast TV
           </p>
 
-          <h1 className="mt-6 max-w-[12ch] text-4xl font-black leading-[1.02] tracking-tight text-ink sm:text-6xl lg:text-7xl">
+          <h1 className="mt-6 max-w-[14ch] text-4xl font-black leading-[1.02] tracking-tight text-ink sm:text-6xl lg:text-7xl">
             EagleCast TV.
             <span className="block text-brand-strong">
-              Live TV, Sports & Entertainment.
+              IPTV Streaming for Live TV, Sports & Entertainment.
             </span>
           </h1>
 
           <p className="mt-5 max-w-xl text-base leading-7 text-[#475569] sm:text-lg">
-            EagleCast TV is an IPTV streaming service for watching live TV,
-            sports, movies, series, and catch-up entertainment on compatible
-            devices. Get Trial, confirm your setup with EagleCast TV support,
-            and test the experience before choosing a package.
+            EagleCast TV is a subscription-based IPTV streaming service for
+            watching live television channels, sports broadcasts, movies,
+            series, and catch-up entertainment across compatible devices. Get a
+            trial to confirm your application setup, test your home network,
+            and evaluate stream performance before selecting an official plan.
+          </p>
+
+          <p className="mt-3 max-w-xl text-sm leading-6 text-ink-muted">
+            Our multi-format account credentials support Xtream Codes API, M3U
+            playlists, and MAG portals natively across Smart TVs, Firestick,
+            Android, iOS, and Windows platforms.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -81,7 +88,14 @@ export function HomeHero() {
           </p>
 
           <p className="mt-4 text-xs font-semibold text-ink-subtle">
-            Try your setup before choosing a package.
+            Explore our step-by-step{" "}
+            <Link
+              href="/tutorials/getting-started-with-eaglecast-tv"
+              className="text-brand underline hover:text-brand-strong"
+            >
+              getting started tutorial
+            </Link>{" "}
+            to configure your hardware before purchase.
           </p>
         </div>
       </div>
