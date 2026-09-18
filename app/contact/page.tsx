@@ -1,5 +1,9 @@
 import { MessageCircle } from "lucide-react";
 import { ContactForm } from "@/components/forms/contact-form";
+import {
+  BreadcrumbJsonLd,
+  FaqJsonLd,
+} from "@/components/seo/page-json-ld";
 import { ButtonLink } from "@/components/ui/button-link";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { buildWhatsappUrl } from "@/data/contact";
@@ -74,6 +78,18 @@ export default function ContactPage() {
         }}
       />
 
+      <FaqJsonLd
+        items={supportFaqs.map((faq) => ({
+          question: faq.question,
+          answer: faq.answer,
+        }))}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", item: "/" },
+          { name: "Contact", item: "/contact" },
+        ]}
+      />
       <section className="bg-canvas">
         <div className="site-container py-16 sm:py-20">
           <div className="max-w-3xl">

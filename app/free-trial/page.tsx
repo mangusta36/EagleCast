@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Check, Mail, MessageCircleMore, Send } from "lucide-react";
+import { BreadcrumbJsonLd } from "@/components/seo/page-json-ld";
 import { ButtonLink } from "@/components/ui/button-link";
 import { contactInfo } from "@/data/contact";
 import { pricingPlans } from "@/data/pricing";
@@ -57,6 +58,12 @@ export default async function FreeTrialPage({
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", item: "/" },
+          { name: "Free trial", item: "/free-trial" },
+        ]}
+      />
       <section className="border-b border-line bg-canvas-alt">
         <div className="site-container grid gap-12 py-14 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16 lg:py-24">
           <div>

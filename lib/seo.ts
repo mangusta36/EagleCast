@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "@/data/seo";
+import { buildVerification } from "@/components/seo/analytics-scripts";
 
 const DEFAULT_TITLE =
   "EagleCast TV | IPTV Streaming, Live TV, Sports & Entertainment";
@@ -18,7 +19,7 @@ export function buildMetadata(options: MetadataOptions = {}): Metadata {
     title = DEFAULT_TITLE,
     description = DEFAULT_DESCRIPTION,
     pathname = "/",
-    image = "/images/iptv-hero-tv-stage.png",
+    image = "/images/og-default.webp",
   } = options;
   const canonical = `${SITE_URL}${pathname}`;
 
@@ -26,6 +27,7 @@ export function buildMetadata(options: MetadataOptions = {}): Metadata {
     title,
     description,
     metadataBase: new URL(SITE_URL),
+    verification: buildVerification(),
     alternates: {
       canonical,
     },

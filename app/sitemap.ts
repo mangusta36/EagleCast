@@ -8,6 +8,7 @@ const routes = [
   "/free-trial",
   "/about",
   "/services",
+  "/pricing",
   "/reseller",
   "/contact",
   "/login-help",
@@ -21,10 +22,21 @@ const routes = [
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const tutorialRoutes = tutorials.map(({ slug }) => `/tutorials/${slug}`);
-  const blogRoutes = blogPosts.map(({ slug }) => `/blog/${slug}`);
-
-  return [...routes, ...tutorialRoutes, ...blogRoutes].map((route) => ({
+  const staticEntries: MetadataRoute.Sitemap = routes.map((route) => ({
     url: `${SITE_URL}${route}`,
   }));
+  const tutorialEntries: MetadataRoute.Sitemap = tutorials.map(
+    ({ slug, publishedAt }) => ({
+      url: `${SITE_URL}/tutorials/${slug}`,
+      lastModified: new Date(publishedAt),
+    }),
+  );
+  const blogEntries: MetadataRoute.Sitemap = blogPosts.map(
+    ({ slug, updatedAt }) => ({
+      url: `${SITE_URL}/blog/${slug}`,
+      lastModified: new Date(updatedAt),
+    }),
+  );
+
+  return [...staticEntries, ...tutorialEntries, ...blogEntries];
 }

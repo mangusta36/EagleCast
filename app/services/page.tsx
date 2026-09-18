@@ -6,7 +6,9 @@ import {
   Tv,
   type LucideIcon,
 } from "lucide-react";
+import Link from "next/link";
 import { CtaBand } from "@/components/sections/cta-band";
+import { BreadcrumbJsonLd } from "@/components/seo/page-json-ld";
 import { ButtonLink } from "@/components/ui/button-link";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -57,6 +59,12 @@ const packageItems = [
 export default function ServicesPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", item: "/" },
+          { name: "Services", item: "/services" },
+        ]}
+      />
       <PageHero
         eyebrow="What is included"
         title="The viewing features that come with every plan"
@@ -158,7 +166,26 @@ export default function ServicesPage() {
             </h2>
             <p className="mt-4 text-base leading-8 text-ink-muted">
               EagleCast TV lists support as available through its official
-              support contact options.
+              support contact options. Include your device, app, connection
+              type, and the exact message or symptom so the team can follow a
+              useful troubleshooting path.
+            </p>
+            <p className="mt-3 text-sm leading-7 text-ink-muted">
+              Start with the{" "}
+              <Link
+                href="/tutorials"
+                className="font-semibold text-brand hover:text-brand-strong"
+              >
+                setup tutorials
+              </Link>{" "}
+              for self-service guidance, or use the{" "}
+              <Link
+                href="/faq"
+                className="font-semibold text-brand hover:text-brand-strong"
+              >
+                FAQ
+              </Link>{" "}
+              for package, payment, and compatibility questions.
             </p>
           </div>
           <ButtonLink href="/contact">Contact support</ButtonLink>

@@ -2,15 +2,21 @@ import { HomeHero } from "@/components/sections/home-hero";
 import {
   DeviceTrustSection,
   EaglecastAtGlanceSection,
+  FinalConversionCta,
   GuidesSection,
   HomeFaqSection,
+  homeFaqItems,
+  HowItWorksSection,
   IptvValueSection,
   PackagesSection,
   ResellerCtaSection,
+  SetupChecklistSection,
+  SupportHelpSection,
+  TrialFlowSection,
   TrustStripSection,
   WhyEagleCastSection,
-  HowItWorksSection,
 } from "@/components/sections/iptv-home-sections";
+import { FaqJsonLd } from "@/components/seo/page-json-ld";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -23,6 +29,12 @@ export const metadata = buildMetadata({
 export default function Home() {
   return (
     <>
+      <FaqJsonLd
+        items={homeFaqItems.map(([question, answer]) => ({
+          question,
+          answer,
+        }))}
+      />
       <HomeHero />
       <EaglecastAtGlanceSection />
       <PackagesSection />
@@ -31,9 +43,13 @@ export default function Home() {
       <IptvValueSection />
       <DeviceTrustSection />
       <HowItWorksSection />
+      <SetupChecklistSection />
+      <SupportHelpSection />
       <ResellerCtaSection />
+      <TrialFlowSection />
       <GuidesSection />
       <HomeFaqSection />
+      <FinalConversionCta />
     </>
   );
 }

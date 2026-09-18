@@ -1,5 +1,10 @@
 import React from "react";
 import { FaqSection } from "@/components/sections/faq-section";
+import {
+  BreadcrumbJsonLd,
+  FaqJsonLd,
+} from "@/components/seo/page-json-ld";
+import { FAQS } from "@/data/faqs";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -12,6 +17,15 @@ export const metadata = buildMetadata({
 export default function FaqPage() {
   return (
     <div className="min-h-screen bg-canvas py-12">
+      <FaqJsonLd
+        items={FAQS.map((faq) => ({
+          question: faq.question,
+          answer: faq.answer,
+        }))}
+      />
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", item: "/" }, { name: "FAQ", item: "/faq" }]}
+      />
       <FaqSection />
     </div>
   );

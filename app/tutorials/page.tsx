@@ -1,4 +1,5 @@
 import { ArticleCard } from "@/components/sections/article-card";
+import { BreadcrumbJsonLd } from "@/components/seo/page-json-ld";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { PageHero } from "@/components/ui/page-hero";
@@ -18,6 +19,12 @@ export default function TutorialsPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", item: "/" },
+          { name: "Tutorials", item: "/tutorials" },
+        ]}
+      />
       <PageHero
         eyebrow="Guides and support"
         title="Practical reading for getting started with EagleCast TV"

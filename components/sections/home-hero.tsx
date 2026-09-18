@@ -7,9 +7,10 @@ import { contactInfo } from "@/data/contact";
 
 const trustItems = [
   "EagleCast TV Setup",
+  "24/7 Support Listed",
   "Fast Activation",
-  "4K Ready",
-  "Device Options",
+  "4K Ready Where Sources Allow",
+  "Multi-Format Login",
 ] as const;
 
 export function HomeHero() {

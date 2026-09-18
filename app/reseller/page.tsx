@@ -13,6 +13,10 @@ import {
 } from "lucide-react";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { SectionHeading } from "@/components/ui/section-heading";
+import {
+  BreadcrumbJsonLd,
+  FaqJsonLd,
+} from "@/components/seo/page-json-ld";
 import { buildWhatsappUrl } from "@/data/contact";
 import { FAQS } from "@/data/faqs";
 import { SITE_URL } from "@/data/seo";
@@ -171,6 +175,19 @@ export default function ResellerPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(resellerJsonLd).replace(/</g, "\\u003c"),
         }}
+      />
+
+      <FaqJsonLd
+        items={resellerFaqs.map((faq) => ({
+          question: faq.question,
+          answer: faq.answer,
+        }))}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", item: "/" },
+          { name: "Reseller", item: "/reseller" },
+        ]}
       />
 
       <section className="bg-canvas">

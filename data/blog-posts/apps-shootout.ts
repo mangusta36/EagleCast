@@ -4,16 +4,20 @@ const editorialAuthor = "EagleCast TV Editorial Team";
 
 export const appsShootoutPost: BlogPost = {
   slug: "best-iptv-apps-comparison-tivimate-smarters-xciptv",
-  title: "Best IPTV Apps Compared (2026): Tivimate vs IPTV Smarters Pro vs XCIPTV vs IBO Player",
-  seoTitle: "Best IPTV Apps Compared (2026): Tivimate vs Smarters vs XCIPTV vs IBO",
-        excerpt: "An exhaustive head-to-head comparison of the top 6 IPTV player applications. Compare Tivimate, IPTV Smarters Pro, XCIPTV, IBO Player, GSE Smart IPTV, and Smartone across UI speed, EPG grid layout, multi-screen modes, cross-platform availability, audio codec decoding, parental controls, and playlist format support.",
+  title:
+    "Best IPTV Apps Compared (2026): Tivimate vs IPTV Smarters Pro vs XCIPTV vs IBO Player",
+  seoTitle:
+    "Best IPTV Apps Compared (2026): Tivimate vs Smarters vs XCIPTV vs IBO",
+  excerpt:
+    "An exhaustive head-to-head comparison of the top 6 IPTV player applications. Compare Tivimate, IPTV Smarters Pro, XCIPTV, IBO Player, GSE Smart IPTV, and Smartone across UI speed, EPG grid layout, multi-screen modes, cross-platform availability, audio codec decoding, parental controls, and playlist format support.",
   deck: "Selecting the right IPTV player app determines whether your streaming experience feels like a fluid cable TV box or a clunky media player. We test and rate Tivimate, IPTV Smarters Pro, XCIPTV, IBO Player, GSE Smart IPTV, and Smartone across 10 critical performance metrics to reveal which app reigns supreme for your device.",
   category: "Buying Guides",
   publishedAt: "August 31, 2026",
   updatedAt: "August 31, 2026",
   author: editorialAuthor,
   readingTime: "30 min read",
-        metaDescription: "Which IPTV app is best in 2026? Read our ultimate head-to-head comparison of Tivimate, IPTV Smarters Pro, XCIPTV, and IBO Player across EPG, multi-screen, speed, and device support.",
+  metaDescription:
+    "Which IPTV app is best in 2026? Read our ultimate head-to-head comparison of Tivimate, IPTV Smarters Pro, XCIPTV, and IBO Player across EPG, multi-screen, speed, and device support.",
   primaryKeyword: "best iptv apps comparison",
   featuredImage: {
     src: "/images/blog/best-iptv-apps-shootout.webp",
@@ -21,19 +25,21 @@ export const appsShootoutPost: BlogPost = {
     photographer: "EagleCast TV Tech Lab",
     sourceUrl: "https://www.eaglecastv.online/",
   },
-  quickAnswer: "Tivimate is the best overall IPTV app for Firestick and Android TV devices, featuring an unmatched cable-style EPG guide, sub-second channel zapping, and up to 9-screen multi-view. IPTV Smarters Pro is the undisputed cross-platform winner for iOS, Apple TV, Windows, and Android. XCIPTV excels in VOD organization and built-in VPN support, while IBO Player is the premier player for LG WebOS and Samsung Tizen Smart TVs.",
+  quickAnswer:
+    "The best IPTV player depends on the device and viewing workflow. Tivimate is designed around Android TV and Fire TV guide navigation; IPTV Smarters supports a broader mix of platforms; XCIPTV emphasizes Android-based VOD and utility features; and IBO Player is commonly considered for LG and Samsung Smart TVs. Confirm current platform support and test the interface on your own device.",
   intro: [
-        "When you subscribe to an Internet Protocol Television (IPTV) service, your provider supplies the raw video streams, server links, and Electronic Program Guide (EPG) data feeds. However, how those channels are organized, searched, rendered, and displayed on your television depends entirely on the **IPTV Player App** you install.",
-        "The modern IPTV app ecosystem contains dozens of choices, but six applications dominate the market in 2026: **Tivimate IPTV Player**, **IPTV Smarters Pro**, **XCIPTV Player**, **IBO Player**, **GSE Smart IPTV**, and **Smartone IPTV**. Each app possesses distinct architectural strengths, unique interface designs, and varying device compatibility.",
-        "To help you choose the ideal player for your living room setup, the testing lab at [EagleCast TV](https://www.eaglecastv.online/) conducted an exhaustive 100-hour shootout. We benchmarked all six apps on Firestick 4K Max, Nvidia Shield Pro, Apple TV 4K, Samsung Tizen, LG WebOS, and Android smartphones. In this comparative review, we reveal how they perform across channel zapping speed, EPG rendering, multi-screen functionality, VOD catalog browsing, audio codec decoding, parental control security, remote control ergonomics, and ease of setup.",
-        "Evaluating app performance on your specific television operating system ensures that you select a video player engine capable of rendering 60fps live sports with zero frame drops.",
-        "Different streaming operating systems employ distinct hardware acceleration APIs: Fire OS and Android TV utilize ExoPlayer and MediaCodec, Apple tvOS relies on AVPlayer and Metal graphics, while LG WebOS and Samsung Tizen use HTML5 video tags with webOS media pipeline extensions.",
-        "a video player engine capable of rendering 60fps live sports with zero frame drops.",
+    "When you subscribe to an Internet Protocol Television (IPTV) service, your provider supplies the raw video streams, server links, and Electronic Program Guide (EPG) data feeds. However, how those channels are organized, searched, rendered, and displayed on your television depends entirely on the **IPTV Player App** you install.",
+    "The modern IPTV app ecosystem contains dozens of choices, but six applications dominate the market in 2026: **Tivimate IPTV Player**, **IPTV Smarters Pro**, **XCIPTV Player**, **IBO Player**, **GSE Smart IPTV**, and **Smartone IPTV**. Each app possesses distinct architectural strengths, unique interface designs, and varying device compatibility.",
+    "This comparison looks at six IPTV players by platform support, EPG layout, multi-screen features, VOD browsing, playback options, parental controls, remote ergonomics, and setup workflow. App versions, device hardware, playlist size, and network conditions can all change performance, so use the comparison to narrow your choices and test the finalists on your own screen.",
+    "Evaluating app performance on your specific television operating system ensures that you select a video player engine capable of rendering 60fps live sports with zero frame drops.",
+    "Different streaming operating systems employ distinct hardware acceleration APIs: Fire OS and Android TV utilize ExoPlayer and MediaCodec, Apple tvOS relies on AVPlayer and Metal graphics, while LG WebOS and Samsung Tizen use HTML5 video tags with webOS media pipeline extensions.",
+    "a video player engine capable of rendering 60fps live sports with zero frame drops.",
   ],
   sections: [
     {
       id: "app-landscape-overview",
-      title: "Evaluating 2026 IPTV Streaming Engines: Operating System Categories",
+      title:
+        "Evaluating 2026 IPTV Streaming Engines: Operating System Categories",
       paragraphs: [
         "Evaluating app performance on low-power streaming devices like the Fire TV Stick Lite requires measuring RAM usage during EPG database indexing. Tivimate maintains an ultra-low memory footprint of under 180 MB, whereas feature-heavy media centers can consume over 400 MB of RAM.",
         "In addition, playlist migration between applications is streamlined when providers utilize the Xtream Codes API standard. Users simply input their Server URL, Username, and Password into the new player app, and all channel categories, VOD movie folders, and EPG feeds populate automatically within seconds.",
@@ -48,7 +54,7 @@ export const appsShootoutPost: BlogPost = {
         "Its built-in Speed Test tool allows subscribers to benchmark server connection bandwidth directly from the app home screen.",
         "Before diving into head-to-head metrics, it is crucial to understand that IPTV player apps fall into two primary operating categories:1. Dedicated Android OS Players (Tivimate & XCIPTV): Built exclusively for Android TV, Google TV, and Fire OS. These apps leverage deep hardware integration for multi-view and advanced video decoders.",
         "2. Cross-Platform Universal Apps (IPTV Smarters Pro, IBO Player, GSE Smart IPTV, Smartone): Engineered to run across diverse operating systems including Apple iOS, tvOS, LG WebOS, Samsung Tizen, and Windows PC.",
-        "Selecting an app optimized for your television OS prevents software crashes and reduces RAM consumption by up to 40%.",
+        "Selecting an app built for your television OS can improve remote navigation and reduce compatibility problems, although memory use still varies by version, playlist, and device.",
         "Understanding player rendering architecture is essential: apps that use native hardware decoders (such as ExoPlayer or AVPlayer) deliver significantly lower CPU temperatures on streaming sticks.",
         "Furthermore, stream initialization speed depends heavily on how efficiently each application parses index manifests. Apps with optimized XMLTV parsers load 7-day program listings in under 3 seconds.",
         "When selecting an IPTV app, multi-playlist management should also be evaluated. Power users who subscribe to dual server lines require an app capable of aggregating channels into a single master EPG grid without duplicating guide entries.",
@@ -56,12 +62,12 @@ export const appsShootoutPost: BlogPost = {
         "If you want to test how these player applications perform on your hardware before purchasing a long-term plan, request a [free 24-hour trial playlist](/free-trial) to verify stream stability.",
         "Comparing user interface layouts across player apps is essential for finding the right software for your household. While power users prefer technical grid views, family members often prefer card dashboards with clear category icons.",
         "Cross-platform synchronization should also be considered if you stream across multiple screens. Apps like IPTV Smarters Pro allow you to use a single login profile across Android, iOS, Windows, and Smart TVs.",
-        
       ],
     },
     {
       id: "contender-tivimate",
-      title: "Contender 1: Tivimate IPTV Player (The Power User's Cable-Style Interface)",
+      title:
+        "Contender 1: Tivimate IPTV Player (The Power User's Cable-Style Interface)",
       paragraphs: [
         "Tivimate has earned a legendary reputation among streaming enthusiasts for one simple reason: it delivers the closest experience to a traditional, high-end digital cable box available on streaming hardware.",
         "Its native ExoPlayer video engine enables sub-second channel zapping and smooth Auto Frame Rate (AFR) matching during live sports broadcasts.",
@@ -70,7 +76,6 @@ export const appsShootoutPost: BlogPost = {
         "Power users can also configure Tivimate to back up entire playlist settings and channel favorites to Google Drive or local SMB network drives for easy deployment across secondary household TVs.",
         "Tivimate's picture-in-picture mode allows users to monitor a secondary sports broadcast in a small preview window while exploring the main channel guide.",
         "Its advanced Auto Frame Rate (AFR) feature dynamically switches display refresh rates between 50Hz, 59.94Hz, and 60Hz to eliminate motion judder during European soccer or American football broadcasts.",
-        
       ],
       bullets: [
         "Pros — Unmatched EPG Timeline: Displays a multi-day grid with seamless scrolling and fast program loading.",
@@ -82,7 +87,8 @@ export const appsShootoutPost: BlogPost = {
     },
     {
       id: "contender-smarters",
-      title: "Contender 2: IPTV Smarters Pro (The Cross-Platform Versatility Champion)",
+      title:
+        "Contender 2: IPTV Smarters Pro (The Cross-Platform Versatility Champion)",
       paragraphs: [
         "IPTV Smarters Pro is the most widely downloaded IPTV application on planet Earth. Its clean, card-style dashboard makes it accessible for beginners while supporting advanced features for experienced viewers.",
         "In Smarters Pro, you can switch between 4 different video player engines (Native, VLC, ExoPlayer, or System Player) to resolve device-specific audio codec drops.",
@@ -91,7 +97,6 @@ export const appsShootoutPost: BlogPost = {
         "If you encounter missing credentials or login parameter errors when configuring Smarters Pro, review our [login help tutorial](/login-help).",
         "IPTV Smarters Pro supports external video player integration, allowing users to pass video streams to external apps like MX Player or VLC for advanced audio equalization.",
         "Its built-in Speed Test tool allows subscribers to benchmark server connection bandwidth directly from the app home screen.",
-        
       ],
       bullets: [
         "Pros — Universal Availability: Runs natively on Android, Firestick, iOS (iPhone/iPad), Apple TV (tvOS), Windows PC, macOS, LG WebOS, and Samsung Tizen.",
@@ -103,7 +108,8 @@ export const appsShootoutPost: BlogPost = {
     },
     {
       id: "contender-xciptv",
-      title: "Contender 3: XCIPTV Player (The Feature-Rich VOD & Catch-up Powerhouse)",
+      title:
+        "Contender 3: XCIPTV Player (The Feature-Rich VOD & Catch-up Powerhouse)",
       paragraphs: [
         "XCIPTV is a favorite among IPTV providers and resellers because of its bold, modern media interface, built-in EXO player integration, and built-in VPN client compatibility.",
         "XCIPTV includes a built-in internet speed test tool that allows users to benchmark their server download speeds directly from the player interface.",
@@ -120,7 +126,8 @@ export const appsShootoutPost: BlogPost = {
     },
     {
       id: "contender-ibo-player",
-      title: "Contender 4: IBO Player (The Smart TV Specialist for WebOS & Tizen)",
+      title:
+        "Contender 4: IBO Player (The Smart TV Specialist for WebOS & Tizen)",
       paragraphs: [
         "Smart TV app stores (LG Content Store and Samsung App Store) enforce strict approval guidelines. IBO Player has emerged as the premier paid player application for LG and Samsung Smart TV owners.",
         "Its web portal management interface allows users to update playlists and EPG links from a computer without typing long URLs on a TV remote.",
@@ -149,7 +156,8 @@ export const appsShootoutPost: BlogPost = {
       cta: {
         variant: "trial",
         title: "Test All Apps With EagleCast TV Credentials",
-        description: "Request a 24-hour trial playlist to test Tivimate, Smarters, XCIPTV, or IBO Player on your home device.",
+        description:
+          "Request a 24-hour trial playlist to test Tivimate, Smarters, XCIPTV, or IBO Player on your home device.",
         href: "/free-trial",
         label: "Get 24-Hour Free Trial Playlist",
       },
@@ -158,56 +166,74 @@ export const appsShootoutPost: BlogPost = {
       id: "head-to-head-matrix",
       title: "Comprehensive Feature Matrix: Comparing Top 6 IPTV Apps",
       paragraphs: [
-        "Below is a direct side-by-side technical evaluation of all six applications across 8 key criteria.",
+        "Below is a side-by-side feature overview. App availability, limits, and pricing can change, so verify current details with the app publisher before purchasing.",
       ],
       table: {
         caption: "Ultimate IPTV App Comparison Matrix (2026)",
-        columns: ["Feature / Benchmark",
-        "Tivimate IPTV Player",
-        "IPTV Smarters Pro",
-        "XCIPTV Player",
-        "IBO Player"],
+        columns: [
+          "Feature / Benchmark",
+          "Tivimate IPTV Player",
+          "IPTV Smarters Pro",
+          "XCIPTV Player",
+          "IBO Player",
+        ],
         rows: [
-          ["Platform Availability",
-        "Android TV, Fire OS",
-        "Android, Fire OS, iOS, tvOS, WebOS, Tizen, PC",
-        "Android TV, Fire OS",
-        "LG WebOS, Samsung Tizen, Android"],
-          ["Channel Zapping Speed",
-        "0.4 Seconds (Instant)",
-        "0.8 Seconds (Fast)",
-        "0.7 Seconds (Fast)",
-        "0.9 Seconds (Good)"],
-          ["EPG Grid Layout",
-        "10/10 (Cable-Style Grid)",
-        "8.0/10 (Category Cards)",
-        "8.5/10 (Modern Grid)",
-        "8.0/10 (Standard List)"],
-          ["Multi-Screen Max Limit",
-        "Up to 9 Streams",
-        "Up to 4 Streams",
-        "Up to 4 Streams",
-        "2 Streams (Side-by-Side)"],
-          ["VOD / Series Layout",
-        "7.5/10 (Basic Posters)",
-        "9.0/10 (Rich Metadata)",
-        "9.5/10 (Trailer & Cast)",
-        "8.0/10 (Standard Grid)"],
-          ["Xtream Codes API",
-        "Full Native Support",
-        "Full Native Support",
-        "Full Native Support",
-        "Full Native Support"],
-          ["M3U / M3U8 Support",
-        "Full Support",
-        "Full Support",
-        "Full Support",
-        "Full Support"],
-          ["Pricing Model",
-        "Free / $9.99/yr Premium",
-        "Free / Optional Pro",
-        "100% Free",
-        "7-Day Free / ~$8 One-Time"],
+          [
+            "Platform Availability",
+            "Android TV, Fire OS",
+            "Android, Fire OS, iOS, tvOS, WebOS, Tizen, PC",
+            "Android TV, Fire OS",
+            "LG WebOS, Samsung Tizen, Android",
+          ],
+          [
+            "Channel Switching",
+            "Varies by device and stream",
+            "Varies by device and stream",
+            "Varies by device and stream",
+            "Varies by TV and stream",
+          ],
+          [
+            "EPG Layout",
+            "Cable-style grid",
+            "Category and guide views",
+            "Modern guide view",
+            "Smart TV guide view",
+          ],
+          [
+            "Multi-Screen Max Limit",
+            "Up to 9 Streams",
+            "Up to 4 Streams",
+            "Up to 4 Streams",
+            "2 Streams (Side-by-Side)",
+          ],
+          [
+            "VOD / Series Layout",
+            "Poster grid",
+            "Metadata-rich cards",
+            "Poster, trailer, and cast views",
+            "Standard Smart TV grid",
+          ],
+          [
+            "Xtream Codes API",
+            "Full Native Support",
+            "Full Native Support",
+            "Full Native Support",
+            "Full Native Support",
+          ],
+          [
+            "M3U / M3U8 Support",
+            "Full Support",
+            "Full Support",
+            "Full Support",
+            "Full Support",
+          ],
+          [
+            "Pricing Model",
+            "Free / $9.99/yr Premium",
+            "Free / Optional Pro",
+            "100% Free",
+            "7-Day Free / ~$8 One-Time",
+          ],
         ],
       },
     },
@@ -226,11 +252,11 @@ export const appsShootoutPost: BlogPost = {
     },
     {
       id: "epg-and-zapping-speed",
-      title: "EPG Rendering, Channel Zapping Speed, and Buffering Management Compared",
+      title:
+        "EPG Rendering, Channel Zapping Speed, and Buffering Management Compared",
       paragraphs: [
-        "In our laboratory benchmarking tests, **Tivimate** achieved the fastest channel zapping speed, switching between 1080p 60fps sports channels in just 400 milliseconds when connected to our high-speed [EagleCast TV network](/services).",
-        "**XCIPTV** and **IPTV Smarters Pro** followed closely at 0.7–0.8 seconds. **IBO Player** averaged 0.9 seconds on LG WebOS Smart TVs, which is exceptionally fast for a Smart TV operating system.",
-        "Regarding EPG parsing, Tivimate and XCIPTV process 7-day XMLTV files in under 3 seconds, whereas Smarters Pro can take up to 8 seconds on initial playlist import.",
+        "Channel switching and EPG loading vary with device processing power, app version, playlist size, guide source, network latency, and the stream itself. Tivimate is often favored for a television-focused guide on Android-based devices, while Smarters, XCIPTV, and IBO Player may fit users who prioritize different platforms or layouts.",
+        "Compare the apps using the same account and device. Time several channel changes, reopen the guide after a restart, and check whether navigation remains responsive after the complete playlist and EPG have loaded.",
       ],
     },
     {
@@ -273,7 +299,8 @@ export const appsShootoutPost: BlogPost = {
       cta: {
         variant: "packages",
         title: "Ready to Experience Premium IPTV Streaming?",
-        description: "Pair your favorite IPTV player app with EagleCast TV's high-speed anti-freeze stream subscriptions.",
+        description:
+          "Pair your favorite IPTV player app with EagleCast TV's high-speed anti-freeze stream subscriptions.",
         href: "/pricing",
         label: "View All Subscription Packages",
       },
@@ -296,16 +323,14 @@ export const appsShootoutPost: BlogPost = {
       title: "VOD Catalog Indexing Speed, Poster Caching & Metadata Shootout",
       paragraphs: [
         "For subscribers who frequently watch Video-on-Demand (VOD) movies and TV series archives, catalog indexing speed and metadata presentation are critical performance factors.",
-        "In our benchmark tests across a VOD library containing 20,000 movies and 5,000 series, **XCIPTV Player** finished indexing all poster art thumbnails and IMDb rating metadata in just 3.2 seconds.",
-        "**IPTV Smarters Pro** indexed the library in 5.1 seconds, displaying clear episode descriptions, cast lists, and YouTube trailer popups directly within the app interface.",
-        "**Tivimate** parsed the VOD database in 4.0 seconds. While Tivimate's VOD poster grid is clean and fast, XCIPTV and Smarters Pro provide superior movie trailer previews and episode tracking functionality.",
-        "**IBO Player** indexed the VOD catalog in 6.2 seconds on LG WebOS Smart TVs, leveraging local Smart TV storage to cache movie poster art for fast offline navigation.",
+        "Large VOD libraries can expose differences in indexing, artwork caching, search, and episode navigation. The result depends heavily on catalog size, metadata quality, storage, memory, and app version, so exact loading times from one setup would not predict another.",
+        "XCIPTV and IPTV Smarters emphasize poster-led browsing and metadata, while Tivimate uses a simpler library presentation and IBO Player is oriented toward Smart TV workflows. Test search, series navigation, and reopening speed with the account you actually plan to use.",
       ],
       bullets: [
-        "XCIPTV (VOD Score: 9.5/10): Best poster art presentation, built-in trailer player, and IMDb cast info.",
-        "IPTV Smarters Pro (VOD Score: 9.0/10): Excellent episode tracking, search filtering, and multi-subtitles.",
-        "Tivimate (VOD Score: 8.0/10): Fast indexing speed, but simpler VOD metadata presentation.",
-        "IBO Player (VOD Score: 8.0/10): Good Smart TV poster caching, but lacks built-in trailer previews.",
+        "XCIPTV: Emphasizes poster art, trailers, and cast information where the supplied metadata supports them.",
+        "IPTV Smarters Pro: Offers episode tracking, search filters, and subtitle controls in supported versions.",
+        "Tivimate: Uses a simpler VOD presentation alongside its television-focused live guide.",
+        "IBO Player: Provides a Smart TV-oriented catalog interface; available metadata varies by playlist and version.",
       ],
     },
     {
@@ -325,37 +350,44 @@ export const appsShootoutPost: BlogPost = {
         "Summary of Replay Features: For users who rely heavily on past TV archives, Tivimate provides the most natural cable-like catch-up navigation experience directly from the main EPG grid overlay.",
         "Furthermore, Tivimate allows users to schedule upcoming live broadcast recordings directly to external USB drives or network NAS storage, turning your streaming stick into a full-fledged cloud DVR set-top box.",
       ],
-    }
+    },
   ],
   faqs: [
     {
       question: "Can I use the same IPTV subscription on multiple apps?",
-      answer: "Yes. Your subscription credentials (Server URL, Username, Password, or M3U link) work across all IPTV apps. However, your subscription plan dictates how many devices can stream simultaneously.",
+      answer:
+        "Yes. Your subscription credentials (Server URL, Username, Password, or M3U link) work across all IPTV apps. However, your subscription plan dictates how many devices can stream simultaneously.",
     },
     {
       question: "Is Tivimate really worth paying for over free apps?",
-      answer: "For Firestick and Android TV users, yes. Tivimate's cable-style EPG grid, sub-second channel zapping speed, and multi-view capabilities make it significantly superior to free alternatives.",
+      answer:
+        "For Firestick and Android TV users, yes. Tivimate's cable-style EPG grid, sub-second channel zapping speed, and multi-view capabilities make it significantly superior to free alternatives.",
     },
     {
       question: "Why can't I find Tivimate on my LG or Samsung Smart TV?",
-      answer: "Tivimate is developed exclusively for Android TV and Fire OS. It cannot run on LG WebOS or Samsung Tizen OS. For Smart TVs, we recommend installing IBO Player or IPTV Smarters Pro.",
+      answer:
+        "Tivimate is developed exclusively for Android TV and Fire OS. It cannot run on LG WebOS or Samsung Tizen OS. For Smart TVs, we recommend installing IBO Player or IPTV Smarters Pro.",
     },
     {
       question: "Which app uses the least memory on older Firesticks?",
-      answer: "Tivimate and IBO Player have the lightest memory footprints and run smoothly even on entry-level streaming sticks with 1 GB of RAM.",
+      answer:
+        "Tivimate and IBO Player have the lightest memory footprints and run smoothly even on entry-level streaming sticks with 1 GB of RAM.",
     },
     {
       question: "Do all 4 apps support Xtream Codes API logins?",
-      answer: "Yes! All four apps (Tivimate, IPTV Smarters Pro, XCIPTV, and IBO Player) fully support Xtream Codes API logins alongside M3U playlist URLs.",
+      answer:
+        "Yes! All four apps (Tivimate, IPTV Smarters Pro, XCIPTV, and IBO Player) fully support Xtream Codes API logins alongside M3U playlist URLs.",
     },
     {
       question: "Which app has the best parental control features?",
-      answer: "IPTV Smarters Pro and Tivimate both offer robust PIN-protected parental controls to lock specific adult or premium channel categories.",
+      answer:
+        "IPTV Smarters Pro and Tivimate both offer robust PIN-protected parental controls to lock specific adult or premium channel categories.",
     },
     {
       question: "Can I watch catch-up TV archives on all these apps?",
-      answer: "Yes. Tivimate, Smarters Pro, XCIPTV, and IBO Player all support catch-up TV playback provided your IPTV service includes catch-up archives.",
-    }
+      answer:
+        "Yes. Tivimate, Smarters Pro, XCIPTV, and IBO Player all support catch-up TV playback provided your IPTV service includes catch-up archives.",
+    },
   ],
   sources: [
     {
@@ -365,13 +397,13 @@ export const appsShootoutPost: BlogPost = {
     {
       label: "EagleCast TV Device Compatibility Guide",
       href: "https://www.eaglecastv.online/#devices",
-    }
+    },
   ],
   relatedSlugs: [
-        "tivimate-iptv-player-setup-guide",
-        "how-to-set-up-iptv-smart-tv",
-        "how-to-set-up-iptv-fire-tv",
-        "best-devices-for-iptv",
-        "iptv-playlist-formats-m3u-xtream-codes-guide",
+    "tivimate-iptv-player-setup-guide",
+    "how-to-set-up-iptv-smart-tv",
+    "how-to-set-up-iptv-fire-tv",
+    "best-devices-for-iptv",
+    "iptv-playlist-formats-m3u-xtream-codes-guide",
   ],
 };

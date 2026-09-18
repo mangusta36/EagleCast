@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
+import { BreadcrumbJsonLd } from "@/components/seo/page-json-ld";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { tutorials } from "@/data/tutorials";
@@ -23,26 +24,35 @@ const guideSections: Record<string, readonly GuideSection[]> = {
       id: "describe-the-issue",
       title: "Describe the issue with useful context",
       paragraphs: [
-        "Start by identifying the device you are using and whether the problem concerns setup, billing, or a technical issue. If you have an order or account reference, include it when you contact support.",
+        "Start by identifying the device and app you are using, then write down exactly what happens. Note whether the issue affects one channel or the whole service, whether it occurs on Wi-Fi or Ethernet, and whether another device behaves differently. If you have an order or account reference, include it when you contact support.",
       ],
       bullets: [
         "Name the device type",
-        "Describe what you need help with",
+        "Name the app and copy the exact error message",
+        "Explain whether the issue affects one item or everything",
         "Include an order or account reference when available",
+      ],
+    },
+    {
+      id: "basic-checks",
+      title: "Run a short, controlled check",
+      paragraphs: [
+        "Restart the app and device, confirm that other internet services work, and test one different channel or item. If possible, compare Wi-Fi with Ethernet or a second network. Change one thing at a time so the result shows which part of the setup may be responsible.",
+        "For buffering and network symptoms, use the [buffering diagnosis guide](/blog/fix-iptv-buffering). For a named login, authorization, playback, or timeout message, use the [error-specific troubleshooting guide](/blog/ultimate-iptv-error-fixing-troubleshooting-guide).",
       ],
     },
     {
       id: "support-options",
       title: "Use the published support options",
       paragraphs: [
-        "EagleCast TV lists support as available 24/7 for setup, billing, and technical assistance. The contact page brings the support email and message form together.",
+        "EagleCast TV lists support as available 24/7 for setup, billing, and technical assistance. The contact page brings the support email and message form together. Share the checks you completed and the result of each one so support can continue from useful evidence instead of repeating the first steps.",
       ],
     },
     {
       id: "trial-check",
       title: "Review the service during the trial",
       paragraphs: [
-        "The EagleCast TV trial gives you access to the full package before choosing a paid term. Use it to review EagleCast TV on the screen you expect to use most often.",
+        "The EagleCast TV trial gives you access to the full package before choosing a paid term. Use it to review EagleCast TV on the screen and network you expect to use most often. Check guide loading, live playback, catch-up, and reopening the app before comparing plans.",
       ],
     },
   ],
@@ -52,6 +62,7 @@ const guideSections: Record<string, readonly GuideSection[]> = {
       title: "Begin with the EagleCast TV trial",
       paragraphs: [
         "Request trial access from the EagleCast TV support team before choosing a paid plan. The trial covers the full package, including live TV, sports, movies, catch-up, and multi-screen viewing.",
+        "When you request access, include the device you want to use first. Support can then point you toward a compatible app and the relevant setup path.",
       ],
     },
     {
@@ -59,6 +70,7 @@ const guideSections: Record<string, readonly GuideSection[]> = {
       title: "Choose the screen you want to try first",
       paragraphs: [
         "The supported-device list includes smart TVs, Android and iOS devices, Fire TV, computers, and tablets. Include your preferred device when requesting access so the team can provide relevant setup guidance.",
+        "Install apps from the device's official app source when available, keep the operating system current, and enter credentials exactly as provided. The [device setup guides](/blog) cover Smart TV, Fire TV, Apple, and player-specific workflows.",
       ],
     },
     {
@@ -76,6 +88,7 @@ const guideSections: Record<string, readonly GuideSection[]> = {
       title: "What catch-up and replay add",
       paragraphs: [
         "EagleCast TV lists catch-up and replay access for up to two days. The feature is intended for returning to content you missed instead of relying only on the live moment.",
+        "Availability can depend on the channel and guide data. In a compatible app, look for a replay, clock, or catch-up marker beside earlier programs rather than assuming every listing can be replayed.",
       ],
     },
     {
@@ -89,7 +102,7 @@ const guideSections: Record<string, readonly GuideSection[]> = {
       id: "need-help",
       title: "Get help with a specific device",
       paragraphs: [
-        "For setup or technical questions about a supported screen, use the EagleCast TV contact page. Support is listed as available 24/7.",
+        "For setup or technical questions about a supported screen, use the EagleCast TV contact page. Support is listed as available 24/7. Include the device, app, channel or program, and the time shown in the guide so the issue can be reviewed with useful context.",
       ],
     },
   ],
@@ -133,6 +146,13 @@ export default async function TutorialPage({ params }: TutorialPageProps) {
 
   return (
     <article className="bg-canvas">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", item: "/" },
+          { name: "Tutorials", item: "/tutorials" },
+          { name: tutorial.title, item: `/tutorials/${tutorial.slug}` },
+        ]}
+      />
       <header className="relative isolate overflow-hidden border-b border-line bg-canvas-alt">
         <div
           aria-hidden="true"

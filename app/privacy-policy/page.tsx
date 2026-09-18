@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -26,6 +27,48 @@ export default function PrivacyPolicyPage() {
             We may collect contact details, package preferences, device
             information, and support messages needed to respond to setup,
             billing, trial, and compatibility requests.
+          </p>
+          <h2 className="text-lg font-bold text-ink">
+            How Information Is Used
+          </h2>
+          <p>
+            Information may be used to respond to requests, provide trial or
+            account assistance, process service questions, troubleshoot a
+            reported issue, and maintain the website. Device and connection
+            details shared with support are used to understand compatibility and
+            playback problems.
+          </p>
+          <h2 className="text-lg font-bold text-ink">Cookies and Analytics</h2>
+          <p>
+            The website may use essential browser storage and configured
+            analytics tools to understand site use and maintain functionality.
+            Browser settings can be used to limit or remove cookies, although
+            doing so may affect some website features.
+          </p>
+          <h2 className="text-lg font-bold text-ink">Sharing and Retention</h2>
+          <p>
+            Personal information is not intended to be sold. Information may be
+            handled by service providers needed to operate communications,
+            analytics, payments, or hosting, and may be disclosed where required
+            by law. Information should be kept only as long as needed for the
+            purpose for which it was collected and for applicable record-keeping
+            obligations.
+          </p>
+          <h2 className="text-lg font-bold text-ink">
+            Security and Your Choices
+          </h2>
+          <p>
+            Reasonable safeguards can reduce risk, but no website or electronic
+            transmission can promise absolute security. To ask about personal
+            information you previously provided, use the official{" "}
+            <Link
+              href="/contact"
+              className="font-semibold text-brand hover:text-brand-strong"
+            >
+              contact page
+            </Link>
+            . Do not include passwords or full payment credentials in a support
+            message.
           </p>
         </div>
       </div>

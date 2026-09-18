@@ -23,6 +23,13 @@ const nextConfig: NextConfig = {
       { source: "/terms-conditions", destination: "/terms-and-conditions", permanent: true },
       { source: "/privacy-policy-final", destination: "/privacy-policy", permanent: true },
       { source: "/terms-conditions-final", destination: "/terms-and-conditions", permanent: true },
+      // Legacy one-page shop (former phone-case store) — home to the live pricing section.
+      { source: "/shop", destination: "/#packages", permanent: true },
+      { source: "/shop/:path*", destination: "/#packages", permanent: true },
+      // Legacy product detail pages from the former store.
+      { source: "/product/:path*", destination: "/#packages", permanent: true },
+      // Legacy cart checkout flow — orders are placed via the trial / support channels.
+      { source: "/checkout", destination: "/free-trial", permanent: true },
     ];
   },
   async headers() {
@@ -36,7 +43,7 @@ const nextConfig: NextConfig = {
           {
             key: "Content-Security-Policy",
             value:
-              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';",
+              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https: data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';",
           },
         ],
       },

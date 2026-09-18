@@ -5,7 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { WhatsappFloating } from "@/components/ui/whatsapp-floating";
 import { buildMetadata } from "@/lib/seo";
-import { CartProvider } from "@/components/cart/cart-context";
+import { AnalyticsScripts } from "@/components/seo/analytics-scripts";
 import { SiteJsonLd } from "@/components/seo/site-json-ld";
 
 const inter = localFont({
@@ -40,13 +40,12 @@ export default function RootLayout({
       className={`${inter.variable} ${instrument.variable} h-full`}
     >
       <body className="min-h-full bg-canvas text-ink-muted antialiased flex flex-col font-sans selection:bg-blue-600/20 selection:text-ink">
+        <AnalyticsScripts />
         <SiteJsonLd />
-        <CartProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <WhatsappFloating />
-        </CartProvider>
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+        <WhatsappFloating />
       </body>
     </html>
   );

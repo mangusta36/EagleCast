@@ -35,6 +35,7 @@ export const FOOTER_NAV = {
     { label: "About EagleCast TV", href: "/about" },
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Terms of Service", href: "/terms-and-conditions" },
+    { label: "Refund Policy", href: "/refund-policy" },
     { label: "Support", href: "/contact" },
   ],
 };

@@ -1,4 +1,5 @@
 import { ArticleCard } from "@/components/sections/article-card";
+import { BreadcrumbJsonLd } from "@/components/seo/page-json-ld";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { blogPosts } from "@/data/blog";
@@ -16,6 +17,9 @@ export default function BlogPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[{ name: "Home", item: "/" }, { name: "Blog", item: "/blog" }]}
+      />
       <section className="bg-canvas">
         <div className="site-container py-16 sm:py-20 lg:py-24">
           <div className="max-w-3xl">

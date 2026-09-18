@@ -5,6 +5,10 @@ import { ChevronRight } from "lucide-react";
 import { ArticleInlineCta } from "@/components/blog/article-inline-cta";
 import { renderRichText } from "@/components/blog/rich-text";
 import { ArticleCard } from "@/components/sections/article-card";
+import {
+  BreadcrumbJsonLd,
+  FaqJsonLd,
+} from "@/components/seo/page-json-ld";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { blogPosts, getBlogPost } from "@/data/blog";
 import { SITE_URL } from "@/data/seo";
@@ -90,6 +94,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           }}
         />
       ) : null}
+      <FaqJsonLd
+        items={post.faqs.map((faq) => ({
+          question: faq.question,
+          answer: faq.answer,
+        }))}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", item: "/" },
+          { name: "Blog", item: "/blog" },
+          { name: post.title, item: `/blog/${post.slug}` },
+        ]}
+      />
 
       <header className="border-b border-line bg-canvas-alt">
         <div className="site-container py-10 sm:py-12 lg:py-16">

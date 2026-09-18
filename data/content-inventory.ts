@@ -1,5 +1,5 @@
 export const contentInventory = {
-  sourceSite: "https://eaglecastv.online/",
+  sourceSite: "https://www.eaglecastv.online/",
   preservedKeywords: [
     "IPTV service",
     "IPTV subscription",

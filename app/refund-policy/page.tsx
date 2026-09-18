@@ -39,6 +39,37 @@ export default function RefundPolicyPage() {
             status, account usage, and support findings. Contact support for the
             current policy that applies to your order.
           </p>
+
+          <h2 className="text-lg font-bold text-ink">4. What to Include</h2>
+          <p>
+            Include the contact details used for the order, the selected plan,
+            the device and app involved, when the issue began, and the support
+            steps already attempted. Do not send passwords or full payment
+            credentials. Complete information helps support distinguish an
+            account issue from a device, app, or local-network problem.
+          </p>
+
+          <h2 className="text-lg font-bold text-ink">
+            5. Technical Limitations
+          </h2>
+          <p>
+            Compatibility and playback can be affected by third-party apps,
+            device capability, Wi-Fi quality, internet-provider performance, and
+            regional availability. A support review may ask you to test a
+            different app, device, or connection before a refund decision is
+            made.
+          </p>
+
+          <h2 className="text-lg font-bold text-ink">
+            6. Decisions and Processing
+          </h2>
+          <p>
+            Support will explain the outcome after reviewing the transaction and
+            reported issue. When a refund is approved, processing also depends
+            on the original payment method and its provider. Contact support for
+            the status of a specific request rather than submitting duplicate
+            requests through multiple channels.
+          </p>
         </div>
 
         <div className="pt-6">

@@ -1,4 +1,4 @@
-export const SITE_URL = "https://eaglecastv.online";
+export const SITE_URL = "https://www.eaglecastv.online";
 
 export const siteMetadata = {
   title: "EagleCast TV | IPTV service for the USA and Canada",
