@@ -3,26 +3,20 @@ import {
   DeviceTrustSection,
   EaglecastAtGlanceSection,
   FinalConversionCta,
-  GuidesSection,
   HomeFaqSection,
   homeFaqItems,
   HowItWorksSection,
   IptvValueSection,
   PackagesSection,
-  ResellerCtaSection,
-  SetupChecklistSection,
   SupportHelpSection,
-  TrialFlowSection,
-  TrustStripSection,
-  WhyEagleCastSection,
 } from "@/components/sections/iptv-home-sections";
 import { FaqJsonLd } from "@/components/seo/page-json-ld";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "EagleCast TV | IPTV Streaming Service for Live TV, Sports & VOD",
+  title: "EagleCast TV | IPTV Streaming Service & Subscriptions",
   description:
-    "Discover EagleCast TV IPTV streaming for live channels, sports broadcasts, movies, series, and catch-up. Test setup with a trial across Smart TV, Firestick, and Android.",
+    "Explore EagleCast TV IPTV streaming for live TV, sports, movies, series, catch-up, and subscription options across Smart TV, Firestick, Android TV, iOS, and more.",
   pathname: "/",
 });
 
@@ -37,17 +31,11 @@ export default function Home() {
       />
       <HomeHero />
       <EaglecastAtGlanceSection />
-      <PackagesSection />
-      <TrustStripSection />
-      <WhyEagleCastSection />
       <IptvValueSection />
+      <PackagesSection />
       <DeviceTrustSection />
       <HowItWorksSection />
-      <SetupChecklistSection />
       <SupportHelpSection />
-      <ResellerCtaSection />
-      <TrialFlowSection />
-      <GuidesSection />
       <HomeFaqSection />
       <FinalConversionCta />
     </>

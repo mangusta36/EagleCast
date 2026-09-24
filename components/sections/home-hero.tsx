@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Zap } from "lucide-react";
@@ -31,22 +29,22 @@ export function HomeHero() {
         <div className="w-full max-w-[44rem]">
           <p className="flex items-center gap-2 text-[12px] font-black uppercase tracking-[0.16em] text-brand">
             <span className="h-px w-8 bg-gold" aria-hidden="true" />
-            Stream with EagleCast TV
+            EagleCast TV IPTV streaming
           </p>
 
           <h1 className="mt-6 max-w-[14ch] text-4xl font-black leading-[1.02] tracking-tight text-ink sm:text-6xl lg:text-7xl">
-            EagleCast TV.
+            EagleCast TV{" "}
             <span className="block text-brand-strong">
-              IPTV Streaming for Live TV, Sports & Entertainment.
+              IPTV Streaming Service
             </span>
           </h1>
 
           <p className="mt-5 max-w-xl text-base leading-7 text-[#475569] sm:text-lg">
-            EagleCast TV is a subscription-based IPTV streaming service for
-            watching live television channels, sports broadcasts, movies,
-            series, and catch-up entertainment across compatible devices. Get a
-            trial to confirm your application setup, test your home network,
-            and evaluate stream performance before selecting an official plan.
+            EagleCast TV is an IPTV streaming service for watching live
+            television channels, sports broadcasts, movies, series, and catch-up
+            entertainment across compatible devices. Review the subscription
+            packages, test your setup with a trial, and get support before
+            choosing a plan.
           </p>
 
           <p className="mt-3 max-w-xl text-sm leading-6 text-ink-muted">
@@ -67,10 +65,10 @@ export function HomeHero() {
               <ArrowRight size={17} aria-hidden="true" />
             </a>
             <Link
-              href="/#packages"
+              href="/pricing"
               className="btn-secondary min-h-12 px-7 text-sm uppercase tracking-wide"
             >
-              View Packages
+              View Subscriptions
             </Link>
           </div>
 

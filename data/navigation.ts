@@ -2,6 +2,7 @@ export const HEADER_NAV = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "Packages", href: "/#packages" },
+  { label: "Trial", href: "/free-trial" },
   { label: "Apps / Devices", href: "/#devices" },
   { label: "Reseller", href: "/reseller" },
   { label: "Blog", href: "/blog" },
@@ -12,6 +13,7 @@ export const FOOTER_NAV = {
   eaglecast: [
     { label: "Services", href: "/services" },
     { label: "Packages", href: "/#packages" },
+    { label: "Free Trial", href: "/free-trial" },
     { label: "Apps / Devices", href: "/#devices" },
     { label: "Reseller", href: "/reseller" },
     { label: "Blog", href: "/blog" },

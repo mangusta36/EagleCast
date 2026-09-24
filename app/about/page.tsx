@@ -29,8 +29,14 @@ export default function AboutPage() {
             IPTV viewing built around trial-first setup.
           </h1>
           <p className="text-base md:text-lg text-ink-muted max-w-2xl mx-auto leading-relaxed">
-            EagleCast TV helps viewers test live TV, sports, movies, and series
-            on their own devices before choosing a package.
+            <Link
+              href="/"
+              className="font-semibold text-brand hover:text-brand-strong"
+            >
+              EagleCast TV
+            </Link>{" "}
+            helps viewers test live TV, sports, movies, and series on their own
+            devices before choosing a package.
           </p>
         </div>
 

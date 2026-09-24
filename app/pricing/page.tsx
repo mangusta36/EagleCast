@@ -1,10 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, ShieldCheck } from "lucide-react";
 import { PricingCard } from "@/components/pricing/pricing-card";
-import {
-  BreadcrumbJsonLd,
-  FaqJsonLd,
-} from "@/components/seo/page-json-ld";
+import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/page-json-ld";
 import { CtaBand } from "@/components/sections/cta-band";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -114,7 +111,15 @@ export default function PricingPage() {
               </Link>{" "}
               and confirm playback on your device first. After the trial, the
               support team can recommend the term that matches your viewing
-              routine. For custom durations or questions,{" "}
+              routine. For custom durations, payment questions, or activation
+              details, read the{" "}
+              <Link
+                href="/blog/how-to-pay-for-eaglecast-tv-subscription"
+                className="font-semibold text-brand hover:text-brand-strong"
+              >
+                EagleCast TV subscription payment guide
+              </Link>{" "}
+              or{" "}
               <Link
                 href="/contact"
                 className="font-semibold text-brand hover:text-brand-strong"
@@ -176,9 +181,8 @@ export default function PricingPage() {
                 No automatic renewal
               </h2>
               <p className="mt-3 text-sm leading-7 text-ink-muted">
-                Each plan is a one-time payment for access over the chosen
-                term. Nothing renews or bills until you confirm a new
-                subscription.
+                Each plan is a one-time payment for access over the chosen term.
+                Nothing renews or bills until you confirm a new subscription.
               </p>
             </article>
             <article className="border-t border-line pt-6">
@@ -191,8 +195,8 @@ export default function PricingPage() {
                 Trial before you buy
               </h2>
               <p className="mt-3 text-sm leading-7 text-ink-muted">
-                Test live TV, sports, movies, catch-up, and multi-screen
-                viewing on your own screen before paying for a full term.
+                Test live TV, sports, movies, catch-up, and multi-screen viewing
+                on your own screen before paying for a full term.
               </p>
             </article>
             <article className="border-t border-line pt-6">

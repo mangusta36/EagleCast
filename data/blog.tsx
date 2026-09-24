@@ -1,6 +1,8 @@
 import { appleGuidePost } from "./blog-posts/apple-guide";
 import { appsShootoutPost } from "./blog-posts/apps-shootout";
 import { errorFixingGuidePost } from "./blog-posts/error-fixing-guide";
+import { paymentGuidePost } from "./blog-posts/payment-guide";
+import { serviceStatusGuidePost } from "./blog-posts/service-status-guide";
 import { tivimateGuidePost } from "./blog-posts/tivimate-guide";
 import { vpnGuidePost } from "./blog-posts/vpn-guide";
 
@@ -57,7 +59,9 @@ export interface BlogPost {
     | "Troubleshooting"
     | "Streaming Quality"
     | "Business / Reseller"
-    | "Buying Guides";
+    | "Buying Guides"
+    | "Payments"
+    | "Support";
   publishedAt: string;
   updatedAt: string;
   author: string;
@@ -2778,6 +2782,8 @@ export const blogPosts: readonly BlogPost[] = [
       "best-devices-for-iptv",
     ],
   },
+  paymentGuidePost,
+  serviceStatusGuidePost,
   tivimateGuidePost,
   appleGuidePost,
   errorFixingGuidePost,

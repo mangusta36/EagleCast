@@ -1,9 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import { ContactForm } from "@/components/forms/contact-form";
-import {
-  BreadcrumbJsonLd,
-  FaqJsonLd,
-} from "@/components/seo/page-json-ld";
+import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/page-json-ld";
 import { ButtonLink } from "@/components/ui/button-link";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { buildWhatsappUrl } from "@/data/contact";
@@ -50,7 +47,7 @@ const supportFaqs = [
   {
     question: "What should I do if my stream buffers?",
     answer:
-      "Start with the buffering and internet-speed guides linked below, then contact support with your device, app, and network details if the issue continues.",
+      "Start with the service status, buffering, and internet-speed guides linked below, then contact support with your device, app, and network details if the issue continues.",
   },
 ] as const;
 
@@ -205,16 +202,24 @@ export default function ContactPage() {
                 Streaming / buffering help
               </h2>
               <p className="mt-3 text-sm leading-7 text-ink-muted">
-                Work through the structured buffering guide before contacting
-                support, then share your test results with the team.
+                Check whether the issue appears local, device-specific, or
+                account-related before contacting support, then share your test
+                results with the team.
               </p>
-              <ButtonLink
-                href="/blog/fix-iptv-buffering"
-                variant="outlineLight"
-                className="mt-5"
-              >
-                Read buffering guide
-              </ButtonLink>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <ButtonLink
+                  href="/blog/is-eaglecast-tv-down"
+                  variant="outlineLight"
+                >
+                  Check service guide
+                </ButtonLink>
+                <ButtonLink
+                  href="/blog/fix-iptv-buffering"
+                  variant="outlineLight"
+                >
+                  Buffering guide
+                </ButtonLink>
+              </div>
             </article>
             <article className="border-t border-line pt-5">
               <h2 className="text-xl font-semibold text-ink">
