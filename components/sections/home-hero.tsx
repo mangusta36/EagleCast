@@ -4,11 +4,11 @@ import { ArrowRight, Zap } from "lucide-react";
 import { contactInfo } from "@/data/contact";
 
 const trustItems = [
-  "EagleCast TV Setup",
-  "24/7 Support Listed",
-  "Fast Activation",
+  "Trial Available",
+  "Setup Support",
   "4K Ready Where Sources Allow",
   "Multi-Format Login",
+  "Clear Plans",
 ] as const;
 
 export function HomeHero() {
@@ -33,24 +33,18 @@ export function HomeHero() {
           </p>
 
           <h1 className="mt-6 max-w-[14ch] text-4xl font-black leading-[1.02] tracking-tight text-ink sm:text-6xl lg:text-7xl">
-            EagleCast TV{" "}
-            <span className="block text-brand-strong">
-              IPTV Streaming Service
-            </span>
+            EagleCast TV IPTV Streaming for Live TV, Sports & Entertainment
           </h1>
 
           <p className="mt-5 max-w-xl text-base leading-7 text-[#475569] sm:text-lg">
-            EagleCast TV is an IPTV streaming service for watching live
-            television channels, sports broadcasts, movies, series, and catch-up
-            entertainment across compatible devices. Review the subscription
-            packages, test your setup with a trial, and get support before
-            choosing a plan.
+            EagleCast TV brings live TV, sports, movies, series, catch-up, and
+            setup support into one IPTV service for compatible Smart TVs,
+            Firestick, Android, iOS, Windows, and set-top boxes.
           </p>
 
           <p className="mt-3 max-w-xl text-sm leading-6 text-ink-muted">
-            Our multi-format account credentials support Xtream Codes API, M3U
-            playlists, and MAG portals natively across Smart TVs, Firestick,
-            Android, iOS, and Windows platforms.
+            Compare plans, request a trial, and confirm your device setup with
+            EagleCast TV support before choosing a subscription term.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -87,14 +81,8 @@ export function HomeHero() {
           </p>
 
           <p className="mt-4 text-xs font-semibold text-ink-subtle">
-            Explore our step-by-step{" "}
-            <Link
-              href="/tutorials/getting-started-with-eaglecast-tv"
-              className="text-brand underline hover:text-brand-strong"
-            >
-              getting started tutorial
-            </Link>{" "}
-            to configure your hardware before purchase.
+            Need setup help first? Use the setup guides hub before choosing a
+            plan.
           </p>
         </div>
       </div>

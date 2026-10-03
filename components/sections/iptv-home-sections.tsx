@@ -2,165 +2,155 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
-  BriefcaseBusiness,
   Check,
+  CircleHelp,
   Headphones,
-  MessageCircle,
+  MonitorSmartphone,
+  PlayCircle,
+  Settings,
+  ShieldCheck,
+  Tv,
   Zap,
+  type LucideIcon,
 } from "lucide-react";
-import { blogPosts } from "@/data/blog";
 import { contactInfo } from "@/data/contact";
 import { PRICING_PLANS } from "@/data/pricing";
 
-const serviceItems = [
+const overviewItems: readonly {
+  title: string;
+  body: string;
+  icon: LucideIcon;
+}[] = [
+  {
+    title: "Device Friendly",
+    body: "Smart TVs, Firestick, Android, iOS, Windows, and compatible TV boxes.",
+    icon: MonitorSmartphone,
+  },
+  {
+    title: "Trial Access",
+    body: "Test your screen, app, and connection before choosing a paid term.",
+    icon: PlayCircle,
+  },
+  {
+    title: "Setup Support",
+    body: "Get help with activation, app login, and basic playback questions.",
+    icon: Headphones,
+  },
+  {
+    title: "Flexible Plans",
+    body: "Choose 3, 6, 12, or 24 months with the same core service included.",
+    icon: ShieldCheck,
+  },
+] as const;
+
+const serviceBenefits = [
   [
-    "Live TV Hub",
-    "Organized live channel access covering international news, sports, and regional broadcasts with a familiar guide workflow.",
+    "Live TV, Sports & Entertainment",
+    "A single IPTV service for everyday channels, live sports viewing, and on-demand entertainment.",
   ],
   [
-    "Sports & Events",
-    "Follow match nights, championship events, and live sports viewing with setup guidance for compatible apps.",
+    "Flexible Plans",
+    "Every listed package includes the same core access, so the main decision is subscription length.",
   ],
   [
-    "Movies & Series",
-    "Browse structured Video on Demand (VOD) entertainment libraries complete with poster art, ratings, and episode groupings.",
-  ],
-  [
-    "Replay / VOD",
-    "Access time-shifted catch-up television to return to available broadcasts without relying only on the live moment.",
-  ],
-  [
-    "EPG Program Guide",
-    "Navigate channels, current showtimes, and upcoming programming with interactive XMLTV guide schedule grids.",
-  ],
-  [
-    "Multi-device Access",
-    "Watch on Smart TVs, Android TV, Firestick, iPhone, iPad, Windows PCs, and MAG set-top boxes.",
-  ],
-  [
-    "Subscription Support",
-    "Compare plan terms, ask about renewals, and confirm setup needs with the EagleCast TV support team.",
-  ],
-  [
-    "Setup Support",
-    "Get help with app selection, login input, portal activation, network calibration, and troubleshooting.",
+    "Setup & Subscription Support",
+    "Confirm your preferred device during the trial request and keep a clear route for help.",
   ],
 ] as const;
 
 const deviceItems = [
-  "Smart TV (Samsung/LG)",
-  "Android TV / Google TV",
+  "Smart TV",
   "Firestick / Fire TV",
+  "Android TV",
   "iPhone / iPad",
   "Windows PC",
-  "MAG / Formuler TV Box",
-] as const;
-
-const trustItems = [
-  [
-    "Live + VOD Access",
-    "Structured channels and on-demand libraries",
-    "text-brand-strong",
-  ],
-  [
-    "Multi-Format Login",
-    "Support for Xtream Codes, M3U & MAC Portals",
-    "text-gold",
-  ],
-  [
-    "4K-Ready Playback",
-    "Where source and device hardware support it",
-    "text-brand-strong",
-  ],
-  [
-    "5+ Device Families",
-    "Smart TV, mobile, desktop, sticks, and boxes",
-    "text-emerald",
-  ],
+  "MAG / Formuler",
 ] as const;
 
 const faqItems = [
   [
-    "Can I try EagleCast TV before choosing a package?",
-    "Yes. Request an EagleCast TV trial so our support team can confirm your preferred player application, device compatibility, and home internet connection before you select an official subscription plan.",
+    "Can I try EagleCast TV before choosing a plan?",
+    "Yes. Request a trial so you can test your device, app workflow, and home connection before selecting a subscription.",
   ],
   [
     "Which devices work with EagleCast TV IPTV?",
-    "EagleCast TV supports common IPTV workflows across Smart TVs (Samsung Tizen, LG webOS, Android TV), Amazon Firestick, Android devices, iOS (iPhone/iPad), Windows computers, and MAG set-top boxes.",
+    "EagleCast TV supports common IPTV apps across Smart TVs, Firestick and Fire TV, Android devices, iPhone and iPad, Windows PCs, and compatible TV boxes.",
   ],
   [
-    "What IPTV connection formats are supported by EagleCast TV?",
-    "EagleCast TV subscription lines support multi-format credential logins including Xtream Codes API (server URL, username, password), custom M3U/M3U8 playlist URLs, and Stalker MAC address portal links.",
-  ],
-  [
-    "How does setup support work?",
-    "Share your device model, streaming application, and viewing priorities with support. Our technical team will guide you through app installation, credential entry, guide mapping, and player buffer settings.",
-  ],
-  [
-    "Does EagleCast TV support 4K streaming?",
-    "EagleCast TV is 4K-ready where channel source availability, device capability, app settings, and home network quality support higher-resolution video playback.",
-  ],
-  [
-    "What should I do if playback buffers or freezes?",
-    "First verify your home internet speed and latency. Use 5GHz Wi-Fi or Cat6 Ethernet, set custom public DNS servers (such as Cloudflare 1.1.1.1), enable hardware GPU decoding in your app, and follow our troubleshooting guide.",
+    "What is included with the subscription plans?",
+    "Published plans include the same core service: live TV, sports, movies, series, catch-up where available, and setup support.",
   ],
   [
     "How many devices are included per subscription?",
-    "Standard EagleCast TV packages include one active device connection per subscription line. Contact support if your household requires multi-screen options before purchase.",
+    "Standard packages include one active device connection per subscription line. Ask support before purchase if you need extra screens.",
   ],
   [
-    "How do EagleCast TV subscriptions work?",
-    "Choose a published subscription term, confirm your device and setup needs with support, and use the official support route for payment and activation instructions.",
+    "How does setup support work?",
+    "Share your device, app, and question with support. The team can guide activation, credential entry, and basic troubleshooting.",
+  ],
+  [
+    "Where can I find detailed setup guides?",
+    "Use the tutorials hub for device-specific setup details. The homepage stays focused on the service, plans, and trial path.",
   ],
 ] as const;
 
 export const homeFaqItems = faqItems as readonly (readonly [string, string])[];
 
+export function EaglecastAtGlanceSection() {
+  return (
+    <section className="border-y border-line bg-canvas-alt">
+      <div className="site-container py-10">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {overviewItems.map((item) => {
+            const Icon = item.icon;
+            return (
+              <article
+                key={item.title}
+                className="rounded-lg border border-line bg-panel p-5 shadow-sm"
+              >
+                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-soft text-brand">
+                  <Icon size={19} aria-hidden="true" />
+                </span>
+                <p className="mt-4 text-base font-black text-ink">
+                  {item.title}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-ink-subtle">
+                  {item.body}
+                </p>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function PackagesSection() {
   return (
     <section id="packages" className="bg-canvas">
       <div className="site-container section-pad">
-        <div className="max-w-3xl">
-          <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
-            EagleCast TV Subscriptions
-          </p>
-          <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-tight tracking-tight text-ink">
-            Compare subscription packages before you choose
-          </h2>
-          <p className="mt-4 text-base leading-7 text-ink-muted sm:text-lg">
-            Review available EagleCast TV subscription packages, then test your
-            device setup with a trial before selecting the term that fits your
-            viewing routine.
-          </p>
-          <p className="mt-3 text-sm leading-6 text-ink-subtle">
-            Every published term shares the same core service, so the real
-            choice is the length of access — plus whether you need extra
-            screens. The 3, 6, 12, and 24-month lines below show the per-month
-            value at each depth. If a specific duration or a household
-            multi-screen setup fits better, the support team can confirm the
-            applicable details before you commit.
-          </p>
-          <p className="mt-3 text-sm leading-6 text-ink-subtle">
-            All plans include multi-format credential support (Xtream Codes API,
-            M3U playlists, MAC Portals), full access to live television and VOD
-            libraries, interactive EPG guide data, and direct technical support.
-            For custom duration inquiries, payment questions, or multi-screen
-            setups, visit our{" "}
-            <Link
-              href="/pricing"
-              className="text-brand font-semibold hover:text-brand-strong"
-            >
-              pricing page
-            </Link>{" "}
-            or contact{" "}
-            <Link
-              href="/contact"
-              className="text-brand font-semibold hover:text-brand-strong"
-            >
-              EagleCast TV support
-            </Link>
-            .
-          </p>
+        <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-3xl">
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
+              EagleCast TV Plans
+            </p>
+            <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.15rem)] font-black leading-tight tracking-tight text-ink">
+              Choose Your EagleCast TV IPTV Subscription Plan
+            </h2>
+            <p className="mt-4 text-base leading-7 text-ink-muted sm:text-lg">
+              Pricing is visible early because the homepage is the main service
+              page. Start with a trial if you want to confirm playback before
+              selecting a plan.
+            </p>
+          </div>
+          <Link
+            href="/pricing"
+            className="inline-flex items-center gap-2 text-sm font-black text-brand-strong hover:text-brand"
+          >
+            Full pricing details
+            <ArrowRight size={16} aria-hidden="true" />
+          </Link>
         </div>
 
         <div className="mt-10 grid items-stretch gap-5 sm:grid-cols-2 xl:grid-cols-4">
@@ -178,13 +168,11 @@ export function PackagesSection() {
                   Popular
                 </span>
               ) : null}
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-ink-subtle">
-                {plan.name}
-              </p>
-              <p className="mt-3 min-h-14 text-sm leading-6 text-ink-subtle">
+              <h3 className="text-lg font-black text-ink">{plan.name}</h3>
+              <p className="mt-3 min-h-12 text-sm leading-6 text-ink-subtle">
                 {plan.description}
               </p>
-              <div className="mt-6 flex flex-wrap items-end gap-x-2">
+              <div className="mt-5 flex flex-wrap items-end gap-x-2">
                 <span className="text-5xl font-black tracking-tight text-ink">
                   {plan.price}
                 </span>
@@ -196,7 +184,7 @@ export function PackagesSection() {
                 {plan.monthlyEquivalent}
               </p>
               <ul className="mt-6 space-y-3 border-t border-line pt-6">
-                {plan.features.slice(0, 5).map((feature) => (
+                {plan.features.slice(0, 4).map((feature) => (
                   <li
                     key={feature}
                     className="flex gap-2 text-sm leading-6 text-ink"
@@ -227,355 +215,45 @@ export function PackagesSection() {
   );
 }
 
-export function EaglecastAtGlanceSection() {
-  const factItems = [
-    [
-      "Service",
-      "IPTV streaming for live TV channels, sports broadcasts, movies, series, and catch-up viewing.",
-    ],
-    [
-      "Formats",
-      "Multi-format accounts supporting Xtream Codes API, M3U/M3U8 playlist URLs, and MAC address portals.",
-    ],
-    [
-      "Devices",
-      "Smart TV (Samsung/LG), Android TV, Firestick, iPhone, iPad, Windows PC, and MAG set-top boxes.",
-    ],
-    [
-      "Trial",
-      "A trial is available so viewers can test setup, app behavior, and network speeds before purchase.",
-    ],
-    [
-      "Support",
-      "Customer support, login assistance, and portal help are accessible via official communication channels.",
-    ],
-    [
-      "Reseller",
-      "Reseller panel options are available for account management, trial generation, and client renewals.",
-    ],
-  ] as const;
-
-  return (
-    <section className="border-y border-line bg-canvas-alt">
-      <div className="site-container section-pad">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-          <div className="max-w-2xl">
-            <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
-              What is EagleCast TV?
-            </p>
-            <h2 className="mt-4 text-[clamp(2rem,4.5vw,3rem)] font-black leading-tight tracking-tight text-ink">
-              IPTV streaming for live TV, sports, movies, and catch-up
-            </h2>
-            <p className="mt-4 text-base leading-7 text-ink-muted sm:text-lg">
-              EagleCast TV is a subscription-based Internet Protocol Television
-              (IPTV) streaming service built for viewers who want live TV,
-              sports events, movies, series, and catch-up entertainment in one
-              unified platform. Instead of relying on proprietary cable boxes or
-              satellite dish installations, EagleCast TV delivers video streams
-              directly over your broadband internet connection to compatible
-              applications on the screens you already own.
-            </p>
-            <p className="mt-4 text-base leading-7 text-ink-muted">
-              Behind the scenes, IP video delivery relies on standardized
-              network protocols. EagleCast TV accounts support all major
-              connection methods—including dynamic Xtream Codes API database
-              queries, custom M3U and M3U8 playlist manifests, and
-              hardware-bound Stalker MAC address portals. Understanding how
-              these connection formats work helps viewers select the ideal setup
-              for their hardware, as explained in our detailed guide to{" "}
-              <Link
-                href="/blog/iptv-playlist-formats-m3u-xtream-codes-guide"
-                className="text-brand font-semibold hover:text-brand-strong"
-              >
-                IPTV playlist formats
-              </Link>
-              .
-            </p>
-            <p className="mt-4 text-base leading-7 text-ink-muted">
-              For most households, evaluating an IPTV subscription requires more
-              than browsing a channel list. It involves confirming device
-              compatibility, playback behavior, electronic program guide (EPG)
-              support, and customer support access. That is why EagleCast TV
-              provides a trial option alongside setup guides for{" "}
-              <Link
-                href="/login-help"
-                className="text-brand font-semibold hover:text-brand-strong"
-              >
-                login help
-              </Link>
-              ,{" "}
-              <Link
-                href="/portal-help"
-                className="text-brand font-semibold hover:text-brand-strong"
-              >
-                portal help
-              </Link>
-              , and{" "}
-              <Link
-                href="/services"
-                className="text-brand font-semibold hover:text-brand-strong"
-              >
-                service features
-              </Link>
-              .
-            </p>
-            <p className="mt-4 text-base leading-7 text-ink-muted">
-              Getting started is straightforward when supported by step-by-step
-              documentation. Viewers can explore our comprehensive tutorial on{" "}
-              <Link
-                href="/tutorials/getting-started-with-eaglecast-tv"
-                className="text-brand font-semibold hover:text-brand-strong"
-              >
-                getting started with EagleCast TV
-              </Link>{" "}
-              to set up their streaming hardware, or review our{" "}
-              <Link
-                href="/tutorials/diy-troubleshooting-guide"
-                className="text-brand font-semibold hover:text-brand-strong"
-              >
-                DIY troubleshooting guide
-              </Link>{" "}
-              for network and buffer optimization.
-            </p>
-            <p className="mt-4 text-base leading-7 text-ink-muted">
-              EagleCast TV is best suited to viewers who want live TV streaming
-              alongside on-demand entertainment: sports fans who follow matches
-              and PPV events, households that split time across a living room TV
-              and mobile screens, and customers who want a trial-first path
-              before selecting a subscription. For a deeper look at how IPTV is
-              positioned against cable and streaming options, start with the{" "}
-              <Link
-                href="/blog/iptv-vs-cable-streaming"
-                className="text-brand font-semibold hover:text-brand-strong"
-              >
-                IPTV vs cable overview
-              </Link>
-              .
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
-              <Link
-                href="/#packages"
-                className="text-brand transition-colors hover:text-brand-strong"
-              >
-                EagleCast TV subscriptions
-              </Link>
-              <Link
-                href="/free-trial"
-                className="text-brand transition-colors hover:text-brand-strong"
-              >
-                Get Trial
-              </Link>
-              <Link
-                href="/contact"
-                className="text-brand transition-colors hover:text-brand-strong"
-              >
-                Customer Support
-              </Link>
-              <Link
-                href="/reseller"
-                className="text-brand transition-colors hover:text-brand-strong"
-              >
-                Reseller Options
-              </Link>
-              <Link
-                href="/blog"
-                className="text-brand transition-colors hover:text-brand-strong"
-              >
-                IPTV Guides
-              </Link>
-            </div>
-          </div>
-
-          <dl className="grid gap-4 sm:grid-cols-2">
-            {factItems.map(([label, value]) => (
-              <div
-                key={label}
-                className="rounded-lg border border-line bg-panel p-5"
-              >
-                <dt className="text-xs font-black uppercase tracking-[0.14em] text-ink-subtle">
-                  {label}
-                </dt>
-                <dd className="mt-3 text-sm leading-7 text-ink">{value}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function TrustStripSection() {
-  return (
-    <section className="border-y border-line bg-canvas-alt">
-      <div className="site-container py-8">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {trustItems.map(([title, body, color]) => (
-            <div key={title} className="border-l border-line pl-4">
-              <p className={`text-sm font-black ${color}`}>{title}</p>
-              <p className="mt-1 text-xs leading-5 text-ink-subtle">{body}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function WhyEagleCastSection() {
-  const reasons = [
-    [
-      "Try before you commit",
-      "Use an EagleCast TV trial to test your device hardware, streaming app, and home network connection before committing to a package.",
-    ],
-    [
-      "Guided setup support",
-      "Our support team assists viewers with app selection, login inputs, portal binding, and buffer settings to eliminate setup friction.",
-    ],
-    [
-      "Watch across your screens",
-      "Enjoy a consistent viewing experience across living room Smart TVs, Firesticks, mobile phones, tablets, and desktop computers.",
-    ],
-    [
-      "EPG & Catch-up Replay",
-      "Stay connected to your favorite programming with interactive guide schedules and time-shifted catch-up television replay.",
-    ],
-  ] as const;
-
-  return (
-    <section className="bg-canvas">
-      <div className="site-container section-pad">
-        <div className="max-w-3xl">
-          <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
-            Why Viewers Choose EagleCast TV
-          </p>
-          <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-tight tracking-tight text-ink">
-            A better IPTV experience starts with a better setup
-          </h2>
-          <p className="mt-4 text-base leading-7 text-ink-muted sm:text-lg">
-            EagleCast TV is designed around transparent plan choices, practical
-            setup preparation, multi-format login support, and dedicated
-            guidance for every major device family.
-          </p>
-          <p className="mt-4 text-base leading-7 text-ink-muted">
-            Because IPTV behavior is heavily influenced by your local network,
-            the service pairs its line access with honest guidance about the
-            things a viewer controls: Wi-Fi positioning, DNS servers, player
-            codec settings, and connection quality. That is why each published
-            plan is the same core service with no tiered feature locks — the
-            variables that change the viewing experience are mostly in the
-            setup, not in the subscription price.
-          </p>
-          <p className="mt-4 text-base leading-7 text-ink-muted">
-            Achieving smooth 4K streaming depends on multiple factors: backend
-            server infrastructure, client player app efficiency, local Wi-Fi
-            stability, and proper DNS configuration. EagleCast TV helps viewers
-            connect all these elements effectively. Learn more about
-            self-service troubleshooting in our{" "}
-            <Link
-              href="/tutorials/diy-troubleshooting-guide"
-              className="text-brand font-semibold hover:text-brand-strong"
-            >
-              DIY troubleshooting guide
-            </Link>{" "}
-            and discover how time-shifted viewing works in our{" "}
-            <Link
-              href="/tutorials/catchup-and-replay-explained"
-              className="text-brand font-semibold hover:text-brand-strong"
-            >
-              catchup and replay guide
-            </Link>
-            .
-          </p>
-        </div>
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-          {reasons.map(([title, body], index) => (
-            <article key={title} className="border-t border-line pt-6">
-              <p className="text-4xl font-black tracking-tight text-brand/15">
-                0{index + 1}
-              </p>
-              <h3 className="mt-6 text-lg font-black uppercase tracking-[0.08em] text-ink">
-                {title}
-              </h3>
-              <p className="mt-3 text-sm leading-6 text-ink-subtle">{body}</p>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export function IptvValueSection() {
   return (
     <section id="services" className="bg-canvas-alt">
       <div className="site-container section-pad">
-        <div className="max-w-3xl">
-          <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
-            Service Features
-          </p>
-          <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-tight tracking-tight text-ink">
-            Live TV, sports, movies, series, and support in one workflow
-          </h2>
-          <p className="mt-4 text-base leading-7 text-ink-muted sm:text-lg">
-            EagleCast TV covers the core viewing habits of modern households:
-            live channels for everyday watching, sports broadcasts for match
-            nights, on-demand video libraries for movies and TV series, and
-            time-shifted catch-up television. Consolidating these categories
-            into one streamlined IPTV workflow keeps viewing, guide browsing,
-            and support in a single setup path.
-          </p>
-          <p className="mt-4 text-base leading-7 text-ink-muted">
-            The practical benefit is a single set of account details, one guide
-            to browse, and one support route for questions. Whether you are
-            switching screens from the living room TV to a phone, you stay in
-            the same application workflow instead of rebuilding setup steps on
-            every device.
-          </p>
-          <p className="mt-4 text-base leading-7 text-ink-muted">
-            Whether you are exploring{" "}
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="max-w-2xl">
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
+              Why EagleCast TV
+            </p>
+            <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.15rem)] font-black leading-tight tracking-tight text-ink">
+              Why Choose EagleCast TV for Live TV, Sports & Entertainment
+            </h2>
+            <p className="mt-4 text-base leading-7 text-ink-muted sm:text-lg">
+              EagleCast TV brings the main viewing experience, plan comparison,
+              trial path, and support route into one service homepage. Detailed
+              setup and troubleshooting live in the support hubs where they
+              belong.
+            </p>
             <Link
-              href="/blog/what-is-iptv"
-              className="text-brand font-semibold hover:text-brand-strong"
+              href="/services"
+              className="btn-secondary mt-7 w-full sm:w-auto"
             >
-              what IPTV is
-            </Link>{" "}
-            or evaluating{" "}
-            <Link
-              href="/blog/iptv-vs-cable-streaming"
-              className="text-brand font-semibold hover:text-brand-strong"
-            >
-              IPTV vs cable streaming
+              View service features
             </Link>
-            , understanding how channel guides and schedules operate is
-            essential. Our comprehensive guide to{" "}
-            <Link
-              href="/blog/what-is-iptv-epg"
-              className="text-brand font-semibold hover:text-brand-strong"
-            >
-              IPTV EPG
-            </Link>{" "}
-            explains how program guide schedule grids sync with player apps.
-          </p>
-        </div>
-        <div className="mt-12 grid gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
-          {serviceItems.map(([title, body], index) => (
-            <article key={title} className="bg-panel p-6">
-              <p
-                className={`text-xs font-black ${
-                  index === 1 || index === 6
-                    ? "text-gold"
-                    : index === 5 || index === 7
-                      ? "text-emerald"
-                      : "text-brand-strong"
-                }`}
+          </div>
+          <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+            {serviceBenefits.map(([title, body], index) => (
+              <article
+                key={title}
+                className="rounded-lg border border-line bg-panel p-5"
               >
-                {String(index + 1).padStart(2, "0")}
-              </p>
-              <h3 className="mt-5 text-lg font-black text-ink">{title}</h3>
-              <p className="mt-3 text-sm leading-6 text-ink-subtle">{body}</p>
-            </article>
-          ))}
+                <p className="text-xs font-black text-brand-strong">
+                  0{index + 1}
+                </p>
+                <h3 className="mt-3 text-lg font-black text-ink">{title}</h3>
+                <p className="mt-2 text-sm leading-6 text-ink-subtle">{body}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -585,55 +263,31 @@ export function IptvValueSection() {
 export function DeviceTrustSection() {
   return (
     <section id="devices" className="bg-canvas">
-      <div className="site-container section-pad grid items-center gap-12 lg:grid-cols-[0.92fr_1.08fr]">
+      <div className="site-container section-pad grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
           <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
             Device Compatibility
           </p>
-          <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-tight tracking-tight text-ink">
-            Watch EagleCast TV on the devices you already own
+          <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.15rem)] font-black leading-tight tracking-tight text-ink">
+            Watch EagleCast TV on Your Favorite Devices
           </h2>
           <p className="mt-4 max-w-xl text-base leading-7 text-ink-muted sm:text-lg">
-            Share your device during the trial request so support can recommend
-            the ideal application and installation walkthrough.
+            EagleCast TV supports common IPTV apps across major device
+            categories. Share your device during the trial request so support
+            can point you to the right setup path.
           </p>
-          <p className="mt-4 max-w-xl text-base leading-7 text-ink-muted">
-            EagleCast TV supports standard IPTV applications across Smart TVs
-            (Samsung Tizen, LG webOS, Android TV), Amazon Firestick / Fire TV
-            devices, Android smartphones and tablets, Apple iOS (iPhone & iPad),
-            Windows PCs, and MAG set-top boxes. Starting with your existing TV
-            or streaming device avoids purchasing unnecessary external hardware.
-          </p>
-          <p className="mt-4 max-w-xl text-base leading-7 text-ink-muted">
-            To choose the best setup for your screen, explore our detailed
-            review of the{" "}
-            <Link
-              href="/blog/best-devices-for-iptv"
-              className="text-brand font-semibold hover:text-brand-strong"
-            >
-              best devices for IPTV
-            </Link>
-            , follow our step-by-step{" "}
-            <Link
-              href="/blog/how-to-set-up-iptv-smart-tv"
-              className="text-brand font-semibold hover:text-brand-strong"
-            >
-              Smart TV setup guide
-            </Link>
-            , or consult our dedicated{" "}
-            <Link
-              href="/blog/how-to-set-up-iptv-fire-tv"
-              className="text-brand font-semibold hover:text-brand-strong"
-            >
-              Fire TV setup guide
-            </Link>
-            .
-          </p>
+          <Link
+            href="/tutorials"
+            className="mt-6 inline-flex items-center gap-2 text-sm font-black text-brand-strong hover:text-brand"
+          >
+            Open setup guides
+            <ArrowRight size={16} aria-hidden="true" />
+          </Link>
           <div className="mt-8 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-3">
             {deviceItems.map((device) => (
               <div
                 key={device}
-                className="rounded-lg border border-line bg-panel px-4 py-3 text-xs font-bold text-ink-muted shadow-sm transition hover:border-brand/45 hover:bg-[#EFF6FF]"
+                className="rounded-lg border border-line bg-panel px-4 py-3 text-xs font-bold text-ink-muted shadow-sm"
               >
                 {device}
               </div>
@@ -661,283 +315,132 @@ export function HowItWorksSection() {
   const steps = [
     [
       "01",
-      "Choose your primary device",
-      "Select the room, television, or mobile screen you use most frequently.",
+      "Choose a Plan or Trial",
+      "Start with the trial path or pick the subscription term you already want.",
     ],
     [
       "02",
-      "Test EagleCast TV with a trial",
-      "Use the trial to verify credential login, guide loading, and stream quality.",
+      "Receive Your Setup Details",
+      "Support sends the activation and app guidance for your selected device.",
     ],
     [
       "03",
-      "Configure player app & network",
-      "Follow player setup guidance and optimize 5GHz Wi-Fi or Ethernet settings.",
-    ],
-    [
-      "04",
-      "Select a subscription package",
-      "Choose the 3, 6, 12, or 24-month package that fits your viewing routine.",
+      "Start Streaming",
+      "Use your compatible IPTV app to watch live TV, sports, movies, and series.",
     ],
   ] as const;
 
   return (
     <section className="bg-canvas-alt">
-      <div className="site-container section-pad grid gap-10 lg:grid-cols-[0.82fr_1.18fr]">
-        <div>
+      <div className="site-container section-pad">
+        <div className="max-w-3xl">
           <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
-            How to Get Started
+            How It Works
           </p>
-          <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-tight tracking-tight text-ink">
-            Start with your device, trial, and subscription choice
+          <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.15rem)] font-black leading-tight tracking-tight text-ink">
+            How to Start Streaming with EagleCast TV
           </h2>
         </div>
-        <div className="space-y-6">
-          <div className="grid gap-4 sm:grid-cols-2">
-            {steps.map(([count, title, body]) => (
-              <article
-                key={title}
-                className="rounded-lg border border-line bg-panel p-5"
-              >
-                <p className="text-xs font-black uppercase tracking-[0.16em] text-brand-strong">
-                  {count}
-                </p>
-                <h3 className="mt-3 text-base font-black text-ink">{title}</h3>
-                <p className="mt-2 text-sm leading-6 text-ink-subtle">{body}</p>
-              </article>
-            ))}
-          </div>
-          <div className="space-y-5 text-base leading-8 text-ink-muted">
-            <p>
-              EagleCast TV works best when viewers begin with the device and
-              room they actually use most. That keeps your trial testing
-              grounded in real-world conditions. Once your player application is
-              installed and credentials are entered, test live channel
-              switching, sports broadcasts, and guide grids during peak
-              household internet usage hours.
-            </p>
-            <p>
-              Streaming performance depends directly on network infrastructure.
-              A stable 4K-ready setup requires consistent download throughput
-              and low latency. Review our technical guide on{" "}
-              <Link
-                href="/blog/internet-speed-for-iptv"
-                className="text-brand font-semibold hover:text-brand-strong"
-              >
-                internet speed for IPTV
-              </Link>
-              , follow our complete manual to{" "}
-              <Link
-                href="/blog/how-to-optimize-home-network-for-iptv-streaming"
-                className="text-brand font-semibold hover:text-brand-strong"
-              >
-                optimize your home network
-              </Link>
-              , and learn how to resolve stream freezing in our{" "}
-              <Link
-                href="/blog/fix-iptv-buffering"
-                className="text-brand font-semibold hover:text-brand-strong"
-              >
-                IPTV buffering guide
-              </Link>
-              .
-            </p>
-            <p>
-              After your initial setup is confirmed, save your account details
-              and preferred player configuration. This ensures future line
-              renewals, support inquiries, and multi-device additions proceed
-              smoothly.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function SetupChecklistSection() {
-  const checklist = [
-    {
-      title: "A supported screen",
-      body: "Any one of the family of supported devices you already own.",
-    },
-    {
-      title: "An IPTV player application",
-      body: "A player app that accepts Xtream Codes, M3U/M3U8, or portal logins.",
-    },
-    {
-      title: "A working internet connection",
-      body: "Consistent download speed with low latency and a stable Wi-Fi or wired signal.",
-    },
-    {
-      title: "A free trial request",
-      body: "A quick request through support so you can test everything before paying.",
-    },
-  ] as const;
-
-  return (
-    <section className="border-y border-line bg-canvas-alt">
-      <div className="site-container section-pad">
-        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-          <div className="max-w-2xl">
-            <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
-              Before you start
-            </p>
-            <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-tight tracking-tight text-ink">
-              Four things to have ready for a smooth IPTV setup
-            </h2>
-            <p className="mt-4 text-base leading-7 text-ink-muted sm:text-lg">
-              IPTV setup is straightforward when the basics are in place. You do
-              not need specialized hardware — most households already own a
-              compatible screen and a router that can handle HD or 4K streaming.
-              Reviewing the list below before requesting your trial keeps the
-              process quick and predictable.
-            </p>
-            <p className="mt-4 text-base leading-7 text-ink-muted">
-              The first three items are the practical requirements. The fourth —
-              the trial — is the part EagleCast TV recommends you never skip. A
-              trial lets you confirm that your chosen app, screen, and
-              connection work well together before any purchase decision, which
-              is exactly the workflow described in the{" "}
-              <Link
-                href="/tutorials/getting-started-with-eaglecast-tv"
-                className="text-brand font-semibold hover:text-brand-strong"
-              >
-                getting started tutorial
-              </Link>
-              .
-            </p>
-          </div>
-          <ol className="grid gap-5">
-            {checklist.map((item, index) => (
-              <li
-                key={item.title}
-                className="flex gap-4 rounded-lg border border-line bg-panel p-5"
-              >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-soft text-sm font-black text-brand">
-                  {index + 1}
-                </span>
-                <div>
-                  <h3 className="text-base font-black text-ink">
-                    {item.title}
-                  </h3>
-                  <p className="mt-1.5 text-sm leading-6 text-ink-subtle">
-                    {item.body}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
+        <ol className="mt-10 grid gap-5 md:grid-cols-3">
+          {steps.map(([count, title, body]) => (
+            <li key={title} className="rounded-lg border border-line bg-panel p-6">
+              <p className="text-xs font-black uppercase tracking-[0.16em] text-brand-strong">
+                {count}
+              </p>
+              <h3 className="mt-4 text-lg font-black text-ink">{title}</h3>
+              <p className="mt-2 text-sm leading-6 text-ink-subtle">{body}</p>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );
 }
 
 export function SupportHelpSection() {
-  const helpRoutes = [
+  return (
+    <section id="support" className="bg-canvas">
+      <div className="site-container py-12">
+        <div className="grid gap-6 rounded-lg border border-line bg-panel p-6 shadow-card md:grid-cols-[1fr_auto] md:items-center md:p-8">
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
+              Need Help Choosing?
+            </p>
+            <h2 className="mt-3 text-2xl font-black tracking-tight text-ink">
+              EagleCast TV Subscription & Setup Support
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-ink-muted">
+              Ask about trials, activation, extra screens, or setup before you
+              buy.
+            </p>
+          </div>
+          <Link href="/contact" className="btn-secondary">
+            <Headphones size={18} aria-hidden="true" />
+            Contact support
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ResourceHubSection() {
+  const resources = [
     {
-      title: "Contact & customer support",
-      body: "Reach the EagleCast TV team about package questions, activation, renewals, and technical issues through the official contact routes.",
-      href: "/contact",
-      label: "Contact page",
+      title: "Setup Guides",
+      body: "Device and app setup instructions for supported screens.",
+      href: "/tutorials",
+      icon: Settings,
     },
     {
-      title: "Login help",
-      body: "Guidance for finding, re-entering, and troubleshooting the login credentials used with your subscription line.",
-      href: "/login-help",
-      label: "Login help",
-    },
-    {
-      title: "Portal help",
-      body: "Understand portal-based setup, where portal details come from, and what to verify when a portal cannot connect.",
-      href: "/portal-help",
-      label: "Portal help",
-    },
-    {
-      title: "FAQ & troubleshooting",
-      body: "Browse answers on trials, devices, activation speed, 4K-ready playback, multi-screen access, and buffering fixes.",
+      title: "Help & FAQ",
+      body: "Short answers about trials, plans, devices, and support.",
       href: "/faq",
-      label: "Visit the FAQ",
+      icon: CircleHelp,
+    },
+    {
+      title: "EagleCast TV Blog",
+      body: "Educational IPTV articles for deeper research when needed.",
+      href: "/blog",
+      icon: Tv,
     },
   ] as const;
 
   return (
-    <section id="support" className="bg-canvas">
+    <section className="bg-canvas-alt">
       <div className="site-container section-pad">
-        <div className="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-          <div className="max-w-2xl">
-            <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
-              Service Information &amp; Support
-            </p>
-            <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-tight tracking-tight text-ink">
-              Support for subscriptions, setup, and streaming issues
-            </h2>
-            <p className="mt-4 text-base leading-7 text-ink-muted sm:text-lg">
-              EagleCast TV support covers the moments that matter: choosing a
-              plan, confirming your device before you pay, entering credentials,
-              and resolving playback issues after activation. Use the official
-              support routes for subscription questions, payment instructions,
-              service information, and account help.
-            </p>
-            <p className="mt-4 text-base leading-7 text-ink-muted">
-              For self-service help, the{" "}
+        <div className="max-w-3xl">
+          <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
+            Resources
+          </p>
+          <h2 className="mt-4 text-[clamp(2rem,4.5vw,3rem)] font-black leading-tight tracking-tight text-ink">
+            EagleCast TV Setup, Support & Resources
+          </h2>
+          <p className="mt-4 text-base leading-7 text-ink-muted">
+            The homepage stays focused on the service. Use these hubs for
+            setup, support, and deeper IPTV education.
+          </p>
+        </div>
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
+          {resources.map((resource) => {
+            const Icon = resource.icon;
+            return (
               <Link
-                href="/tutorials/diy-troubleshooting-guide"
-                className="text-brand font-semibold hover:text-brand-strong"
+                key={resource.href}
+                href={resource.href}
+                className="group rounded-lg border border-line bg-panel p-6 shadow-card transition hover:-translate-y-0.5 hover:border-brand/45 hover:shadow-soft"
               >
-                DIY troubleshooting guide
-              </Link>{" "}
-              walks through how to describe an issue, while the{" "}
-              <Link
-                href="/tutorials/getting-started-with-eaglecast-tv"
-                className="text-brand font-semibold hover:text-brand-strong"
-              >
-                getting started tutorial
-              </Link>{" "}
-              covers requesting trial access and choosing a first screen. Both
-              routes prepare you to get the most from a support conversation.
-            </p>
-            <p className="mt-4 text-base leading-7 text-ink-muted">
-              If buffering or freezing shows up after setup, start with the{" "}
-              <Link
-                href="/blog/fix-iptv-buffering"
-                className="text-brand font-semibold hover:text-brand-strong"
-              >
-                buffering guide
-              </Link>{" "}
-              and the{" "}
-              <Link
-                href="/blog/internet-speed-for-iptv"
-                className="text-brand font-semibold hover:text-brand-strong"
-              >
-                internet speed guide
-              </Link>
-              , then contact support with your device, app, and network details.
-            </p>
-            <Link
-              href="/contact"
-              className="btn-secondary mt-8 w-full sm:w-auto"
-            >
-              <Headphones size={18} aria-hidden="true" />
-              Contact EagleCast TV Support
-            </Link>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {helpRoutes.map((route) => (
-              <Link
-                key={route.title}
-                href={route.href}
-                className="group rounded-lg border border-line bg-panel p-5 transition hover:-translate-y-0.5 hover:border-brand/45 hover:shadow-soft"
-              >
-                <h3 className="text-base font-black text-ink group-hover:text-brand">
-                  {route.title}
+                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-soft text-brand">
+                  <Icon size={19} aria-hidden="true" />
+                </span>
+                <h3 className="mt-5 text-lg font-black text-ink group-hover:text-brand">
+                  {resource.title}
                 </h3>
-                <p className="mt-2 text-sm leading-6 text-ink-subtle">
-                  {route.body}
+                <p className="mt-3 text-sm leading-6 text-ink-subtle">
+                  {resource.body}
                 </p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-brand">
-                  {route.label}
+                <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand-strong">
+                  Open hub
                   <ArrowRight
                     size={15}
                     className="transition-transform group-hover:translate-x-0.5"
@@ -945,140 +448,8 @@ export function SupportHelpSection() {
                   />
                 </span>
               </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function ResellerCtaSection() {
-  const points = [
-    "Customer account panels",
-    "Trial generation workflows",
-    "Subscription renewals",
-    "Device setup guidance",
-  ] as const;
-
-  return (
-    <section id="reseller" className="bg-canvas">
-      <div className="site-container section-pad">
-        <div className="rounded-lg border border-brand/15 bg-[#EFF6FF] p-6 shadow-soft md:p-10">
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-            <div>
-              <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
-                EagleCast TV Reseller
-              </p>
-              <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-tight tracking-tight text-ink">
-                Build your IPTV business with an organized workflow
-              </h2>
-              <p className="mt-4 text-base leading-7 text-[#475569] sm:text-lg">
-                Use a structured streaming brand foundation for customer trials,
-                subscription renewals, setup guidance, and account management.
-              </p>
-              <p className="mt-4 text-base leading-7 text-[#475569]">
-                The EagleCast TV reseller program is built for partners who need
-                a transparent, reliable framework for managing customer
-                accounts. Instead of dealing with ambiguous support lines, our
-                reseller panel enables clean customer onboarding, rapid trial
-                creation, line management, and structured device setup help.
-              </p>
-              <p className="mt-4 text-base leading-7 text-[#475569]">
-                Whether managing a few client accounts or building a dedicated
-                customer base, our reseller tools help you deliver consistent
-                support, guide app installations, and handle renewals
-                efficiently.
-              </p>
-              <Link href="/reseller" className="btn-secondary mt-8">
-                <BriefcaseBusiness size={18} aria-hidden="true" />
-                Explore Reseller Options
-              </Link>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {points.map((point, index) => (
-                <div key={point} className="border-t border-line pt-5">
-                  <p className="text-sm font-black text-brand-strong">
-                    0{index + 1}
-                  </p>
-                  <p className="mt-3 font-bold text-ink">{point}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function GuidesSection() {
-  return (
-    <section className="bg-canvas-alt">
-      <div className="site-container section-pad">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <div className="max-w-2xl">
-            <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
-              EagleCast TV Guides & Resources
-            </p>
-            <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-tight tracking-tight text-ink">
-              Popular EagleCast TV setup & optimization guides
-            </h2>
-            <p className="mt-4 text-base leading-7 text-ink-muted">
-              Our educational guides answer key questions about IPTV streaming:
-              connection formats (Xtream Codes API, M3U, MAC Portals), home
-              network optimization, electronic program guides, Smart TV setup,
-              Firestick configuration, and buffer troubleshooting.
-            </p>
-          </div>
-          <Link
-            href="/blog"
-            className="group inline-flex items-center gap-2 text-sm font-bold text-brand-strong hover:text-brand"
-          >
-            View all guides
-            <ArrowRight
-              size={16}
-              className="transition-transform group-hover:translate-x-0.5"
-              aria-hidden="true"
-            />
-          </Link>
-        </div>
-        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {blogPosts.slice(0, 6).map((post) => (
-            <article
-              key={post.slug}
-              className="overflow-hidden rounded-lg border border-line bg-panel shadow-card transition hover:border-line-strong hover:shadow-soft flex flex-col"
-            >
-              <div className="relative aspect-[16/9] bg-panel">
-                <Image
-                  src={post.featuredImage.src}
-                  alt={post.featuredImage.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-white/10" />
-              </div>
-              <div className="p-5 flex flex-col flex-1">
-                <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-strong">
-                  {post.category} · {post.readingTime}
-                </p>
-                <h3 className="mt-3 line-clamp-2 text-lg font-black leading-6 text-ink">
-                  {post.title}
-                </h3>
-                <p className="mt-3 line-clamp-3 text-sm leading-6 text-ink-subtle flex-1">
-                  {post.excerpt}
-                </p>
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand-strong hover:text-brand"
-                >
-                  Read Guide
-                  <ArrowRight size={15} aria-hidden="true" />
-                </Link>
-              </div>
-            </article>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
@@ -1091,25 +462,11 @@ export function HomeFaqSection() {
       <div className="site-container section-pad">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
-            Helpful Answers
+            FAQ
           </p>
-          <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-tight tracking-tight text-ink">
-            EagleCast TV IPTV FAQ
+          <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.15rem)] font-black leading-tight tracking-tight text-ink">
+            EagleCast TV IPTV FAQs
           </h2>
-          <p className="mt-4 text-base leading-7 text-ink-muted">
-            Frequently asked questions about IPTV streaming, player
-            applications, supported devices, connection formats, trial setup,
-            buffer troubleshooting, and subscription support. For the full set
-            of answers — including payment, trial timing, and device-specific
-            workflow — visit the complete{" "}
-            <Link
-              href="/faq"
-              className="font-semibold text-brand-strong hover:text-brand"
-            >
-              EagleCast TV FAQ page
-            </Link>
-            .
-          </p>
         </div>
         <div className="mx-auto mt-10 max-w-4xl divide-y divide-line rounded-lg border border-line bg-panel shadow-card">
           {faqItems.map(([question, answer]) => (
@@ -1134,52 +491,20 @@ export function HomeFaqSection() {
   );
 }
 
-export function TrialFlowSection() {
-  return (
-    <section id="trial" className="bg-canvas-alt">
-      <div className="site-container py-12">
-        <div className="grid gap-6 rounded-lg border border-line bg-panel p-6 md:grid-cols-[1fr_auto] md:items-center md:p-8">
-          <div>
-            <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
-              EagleCast TV Get Trial
-            </p>
-            <h2 className="mt-3 text-2xl font-black tracking-tight text-ink">
-              Try EagleCast TV before you subscribe.
-            </h2>
-            <p className="mt-2 text-sm leading-6 text-ink-muted">
-              Share your device and viewing priorities so support can guide your
-              setup path.
-            </p>
-          </div>
-          <a
-            href={contactInfo.whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-emerald"
-          >
-            <MessageCircle size={18} aria-hidden="true" />
-            Get Trial
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export function FinalConversionCta() {
   return (
     <section className="bg-canvas-alt">
       <div className="site-container py-14">
         <div className="rounded-lg border border-brand/20 bg-panel p-8 text-center shadow-card md:p-12">
           <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-strong">
-            Ready to Start?
+            Start Watching
           </p>
           <h2 className="mt-4 text-3xl font-black tracking-tight text-ink sm:text-4xl">
-            Start streaming with EagleCast TV
+            Start Streaming with EagleCast TV
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-ink-muted">
-            Request your trial line today to test setup on your Smart TV,
-            Firestick, Android, or set-top box before selecting a package.
+            Request a trial or compare subscriptions, then activate EagleCast TV
+            on your preferred device with setup support.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <a

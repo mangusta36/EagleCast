@@ -4,6 +4,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { blogPosts } from "@/data/blog";
 import { buildMetadata } from "@/lib/seo";
+import Link from "next/link";
 
 export const metadata = buildMetadata({
   title: "IPTV Guides, Setup Help & Streaming Advice | EagleCast TV",
@@ -18,7 +19,10 @@ export default function BlogPage() {
   return (
     <>
       <BreadcrumbJsonLd
-        items={[{ name: "Home", item: "/" }, { name: "Blog", item: "/blog" }]}
+        items={[
+          { name: "Home", item: "/" },
+          { name: "Blog", item: "/blog" },
+        ]}
       />
       <section className="bg-canvas">
         <div className="site-container py-16 sm:py-20 lg:py-24">
@@ -28,9 +32,15 @@ export default function BlogPage() {
               IPTV Guides, Setup Help &amp; Streaming Advice
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-8 text-ink-muted sm:text-lg">
-              EagleCast TV publishes practical IPTV guides for understanding the
-              technology, choosing devices, setting up apps, improving streaming
-              quality, and making smarter purchase decisions.
+              <Link
+                href="/"
+                className="font-semibold text-brand hover:text-brand-strong"
+              >
+                EagleCast TV
+              </Link>{" "}
+              publishes practical IPTV guides for understanding the technology,
+              choosing devices, setting up apps, improving streaming quality,
+              and making smarter purchase decisions.
             </p>
           </div>
         </div>

@@ -21,7 +21,7 @@ export const PRICING_PLANS: PricingPlan[] = [
   {
     slug: "3-months",
     name: "3 Months",
-    description: "Flexible short-term access to test out premium streaming.",
+    description: "Flexible short-term EagleCast TV subscription access.",
     price: "$37",
     monthlyEquivalent: "$12.33/mo",
     billingPeriod: "every 3 months",
@@ -43,7 +43,8 @@ export const PRICING_PLANS: PricingPlan[] = [
   {
     slug: "6-months",
     name: "6 Months",
-    description: "Great value for regular sports & entertainment viewers.",
+    description:
+      "EagleCast TV access for regular sports and entertainment viewers.",
     price: "$49",
     monthlyEquivalent: "$8.16/mo",
     billingPeriod: "every 6 months",
@@ -66,7 +67,7 @@ export const PRICING_PLANS: PricingPlan[] = [
   {
     slug: "12-months",
     name: "12 Months",
-    description: "Our most popular package. Maximum stability & best value.",
+    description: "The most popular EagleCast TV package for long-term value.",
     price: "$67",
     monthlyEquivalent: "$5.58/mo",
     billingPeriod: "billed annually",
@@ -92,7 +93,7 @@ export const PRICING_PLANS: PricingPlan[] = [
   {
     slug: "24-months",
     name: "24 Months",
-    description: "Long-term VIP pass. Lock in the absolute lowest rate.",
+    description: "Long-term EagleCast TV access at the lowest listed rate.",
     price: "$110",
     monthlyEquivalent: "$4.58/mo",
     billingPeriod: "every 2 years",

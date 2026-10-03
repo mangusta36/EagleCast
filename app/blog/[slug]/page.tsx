@@ -5,10 +5,7 @@ import { ChevronRight } from "lucide-react";
 import { ArticleInlineCta } from "@/components/blog/article-inline-cta";
 import { renderRichText } from "@/components/blog/rich-text";
 import { ArticleCard } from "@/components/sections/article-card";
-import {
-  BreadcrumbJsonLd,
-  FaqJsonLd,
-} from "@/components/seo/page-json-ld";
+import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/page-json-ld";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { blogPosts, getBlogPost } from "@/data/blog";
 import { SITE_URL } from "@/data/seo";
@@ -31,7 +28,9 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   }
 
   return buildMetadata({
-    title: `${post.seoTitle} | EagleCast TV`,
+    title: post.seoTitle.includes("EagleCast TV")
+      ? post.seoTitle
+      : `${post.seoTitle} | EagleCast TV`,
     description: post.metaDescription,
     pathname: `/blog/${post.slug}`,
     image: post.featuredImage.src,

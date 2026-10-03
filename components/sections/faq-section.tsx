@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { FAQS } from "@/data/faqs";
 import { ChevronDown, HelpCircle, ShieldCheck } from "lucide-react";
 
@@ -15,7 +16,11 @@ export function FaqSection() {
           </h1>
           <p className="text-sm md:text-base text-slate-300 mt-2">
             Quick answers about IPTV streaming, apps, devices, trials, playback,
-            setup, and reseller options.
+            setup, and reseller options. For the service overview, visit{" "}
+            <Link href="/" className="font-semibold text-blue-200 underline">
+              EagleCast TV
+            </Link>
+            .
           </p>
         </div>
 

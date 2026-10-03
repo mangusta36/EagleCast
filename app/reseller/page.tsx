@@ -13,10 +13,7 @@ import {
 } from "lucide-react";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { SectionHeading } from "@/components/ui/section-heading";
-import {
-  BreadcrumbJsonLd,
-  FaqJsonLd,
-} from "@/components/seo/page-json-ld";
+import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/page-json-ld";
 import { buildWhatsappUrl } from "@/data/contact";
 import { FAQS } from "@/data/faqs";
 import { SITE_URL } from "@/data/seo";
@@ -199,7 +196,15 @@ export default function ResellerPage() {
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-8 text-ink-muted sm:text-lg">
               Sell IPTV subscriptions to your own customers with reseller
-              access, setup guidance, and support from EagleCast TV.
+              access, setup guidance, and support from EagleCast TV. New to the
+              service? Review the{" "}
+              <Link
+                href="/"
+                className="font-semibold text-brand hover:text-brand-strong"
+              >
+                EagleCast TV streaming service
+              </Link>{" "}
+              before asking about reseller access.
             </p>
             <div className="mt-8 rounded-lg border border-line bg-panel p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand">

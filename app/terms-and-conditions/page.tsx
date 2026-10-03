@@ -13,7 +13,9 @@ export default function TermsPage() {
   return (
     <div className="min-h-screen bg-canvas py-16">
       <div className="site-container max-w-3xl space-y-6">
-        <h1 className="text-3xl font-extrabold text-ink">Terms & Conditions</h1>
+        <h1 className="text-3xl font-extrabold text-ink">
+          EagleCast TV Terms & Conditions
+        </h1>
         <p className="text-sm text-ink-subtle">Last updated: August 2026</p>
 
         <div className="space-y-4 border-t border-line pt-6 text-sm leading-relaxed text-ink-muted">
@@ -22,7 +24,9 @@ export default function TermsPage() {
             trial, choosing a package, or contacting support, you agree to these
             Terms and Conditions.
           </p>
-          <h2 className="text-lg font-bold text-ink">Service Availability</h2>
+          <h2 className="text-lg font-bold text-ink">
+            EagleCast TV Service Availability
+          </h2>
           <p>
             Live channels, sports, movies, series, replay, and higher-resolution
             playback may vary by source availability, device capability, app
@@ -30,18 +34,18 @@ export default function TermsPage() {
           </p>
           <h2 className="text-lg font-bold text-ink">Trials and Purchases</h2>
           <p>
-            Use the available trial to evaluate compatibility and playback on
-            your own device and network before choosing a paid term. Published
-            plans use one-time payments and do not renew automatically. The
-            features, connection allowance, term, and price presented when an
-            order is confirmed form part of that purchase.
+            Use the available EagleCast TV trial to evaluate compatibility and
+            playback on your own device and network before choosing a paid term.
+            Published plans use one-time payments and do not renew
+            automatically. The features, connection allowance, term, and price
+            presented when an order is confirmed form part of that purchase.
           </p>
           <h2 className="text-lg font-bold text-ink">
             Account Responsibilities
           </h2>
           <p>
             You are responsible for providing accurate order information,
-            keeping access credentials private, using the service only through
+            keeping access credentials private, using EagleCast TV only through
             compatible apps and devices, and following applicable law. Account
             access should not be resold, shared, or used beyond the connections
             included with the selected plan unless a separate reseller

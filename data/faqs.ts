@@ -16,16 +16,16 @@ export const FAQS: FaqItem[] = [
   },
   {
     id: "faq-2",
-    question: "Which devices and streaming apps are supported?",
+    question: "Which devices and streaming apps work with EagleCast TV?",
     answer:
       "EagleCast TV supports common IPTV app workflows across Smart TVs, Firestick and Fire TV devices, Android phones and tablets, iPhones and iPads, compatible boxes, Windows PCs, and Mac devices.",
     category: "compatibility",
   },
   {
     id: "faq-3",
-    question: "How quickly will my IPTV line be activated after ordering?",
+    question: "How quickly is an EagleCast TV IPTV line activated?",
     answer:
-      "Line activation is near-instant. Once you submit your order or trial request on WhatsApp, our team sends your M3U playlist link, Xtream Codes credentials, and step-by-step setup guide within 2 to 5 minutes.",
+      "EagleCast TV line activation is near-instant. Once you submit your order or trial request on WhatsApp, the team sends your M3U playlist link, Xtream Codes credentials, and step-by-step setup guide within 2 to 5 minutes.",
     category: "setup",
   },
   {
@@ -37,16 +37,16 @@ export const FAQS: FaqItem[] = [
   },
   {
     id: "faq-5",
-    question: "How many devices can I stream on simultaneously?",
+    question: "How many devices can stream with one EagleCast TV subscription?",
     answer:
-      "Standard subscription plans include 1 active connection. If you need multi-screen streaming for family members or multiple rooms, you can easily add extra connections during checkout or via WhatsApp support.",
+      "Standard EagleCast TV subscription plans include 1 active connection. If you need multi-screen streaming for family members or multiple rooms, you can add extra connections during checkout or via WhatsApp support.",
     category: "compatibility",
   },
   {
     id: "faq-6",
-    question: "How does the IPTV Reseller Panel program work?",
+    question: "How does the EagleCast TV IPTV reseller panel work?",
     answer:
-      "Our Reseller Program provides you with a dedicated Xtream Codes / M3U Management Panel to create, manage, renew, and sell sub-accounts to your own clients. You purchase credit packages with full 24/7 technical backing.",
+      "The EagleCast TV reseller program provides a dedicated Xtream Codes / M3U management panel to create, manage, renew, and sell sub-accounts to your own clients. You purchase credit packages with technical backing from EagleCast TV.",
     category: "reseller",
   },
 ];

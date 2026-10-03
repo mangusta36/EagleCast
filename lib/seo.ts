@@ -21,7 +21,8 @@ export function buildMetadata(options: MetadataOptions = {}): Metadata {
     pathname = "/",
     image = "/images/og-default.webp",
   } = options;
-  const canonical = `${SITE_URL}${pathname}`;
+  const canonical =
+    pathname === "/" ? `${SITE_URL}/` : `${SITE_URL}${pathname}`;
 
   return {
     title,

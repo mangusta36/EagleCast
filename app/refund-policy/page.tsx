@@ -13,12 +13,14 @@ export default function RefundPolicyPage() {
   return (
     <div className="min-h-screen bg-canvas py-16">
       <div className="site-container max-w-3xl space-y-6">
-        <h1 className="text-3xl font-extrabold text-ink">Refund Policy</h1>
+        <h1 className="text-3xl font-extrabold text-ink">
+          EagleCast TV Refund Policy
+        </h1>
         <p className="text-sm text-ink-subtle">Last updated: August 2026</p>
 
         <div className="space-y-4 border-t border-line pt-6 text-sm leading-relaxed text-ink-muted">
           <h2 className="text-lg font-bold text-ink">
-            1. Trial Before Purchase
+            1. EagleCast TV Trial Before Purchase
           </h2>
           <p>
             EagleCast TV encourages viewers to request a trial before choosing a
@@ -26,7 +28,9 @@ export default function RefundPolicyPage() {
             checked first.
           </p>
 
-          <h2 className="text-lg font-bold text-ink">2. Support Review</h2>
+          <h2 className="text-lg font-bold text-ink">
+            2. EagleCast TV Support Review
+          </h2>
           <p>
             If you experience an issue after purchase, contact EagleCast TV
             support with your device, app, connection type, package, and error
@@ -35,18 +39,19 @@ export default function RefundPolicyPage() {
 
           <h2 className="text-lg font-bold text-ink">3. Refund Questions</h2>
           <p>
-            Refund eligibility depends on the transaction details, service
-            status, account usage, and support findings. Contact support for the
-            current policy that applies to your order.
+            Refund eligibility depends on the transaction details, EagleCast TV
+            service status, account usage, and support findings. Contact support
+            for the current policy that applies to your order.
           </p>
 
           <h2 className="text-lg font-bold text-ink">4. What to Include</h2>
           <p>
-            Include the contact details used for the order, the selected plan,
-            the device and app involved, when the issue began, and the support
-            steps already attempted. Do not send passwords or full payment
-            credentials. Complete information helps support distinguish an
-            account issue from a device, app, or local-network problem.
+            Include the contact details used for the EagleCast TV order, the
+            selected plan, the device and app involved, when the issue began,
+            and the support steps already attempted. Do not send passwords or
+            full payment credentials. Complete information helps support
+            distinguish an account issue from a device, app, or local-network
+            problem.
           </p>
 
           <h2 className="text-lg font-bold text-ink">

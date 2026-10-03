@@ -37,7 +37,7 @@ c = c.replace(
     'When importing credentials into Smarters Pro on Apple TV, you can use the iOS Remote app on your iPhone to type your Server URL, Username, and Password without clicking through the on-screen tvOS keyboard.\n        "In addition, Smarters Pro on Apple TV supports multi-screen mode, allowing users to divide their 4K display into four 1080p stream boxes. This makes it possible to watch four simultaneous live sports channels on Saturdays without frame rate drop.",'
 )
 
-with open(apple_path, "w", encoding="utf-8") as f:
+with open(apple_ath, "w", encoding="utf-8") as f:
     f.write(c)
 
 

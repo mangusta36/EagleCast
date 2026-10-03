@@ -108,7 +108,7 @@ export const paymentGuidePost: BlogPost = {
         description:
           "Use the official support route for current payment instructions, setup details, login help, and portal guidance.",
         href: "/contact",
-        label: "Contact Support",
+        label: "Contact EagleCast TV support",
       },
     },
     {

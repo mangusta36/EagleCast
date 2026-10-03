@@ -157,7 +157,7 @@ export const serviceStatusGuidePost: BlogPost = {
         description:
           "Contact EagleCast TV support with your device, app, error message, and test results so the team can check the right layer.",
         href: "/contact",
-        label: "Contact Support",
+        label: "Contact EagleCast TV support",
       },
     },
   ],

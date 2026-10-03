@@ -29,22 +29,22 @@ const servicePresentation: Record<
 > = {
   "Catchup & Replay": {
     icon: RotateCcw,
-    body: "Return to missed content with catch-up and replay access for up to two days.",
-    detail: "Included in every listed plan",
+    body: "Return to missed content with EagleCast TV catch-up and replay access for up to two days.",
+    detail: "Included in every listed EagleCast TV plan",
   },
   "Sports and PPV": {
     icon: Trophy,
-    body: "Watch local and international sports alongside the PPV events included in the service offering.",
+    body: "Watch local and international sports alongside the PPV events included in the EagleCast TV service offering.",
     detail: "Part of the full EagleCast TV package",
   },
   "Live TV with EPG": {
     icon: Tv,
-    body: "Browse live TV with an electronic program guide and HD-quality streaming support.",
-    detail: "Guide access is included",
+    body: "Browse EagleCast TV live channels with an electronic program guide and HD-quality streaming support.",
+    detail: "EagleCast TV guide access is included",
   },
   "24x7 Support": {
     icon: Headphones,
-    body: "Get help with setup, billing, and technical questions through the listed support channels.",
+    body: "Get EagleCast TV help with setup, billing, and technical questions through the listed support channels.",
     detail: "Support is listed as available 24/7",
   },
 };
@@ -67,7 +67,7 @@ export default function ServicesPage() {
       />
       <PageHero
         eyebrow="What is included"
-        title="The viewing features that come with every plan"
+        title="EagleCast TV viewing features included with every plan"
         description="EagleCast TV combines live TV, sports, movies, catch-up, multi-screen access, and support under the same core service."
       >
         <ButtonLink href="/free-trial">Get Trial</ButtonLink>
@@ -76,13 +76,27 @@ export default function ServicesPage() {
         </ButtonLink>
       </PageHero>
 
+      <section className="border-b border-line bg-canvas">
+        <div className="site-container py-6 text-sm leading-7 text-ink-muted">
+          This page explains the feature set. For the broad brand, plan, and
+          trial path, start from the{" "}
+          <Link
+            href="/"
+            className="font-semibold text-brand hover:text-brand-strong"
+          >
+            EagleCast TV IPTV service homepage
+          </Link>
+          .
+        </div>
+      </section>
+
       <section className="bg-canvas">
         <div className="site-container section-pad grid items-center gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:gap-20">
           <div>
             <SectionHeading
               eyebrow="One complete package"
-              title="Move from the guide to the content you want"
-              description="The service covers the main ways viewers browse and return to entertainment, without splitting features across higher tiers."
+              title="Move from the EagleCast TV guide to the content you want"
+              description="EagleCast TV covers the main ways viewers browse and return to entertainment, without splitting features across higher tiers."
             />
             <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
               {packageItems.map((item) => {
@@ -111,7 +125,7 @@ export default function ServicesPage() {
         <div className="site-container section-pad">
           <SectionHeading
             eyebrow="Feature overview"
-            title="Four parts of the everyday experience"
+            title="Four parts of the everyday EagleCast TV experience"
             description="Each feature below is listed as part of the same EagleCast TV service and is available across the published plan terms."
           />
 
@@ -176,19 +190,19 @@ export default function ServicesPage() {
                 href="/tutorials"
                 className="font-semibold text-brand hover:text-brand-strong"
               >
-                setup tutorials
+                EagleCast TV setup tutorials
               </Link>{" "}
               for self-service guidance, or use the{" "}
               <Link
                 href="/faq"
                 className="font-semibold text-brand hover:text-brand-strong"
               >
-                FAQ
+                EagleCast TV FAQ
               </Link>{" "}
               for package, payment, and compatibility questions.
             </p>
           </div>
-          <ButtonLink href="/contact">Contact support</ButtonLink>
+          <ButtonLink href="/contact">Contact EagleCast TV support</ButtonLink>
         </div>
       </section>
 

@@ -8,7 +8,7 @@ const siteStructuredData = {
       "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
       name: "EagleCast TV",
-      url: SITE_URL,
+      url: `${SITE_URL}/`,
       logo: `${SITE_URL}/icon.svg`,
       email: contactInfo.email,
       sameAs: [contactInfo.telegram],
@@ -17,47 +17,11 @@ const siteStructuredData = {
       "@type": "WebSite",
       "@id": `${SITE_URL}/#website`,
       name: "EagleCast TV",
-      url: SITE_URL,
+      url: `${SITE_URL}/`,
       description: siteMetadata.description,
       publisher: {
         "@id": `${SITE_URL}/#organization`,
       },
-    },
-    {
-      "@type": "Service",
-      "@id": `${SITE_URL}/#service`,
-      name: "EagleCast TV",
-      serviceType: "IPTV service",
-      url: SITE_URL,
-      description: siteMetadata.description,
-      provider: {
-        "@id": `${SITE_URL}/#organization`,
-      },
-      isRelatedTo: {
-        "@id": `${SITE_URL}/#website`,
-      },
-      areaServed: [
-        {
-          "@type": "Country",
-          name: "United States",
-        },
-        {
-          "@type": "Country",
-          name: "Canada",
-        },
-      ],
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": `${SITE_URL}/#breadcrumb`,
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: SITE_URL,
-        },
-      ],
     },
   ],
 };

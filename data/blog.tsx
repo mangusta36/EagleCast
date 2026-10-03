@@ -1,6 +1,8 @@
 import { appleGuidePost } from "./blog-posts/apple-guide";
 import { appsShootoutPost } from "./blog-posts/apps-shootout";
 import { errorFixingGuidePost } from "./blog-posts/error-fixing-guide";
+import { mlbPlayoffs2026GuidePost } from "./blog-posts/mlb-playoffs-2026-guide";
+import { nba202627GuidePost } from "./blog-posts/nba-2026-27-guide";
 import { paymentGuidePost } from "./blog-posts/payment-guide";
 import { serviceStatusGuidePost } from "./blog-posts/service-status-guide";
 import { tivimateGuidePost } from "./blog-posts/tivimate-guide";
@@ -214,7 +216,7 @@ export const blogPosts: readonly BlogPost[] = [
         paragraphs: [
           "One common myth is that IPTV will either work perfectly everywhere or fail everywhere. Real home viewing is more nuanced. A service can behave well on one device, poorly on another, and somewhere in between in a second room with weaker Wi-Fi. Another myth is that a high-speed internet package guarantees smooth playback by itself. In reality, the screen only experiences the quality of the path that reaches it, not the headline number on the bill. The room, the device, the app, and the time of day still matter.",
           "A more useful approach is to test the things that predict long-term comfort. Check live playback, not only one on-demand item. Open the guide, not only one stream. Use the actual room and device where you plan to watch most often. If other people will share the service, see how it behaves under normal household conditions rather than in an empty-house ideal. These are the tests that turn theory into evidence.",
-          'It also helps to notice your own priorities early. A sports viewer may care a lot about live-event stability and delay. A family may care more about device flexibility and connection limits. A less technical viewer may care most about whether the app and remote feel easy to understand. Those priorities shape what "good" looks like. Testing should be built around them rather than around abstract marketing claims.',
+          'It also helps to notice your own priorities early. A sports viewer may care a lot about live-event stability and delay, especially during schedule-driven events like the [2026 MLB playoffs](/blog/how-to-watch-mlb-playoffs-2026) or a long [NBA season viewing plan](/blog/how-to-watch-nba-2026-27). A family may care more about device flexibility and connection limits. A less technical viewer may care most about whether the app and remote feel easy to understand. Those priorities shape what "good" looks like. Testing should be built around them rather than around abstract marketing claims.',
           "By the time you finish those checks, IPTV becomes much easier to judge fairly. You are no longer asking whether the acronym sounds modern or whether the feature list looks long. You are asking whether the whole stack delivers a comfortable, trustworthy viewing experience in your real environment, which is the only question that matters at subscription time.",
         ],
       },
@@ -613,7 +615,7 @@ export const blogPosts: readonly BlogPost[] = [
         id: "who-each-device-suits",
         title: "Which device type suits which viewer",
         paragraphs: [
-          "A casual household that wants the fewest boxes may be happiest starting on the television itself and adding external hardware only if needed. A viewer who already knows the TV software feels slow may get the biggest improvement from a Fire TV or Android TV device. Someone who watches while traveling may care more about mobile app support than about living room polish. A sports-focused viewer may prioritize Ethernet-friendly hardware and a remote that handles channel movement quickly.",
+          "A casual household that wants the fewest boxes may be happiest starting on the television itself and adding external hardware only if needed. A viewer who already knows the TV software feels slow may get the biggest improvement from a Fire TV or Android TV device. Someone who watches while traveling may care more about mobile app support than about living room polish. A sports-focused viewer may prioritize Ethernet-friendly hardware and a remote that handles channel movement quickly, particularly when following current guides such as [how to watch MLB playoffs 2026](/blog/how-to-watch-mlb-playoffs-2026).",
           "That is why the right answer depends less on generic rankings and more on your room and habit pattern. Think about where you watch, whether you share the screen, how often you use live channels versus on-demand browsing, and how comfortable you are troubleshooting hardware. That decision process is usually more reliable than choosing whatever device appears most often in listicles.",
         ],
         cta: {
@@ -859,7 +861,7 @@ export const blogPosts: readonly BlogPost[] = [
           description:
             "When the app, guide, or credentials still do not behave as expected, use the support route with your TV model, operating system, and a short description of what you already tested.",
           href: "/contact",
-          label: "Contact Support",
+          label: "Contact EagleCast TV support",
         },
       },
     ],
@@ -1712,7 +1714,7 @@ export const blogPosts: readonly BlogPost[] = [
           description:
             "Use the support route with the device type, app name, time-zone setting, and whether the issue affects every channel or only part of the lineup.",
           href: "/contact",
-          label: "Contact Support",
+          label: "Contact EagleCast TV support",
         },
       },
       {
@@ -2553,7 +2555,7 @@ export const blogPosts: readonly BlogPost[] = [
     quickAnswer:
       "To optimize your home network for live 4K IPTV streaming, connect your primary device via Cat6 Ethernet or 5GHz Wi-Fi, assign custom DNS servers (such as Cloudflare 1.1.1.1 or Google 8.8.8.8), configure Quality of Service (QoS) bandwidth priority for your TV device on your router, and set player application buffers to 2\u20135 seconds.",
     intro: [
-      "Experiencing stream freezes, visual pixelation, or repeated buffering during a high-stakes live sports broadcast or movie night is frustrating. While viewers often blame their streaming service immediately, network diagnostic logs frequently reveal local network congestion, Wi-Fi signal attenuation, DNS routing delays, or router packet drops as the primary culprits.",
+      "Experiencing stream freezes, visual pixelation, or repeated buffering during a high-stakes live sports broadcast or movie night is frustrating. If you are preparing for schedule-heavy viewing like the [2026-27 NBA season](/blog/how-to-watch-nba-2026-27), network diagnostic logs often reveal local congestion, Wi-Fi signal attenuation, DNS routing delays, or router packet drops as the primary culprits.",
       "Unlike on-demand video platforms like Netflix or YouTube\u2014which can pre-buffer several minutes of content into local device storage\u2014live IPTV broadcasts deliver video data in strict real-time. This leaves zero tolerance for packet loss or bandwidth instability. By applying proven network optimization techniques, tuning router configurations, and establishing solid physical connections, you can build a robust home network capable of delivering continuous 4K streaming across every screen in your home.",
       "Reducing buffering requires looking beyond headline speed test numbers. A fast connection can still buffer when local Wi-Fi introduces jitter, household traffic creates congestion, or an upstream route becomes unstable. This guide provides a step-by-step workflow for checking the home router, wireless connection, DNS resolution, and player settings.",
     ],
@@ -2653,7 +2655,7 @@ export const blogPosts: readonly BlogPost[] = [
           description:
             "Contact our technical support team for personalized assistance configuring router settings, DNS servers, and application decoders.",
           href: "/contact",
-          label: "Contact Support",
+          label: "Contact EagleCast TV support",
         },
       },
       {
@@ -2782,6 +2784,8 @@ export const blogPosts: readonly BlogPost[] = [
       "best-devices-for-iptv",
     ],
   },
+  mlbPlayoffs2026GuidePost,
+  nba202627GuidePost,
   paymentGuidePost,
   serviceStatusGuidePost,
   tivimateGuidePost,

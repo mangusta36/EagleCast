@@ -111,8 +111,16 @@ export default function PricingPage() {
               </Link>{" "}
               and confirm playback on your device first. After the trial, the
               support team can recommend the term that matches your viewing
-              routine. For custom durations, payment questions, or activation
-              details, read the{" "}
+              routine. If you need the broader service overview first, return to
+              the{" "}
+              <Link
+                href="/"
+                className="font-semibold text-brand hover:text-brand-strong"
+              >
+                EagleCast TV homepage
+              </Link>
+              . For custom durations, payment questions, or activation details,
+              read the{" "}
               <Link
                 href="/blog/how-to-pay-for-eaglecast-tv-subscription"
                 className="font-semibold text-brand hover:text-brand-strong"

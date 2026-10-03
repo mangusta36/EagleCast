@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { FaqSection } from "@/components/sections/faq-section";
 import {
   BreadcrumbJsonLd,
@@ -26,6 +27,20 @@ export default function FaqPage() {
       <BreadcrumbJsonLd
         items={[{ name: "Home", item: "/" }, { name: "FAQ", item: "/faq" }]}
       />
+      <section className="bg-canvas">
+        <div className="site-container max-w-3xl pt-10 text-sm leading-7 text-ink-muted">
+          These answers support current customers and shoppers. For the main
+          service overview, plan path, and supported device summary, start with
+          the{" "}
+          <Link
+            href="/"
+            className="font-semibold text-brand hover:text-brand-strong"
+          >
+            EagleCast TV IPTV
+          </Link>{" "}
+          homepage.
+        </div>
+      </section>
       <FaqSection />
     </div>
   );

@@ -20,8 +20,8 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-xs leading-relaxed text-ink-subtle">
-              Premium IPTV streaming for live channels, sports, movies, series,
-              apps, devices, and guided setup support.
+              EagleCast TV provides IPTV streaming for live channels, sports,
+              movies, series, supported apps, devices, and guided setup support.
             </p>
             <p className="text-xs text-ink-subtle">{contactInfo.email}</p>
             <div className="flex items-center gap-2 pt-2">
@@ -32,7 +32,7 @@ export function Footer() {
                 className="inline-flex items-center gap-2 rounded-full border border-[#25D366]/35 bg-[#ECFDF5] px-3 py-1.5 text-xs font-bold text-[#047857] transition-colors hover:bg-[#D1FAE5]"
               >
                 <MessageCircle className="w-3.5 h-3.5 fill-current" />
-                <span>WhatsApp 24/7 Support</span>
+                <span>EagleCast TV WhatsApp support</span>
               </a>
             </div>
           </div>

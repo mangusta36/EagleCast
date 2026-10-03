@@ -1,4 +1,5 @@
 import { MessageCircle } from "lucide-react";
+import Link from "next/link";
 import { ContactForm } from "@/components/forms/contact-form";
 import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/page-json-ld";
 import { ButtonLink } from "@/components/ui/button-link";
@@ -100,7 +101,15 @@ export default function ContactPage() {
               Get help with package questions, activation details, device setup,
               login credentials, portal information, buffering issues, and
               reseller support through the official EagleCast TV support
-              channels.
+              channels. For the service overview, plans, and trial path, start
+              from{" "}
+              <Link
+                href="/"
+                className="font-semibold text-brand hover:text-brand-strong"
+              >
+                EagleCast TV
+              </Link>
+              .
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a

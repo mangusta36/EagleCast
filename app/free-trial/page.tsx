@@ -23,18 +23,18 @@ const trialIncludes = [
 const steps = [
   {
     number: "1",
-    title: "Request access by email",
-    body: "Send the team a trial request. If you came from a plan, that interest is carried into the email draft.",
+    title: "Request EagleCast TV access by email",
+    body: "Send the EagleCast TV team a trial request. If you came from a plan, that interest is carried into the email draft.",
   },
   {
     number: "2",
-    title: "Receive your setup details",
-    body: "The team provides your access information and guidance for your chosen device.",
+    title: "Receive EagleCast TV setup details",
+    body: "The team provides your EagleCast TV access information and guidance for your chosen device.",
   },
   {
     number: "3",
     title: "Explore before you subscribe",
-    body: "Try the full package, then decide whether one of the listed subscription terms fits.",
+    body: "Try the full EagleCast TV package, then decide whether one of the listed subscription terms fits.",
   },
 ] as const;
 
@@ -75,7 +75,14 @@ export default async function FreeTrialPage({
             </h1>
             <p className="mt-6 max-w-xl text-base leading-8 text-ink-muted sm:text-lg">
               Try the full package before choosing a paid term. Request access
-              directly from the EagleCast TV support team.
+              directly from the EagleCast TV support team, or review the{" "}
+              <Link
+                href="/"
+                className="font-semibold text-brand hover:text-brand-strong"
+              >
+                EagleCast TV service overview
+              </Link>{" "}
+              first.
             </p>
 
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -117,7 +124,7 @@ export default async function FreeTrialPage({
             ) : null}
 
             <h2 className="text-2xl font-semibold text-ink">
-              Request your trial
+              Request your EagleCast TV trial
             </h2>
             <p className="mt-3 text-sm leading-7 text-ink-muted">
               The button below opens a prepared email to {contactInfo.email}.
@@ -145,7 +152,7 @@ export default async function FreeTrialPage({
                 className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-line bg-panel px-4 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
               >
                 <MessageCircleMore size={16} aria-hidden="true" />
-                Contact options
+                EagleCast TV contact options
               </Link>
               <a
                 href={contactInfo.telegram}
@@ -168,7 +175,7 @@ export default async function FreeTrialPage({
               What happens next
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-ink sm:text-4xl">
-              A simple path from request to watching
+              A simple EagleCast TV path from request to watching
             </h2>
           </div>
           <ol className="mt-12 grid gap-5 lg:grid-cols-3">
@@ -196,7 +203,7 @@ export default async function FreeTrialPage({
                 Want to review the terms first?
               </p>
               <p className="mt-1 text-sm text-ink-muted">
-                All listed plans include the same service features.
+                All listed EagleCast TV plans include the same service features.
               </p>
             </div>
             <ButtonLink
@@ -205,7 +212,7 @@ export default async function FreeTrialPage({
               withArrow
               className="w-full sm:w-auto"
             >
-              Compare plans
+              Compare EagleCast TV plans
             </ButtonLink>
           </div>
         </div>

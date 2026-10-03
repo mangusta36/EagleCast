@@ -29,7 +29,7 @@ export const tivimateGuidePost: BlogPost = {
   intro: [
     "If you stream live television on an Amazon Firestick, Nvidia Shield Pro, Chromecast with Google TV, or another Android TV box, you may have encountered Tivimate IPTV Player. It is a popular option for its television-focused controls, Electronic Program Guide (EPG), and cable-like interface.",
     "However, Tivimate is strictly a standalone video player engine—it does not provide channels, media content, or subscriptions on its own. To unlock its full capabilities, users must pair the app with a high-performance IPTV service that provides reliable playlist credentials, stable stream servers, and rich EPG data feeds.",
-    "In this definitive setup guide, we will walk you through every step required to install Tivimate, import your server credentials via Xtream Codes API or M3U playlist URLs, configure sub-second channel zapping, set up automated EPG updates, configure scheduled recording on external USB drives, aggregate multiple playlists, optimize internal video decoders, adjust surround sound audio passthrough, and troubleshoot common error codes. Whether you are using the free version or managing multiple screens with Tivimate Premium, this guide ensures your setup runs smoothly.",
+    "In this definitive setup guide, we will walk you through every step required to install Tivimate, import your server credentials via Xtream Codes API or M3U playlist URLs, configure sub-second channel zapping, set up automated EPG updates, configure scheduled recording on external USB drives, aggregate multiple playlists, optimize internal video decoders, adjust surround sound audio passthrough, and troubleshoot common error codes. If you need the commercial overview before player setup, the [EagleCast TV IPTV service](/) page explains plans, trial access, and supported devices.",
     "Tivimate's popularity is driven by its focus on living room ergonomics. Unlike mobile-oriented apps adapted for TV screens, Tivimate was coded specifically for television remote controls, supporting fast D-pad scrolling, channel number keypads, multi-screen grid layouts, and custom favorite categories.",
   ],
   sections: [
@@ -39,7 +39,7 @@ export const tivimateGuidePost: BlogPost = {
         "What Is Tivimate IPTV Player and Why Is It the Industry Gold Standard?",
       paragraphs: [
         "Unlike generic media players that simply load video files, Tivimate was built from the ground up specifically for live Internet Protocol Television (IPTV) broadcasting. Its interface mirrors modern top-tier digital cable and satellite set-top boxes, featuring grid-style program guides, channel category filters, picture-in-picture modes, and fast channel switching.",
-        "When paired with a compatible service such as [EagleCast TV](https://www.eaglecastv.online/), Tivimate can organize live channels, catch-up access, and Video-on-Demand (VOD) libraries on Fire TV and Android TV devices. Available content and playback quality depend on the service, account, device, and connection.",
+        "When paired with a compatible service, Tivimate can organize live channels, catch-up access, and Video-on-Demand (VOD) libraries on Fire TV and Android TV devices. Available content and playback quality depend on the service, account, device, and connection.",
         "Key architectural advantages that elevate Tivimate above competing apps like IPTV Smarters Pro or GSE Smart IPTV include native ExoPlayer video rendering, multi-playlist aggregation, auto-frame-rate (AFR) matching, customized channel sorting, and sub-second EPG parsing speeds.",
         "Under the hood, Tivimate utilizes a custom TS (Transport Stream) demuxer pipeline that pre-buffers packet headers before video frames reach your GPU. This architectural approach prevents video stuttering during live sports broadcasts when switching between 1080p 60fps and 4K HDR streams.",
         "In addition, Tivimate supports advanced ExoPlayer buffer tuning settings. By default, standard player applications assign a fixed 1-second RAM buffer that can easily exhaust during Wi-Fi signal drops. Tivimate allows users to define custom buffer thresholds (Small 2s, Medium 4s, Large 8s), enabling uninterrupted playback even across high-latency wireless connections.",
@@ -123,7 +123,7 @@ export const tivimateGuidePost: BlogPost = {
         description:
           "Experience 6,000+ live channels and sub-second channel zapping on Tivimate with a 24-hour test playlist.",
         href: "/free-trial",
-        label: "Get 24-Hour Trial Playlist",
+        label: "Get EagleCast TV trial playlist",
       },
     },
     {
