@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { FOOTER_NAV } from "@/data/navigation";
-import { contactInfo } from "@/data/contact";
-import { Tv, MessageCircle } from "lucide-react";
+import { Tv } from "lucide-react";
 
 export function Footer() {
   return (
@@ -23,24 +22,18 @@ export function Footer() {
               EagleCast TV provides IPTV streaming for live channels, sports,
               movies, series, supported apps, devices, and guided setup support.
             </p>
-            <p className="text-xs text-ink-subtle">{contactInfo.email}</p>
-            <div className="flex items-center gap-2 pt-2">
-              <a
-                href={contactInfo.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-[#25D366]/35 bg-[#ECFDF5] px-3 py-1.5 text-xs font-bold text-[#047857] transition-colors hover:bg-[#D1FAE5]"
-              >
-                <MessageCircle className="w-3.5 h-3.5 fill-current" />
-                <span>EagleCast TV WhatsApp support</span>
-              </a>
-            </div>
+            <Link
+              href="/contact"
+              className="text-xs font-semibold text-brand hover:text-brand-strong"
+            >
+              Support information
+            </Link>
           </div>
 
           <div>
-            <h4 className="text-xs font-extrabold text-ink uppercase tracking-wider mb-4">
+            <h2 className="text-xs font-extrabold text-ink uppercase tracking-wider mb-4">
               Explore
-            </h4>
+            </h2>
             <ul className="space-y-2.5 text-xs">
               {FOOTER_NAV.eaglecast.map((link) => (
                 <li key={link.label}>
@@ -56,9 +49,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs font-extrabold text-ink uppercase tracking-wider mb-4">
+            <h2 className="text-xs font-extrabold text-ink uppercase tracking-wider mb-4">
               Guides
-            </h4>
+            </h2>
             <ul className="space-y-2.5 text-xs">
               {FOOTER_NAV.support.map((link) => (
                 <li key={link.label}>
@@ -74,9 +67,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs font-extrabold text-ink uppercase tracking-wider mb-4">
+            <h2 className="text-xs font-extrabold text-ink uppercase tracking-wider mb-4">
               Legal
-            </h4>
+            </h2>
             <ul className="space-y-2.5 text-xs">
               {FOOTER_NAV.business.map((link) => (
                 <li key={link.label}>
@@ -96,8 +89,6 @@ export function Footer() {
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-ink-subtle">
           <p>© {new Date().getFullYear()} EagleCast TV. All rights reserved.</p>
           <div className="flex items-center gap-4 text-ink-subtle">
-            <span>Support: {contactInfo.email}</span>
-            <span>•</span>
             <Link href="/privacy-policy" className="hover:text-brand-strong">
               Privacy Policy
             </Link>

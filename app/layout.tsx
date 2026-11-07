@@ -40,10 +40,18 @@ export default function RootLayout({
       className={`${inter.variable} ${instrument.variable} h-full`}
     >
       <body className="min-h-full bg-canvas text-ink-muted antialiased flex flex-col font-sans selection:bg-blue-600/20 selection:text-ink">
+        <a
+          href="#main-content"
+          className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-lg bg-ink px-4 py-3 text-sm font-semibold text-white shadow-card transition-transform focus:translate-y-0"
+        >
+          Skip to main content
+        </a>
         <AnalyticsScripts />
         <SiteJsonLd />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" tabIndex={-1} className="flex-1">
+          {children}
+        </main>
         <Footer />
         <WhatsappFloating />
       </body>

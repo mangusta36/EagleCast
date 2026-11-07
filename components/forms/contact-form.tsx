@@ -2,8 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import Link from "next/link";
-import { Clock, Mail, Send } from "lucide-react";
-import { contactInfo } from "@/data/contact";
+import { Mail } from "lucide-react";
 
 type FieldName = "name" | "email" | "subject" | "message";
 type FormErrors = Partial<Record<FieldName, string>>;
@@ -41,28 +40,15 @@ export function ContactForm() {
 
     if (Object.keys(nextErrors).length > 0) {
       setStatus("Please correct the highlighted fields.");
+      const firstInvalidField = Object.keys(nextErrors)[0] as FieldName;
+      const field = event.currentTarget.elements.namedItem(firstInvalidField);
+      if (field instanceof HTMLElement) field.focus();
       return;
     }
 
-    const name = String(formData.get("name") ?? "").trim();
-    const email = String(formData.get("email") ?? "").trim();
-    const subject = String(formData.get("subject") ?? "").trim();
-    const message = String(formData.get("message") ?? "").trim();
-    const orderReference = String(formData.get("orderReference") ?? "").trim();
-    const body = [
-      `Name: ${name}`,
-      `Reply email: ${email}`,
-      orderReference ? `Order or account reference: ${orderReference}` : "",
-      "",
-      message,
-    ]
-      .filter(Boolean)
-      .join("\n");
-
     setStatus(
-      "Your email draft is ready. Review it in your email app before sending.",
+      "This site is not currently publishing a verified contact destination. Please use the self-service guides below while contact details are confirmed.",
     );
-    window.location.href = `mailto:${contactInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 
   return (
@@ -76,8 +62,9 @@ export function ContactForm() {
             Talk to the EagleCast TV team
           </h2>
           <p className="mt-4 text-base leading-8 text-ink-muted">
-            Email is the direct route for trial requests, setup help, billing
-            questions, and technical support.
+            Verified support contact details are not currently published. Use
+            the setup and troubleshooting guidance on this site while the
+            operator confirms a contact destination.
           </p>
 
           <div className="mt-9 divide-y divide-line border-y border-line">
@@ -87,52 +74,11 @@ export function ContactForm() {
               </span>
               <div>
                 <h3 className="text-sm font-semibold text-ink">
-                  Support email
-                </h3>
-                <a
-                  href={`mailto:${contactInfo.email}`}
-                  className="mt-1 block text-sm font-semibold text-brand hover:text-brand-strong"
-                >
-                  {contactInfo.email}
-                </a>
-                <p className="mt-1 text-xs leading-5 text-ink-muted">
-                  Trial, billing, setup, and technical questions.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4 py-5">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-mint-soft text-mint-strong">
-                <Clock size={18} aria-hidden="true" />
-              </span>
-              <div>
-                <h3 className="text-sm font-semibold text-ink">
-                  {contactInfo.hours}
+                  Contact details pending
                 </h3>
                 <p className="mt-1 text-xs leading-5 text-ink-muted">
-                  Include your device and account reference when relevant.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4 py-5">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold-soft text-gold">
-                <Send size={18} aria-hidden="true" />
-              </span>
-              <div>
-                <h3 className="text-sm font-semibold text-ink">
-                  Telegram news channel
-                </h3>
-                <a
-                  href={contactInfo.telegram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-1 block text-sm font-semibold text-brand hover:text-brand-strong"
-                >
-                  @EagleCast TVnews
-                </a>
-                <p className="mt-1 text-xs leading-5 text-ink-muted">
-                  Announcements and service updates—not a support inbox.
+                  No email, messaging account, or response-time commitment is
+                  presented as verified by this site.
                 </p>
               </div>
             </div>
@@ -248,8 +194,8 @@ export function ContactForm() {
             {status ? (
               <p
                 className={`text-sm ${Object.keys(errors).length ? "text-coral" : "text-mint-strong"}`}
-                role="status"
-                aria-live="polite"
+                role={Object.keys(errors).length ? "alert" : "status"}
+                aria-live={Object.keys(errors).length ? "assertive" : "polite"}
               >
                 {status}
               </p>

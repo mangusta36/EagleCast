@@ -19,7 +19,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "EagleCast TV IPTV Services & Streaming Features",
   description:
-    "Explore EagleCast TV IPTV services for live TV with EPG, sports and PPV, movies and series, catch-up, replay, multi-screen viewing and setup support.",
+    "Explore EagleCast TV IPTV services for live TV with EPG, sports and PPV, movies and series, catch-up, optional extra screens and setup support.",
   pathname: "/services",
 });
 
@@ -29,7 +29,7 @@ const servicePresentation: Record<
 > = {
   "Catchup & Replay": {
     icon: RotateCcw,
-    body: "Return to missed content with EagleCast TV catch-up and replay access for up to two days.",
+    body: "Return to missed content where the channel, guide data, and player support EagleCast TV catch-up and replay.",
     detail: "Included in every listed EagleCast TV plan",
   },
   "Sports and PPV": {
@@ -45,7 +45,7 @@ const servicePresentation: Record<
   "24x7 Support": {
     icon: Headphones,
     body: "Get EagleCast TV help with setup, billing, and technical questions through the listed support channels.",
-    detail: "Support is listed as available 24/7",
+    detail: "Support availability requires confirmation",
   },
 };
 
@@ -53,7 +53,7 @@ const packageItems = [
   { icon: Tv, label: "Live TV with EPG" },
   { icon: Trophy, label: "Sports and PPV" },
   { icon: Film, label: "Movies and series" },
-  { icon: RotateCcw, label: "Catch-up and multi-screen" },
+  { icon: RotateCcw, label: "Catch-up and optional extra screens" },
 ] as const;
 
 export default function ServicesPage() {
@@ -68,7 +68,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="What is included"
         title="EagleCast TV viewing features included with every plan"
-        description="EagleCast TV combines live TV, sports, movies, catch-up, multi-screen access, and support under the same core service."
+        description="EagleCast TV combines live TV, sports, movies, catch-up, one active connection, optional extra screens, and support under the same core service."
       >
         <ButtonLink href="/free-trial">Get Trial</ButtonLink>
         <ButtonLink href="/pricing" variant="outlineLight">
@@ -179,10 +179,10 @@ export default function ServicesPage() {
               Setup, billing, and technical questions have a clear route.
             </h2>
             <p className="mt-4 text-base leading-8 text-ink-muted">
-              EagleCast TV lists support as available through its official
-              support contact options. Include your device, app, connection
-              type, and the exact message or symptom so the team can follow a
-              useful troubleshooting path.
+              Verified external support contact details and response hours are
+              not currently published. Record your device, app, connection type,
+              and the exact message or symptom while following the
+              troubleshooting guidance below.
             </p>
             <p className="mt-3 text-sm leading-7 text-ink-muted">
               Start with the{" "}

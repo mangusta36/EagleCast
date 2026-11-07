@@ -2,7 +2,7 @@ export const services = [
   {
     title: "Catchup & Replay",
     description:
-      "EagleCast TV catch-up and replay help you return to missed content with supported catch-up features for up to two days.",
+      "EagleCast TV catch-up and replay help you return to missed content where the channel, guide data, and player support the feature.",
     icon: "Replay",
   },
   {

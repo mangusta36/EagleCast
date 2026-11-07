@@ -1,10 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { FaqSection } from "@/components/sections/faq-section";
-import {
-  BreadcrumbJsonLd,
-  FaqJsonLd,
-} from "@/components/seo/page-json-ld";
+import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/page-json-ld";
 import { FAQS } from "@/data/faqs";
 import { buildMetadata } from "@/lib/seo";
 
@@ -25,7 +22,10 @@ export default function FaqPage() {
         }))}
       />
       <BreadcrumbJsonLd
-        items={[{ name: "Home", item: "/" }, { name: "FAQ", item: "/faq" }]}
+        items={[
+          { name: "Home", item: "/" },
+          { name: "FAQ", item: "/faq" },
+        ]}
       />
       <section className="bg-canvas">
         <div className="site-container max-w-3xl pt-10 text-sm leading-7 text-ink-muted">

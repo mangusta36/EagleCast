@@ -1,5 +1,6 @@
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ButtonLink } from "@/components/ui/button-link";
+import { BreadcrumbJsonLd } from "@/components/seo/page-json-ld";
 import { SITE_URL } from "@/data/seo";
 import { buildMetadata } from "@/lib/seo";
 
@@ -33,6 +34,12 @@ export default function PortalHelpPage() {
           __html: JSON.stringify(portalHelpJsonLd).replace(/</g, "\\u003c"),
         }}
       />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", item: "/" },
+          { name: "Portal help", item: "/portal-help" },
+        ]}
+      />
 
       <section className="bg-canvas">
         <div className="site-container py-16 sm:py-20">
@@ -60,11 +67,11 @@ export default function PortalHelpPage() {
               </h2>
               <p className="mt-3 text-sm leading-7 text-ink-muted">
                 EagleCast TV portal details are provided during activation or
-                through the official support workflow when a compatible player
-                or box needs portal-style setup. If you cannot find those
-                details or the portal is not working, contact EagleCast TV
-                support instead of guessing at old server values or searching
-                for private infrastructure online.
+                through the relevant setup workflow when a compatible player or
+                box needs portal-style setup. If you cannot find those details
+                or the portal is not working, contact EagleCast TV support
+                instead of guessing at old server values or searching for
+                private infrastructure online.
               </p>
             </div>
           </div>
@@ -76,7 +83,7 @@ export default function PortalHelpPage() {
           <SectionHeading
             eyebrow="Portal basics"
             title="What the EagleCast TV portal means in practice"
-            description="A portal is a setup endpoint used by some compatible IPTV players and boxes. Customers receive the information they need during the official setup workflow."
+            description="A portal is a setup endpoint used by some compatible IPTV players and boxes. Customers receive the information they need during the relevant setup workflow."
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             <article className="border-t border-line pt-5">
@@ -115,8 +122,8 @@ export default function PortalHelpPage() {
                 Lost your portal details?
               </h2>
               <p className="mt-3 text-sm leading-7 text-ink-muted">
-                Use the official support route instead of guessing at old values
-                or searching for private infrastructure online.
+                Use the available setup details instead of guessing at old
+                values or searching for private infrastructure online.
               </p>
             </article>
           </div>

@@ -43,9 +43,9 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
           <div className="rounded-lg border border-line bg-panel p-6">
             <ShieldCheck className="w-8 h-8 text-emerald" />
-            <h3 className="mt-5 text-lg font-bold text-ink">
+            <h2 className="mt-5 text-lg font-bold text-ink">
               Free trial confidence
-            </h3>
+            </h2>
             <p className="mt-3 text-sm text-ink-subtle leading-relaxed">
               Confirm your app, device, and connection before committing to a
               plan.
@@ -53,9 +53,9 @@ export default function AboutPage() {
           </div>
           <div className="rounded-lg border border-line bg-panel p-6">
             <MonitorPlay className="w-8 h-8 text-brand" />
-            <h3 className="mt-5 text-lg font-bold text-ink">
+            <h2 className="mt-5 text-lg font-bold text-ink">
               Multi-device viewing
-            </h3>
+            </h2>
             <p className="mt-3 text-sm text-ink-subtle leading-relaxed">
               Watch through common IPTV workflows on TVs, sticks, phones,
               laptops, and compatible boxes.
@@ -63,7 +63,7 @@ export default function AboutPage() {
           </div>
           <div className="rounded-lg border border-line bg-panel p-6">
             <Headphones className="w-8 h-8 text-gold" />
-            <h3 className="mt-5 text-lg font-bold text-ink">Setup support</h3>
+            <h2 className="mt-5 text-lg font-bold text-ink">Setup support</h2>
             <p className="mt-3 text-sm text-ink-subtle leading-relaxed">
               Get guidance for activation, app choice, package questions, and
               renewals.

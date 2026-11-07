@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { SITE_URL } from "@/data/seo";
 
 const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
 
@@ -15,7 +16,10 @@ export function renderRichText(text: string) {
       parts.push(text.slice(lastIndex, index));
     }
 
-    const isInternal = href.startsWith("/");
+    const isInternal =
+      href.startsWith("/") ||
+      href === SITE_URL ||
+      href.startsWith(`${SITE_URL}/`);
 
     parts.push(
       isInternal ? (

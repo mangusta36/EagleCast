@@ -20,15 +20,15 @@ const includedForAll = [
   "Sports & PPV events",
   "Movies and series VOD",
   "Catch-up and replay",
-  "Multi-screen connections",
-  "24/7 setup and technical support",
+  "One active connection, with extra-screen options",
+  "Setup guidance; support availability requires confirmation",
 ] as const;
 
 const pricingFaqs = [
   {
     question: "What is included in every EagleCast TV plan?",
     answer:
-      "Every published plan includes the same core service: live TV with an electronic program guide, sports and PPV events, international movies and series, catch-up and replay, multi-screen connections, and 24/7 setup and technical support.",
+      "Published plans describe live TV with an electronic program guide, sports and PPV events, movies and series, catch-up and replay, and one active connection. Extra-screen connections are listed by term. Availability and fulfillment require operator confirmation.",
   },
   {
     question: "Are EagleCast TV payments one-time or automatic?",
@@ -38,7 +38,7 @@ const pricingFaqs = [
   {
     question: "Can I try EagleCast TV before paying for a full term?",
     answer:
-      "Yes. EagleCast TV offers a trial so you can test live TV, sports, movies, catch-up, and multi-screen viewing on your own device before selecting a paid subscription term.",
+      "Yes. EagleCast TV offers a trial so you can test live TV, sports, movies, and catch-up on your own device before selecting a paid subscription term.",
   },
   {
     question: "Can I add extra screens to my plan?",
@@ -48,7 +48,7 @@ const pricingFaqs = [
   {
     question: "Which payment and activation path do I use?",
     answer:
-      "Plans purchase directly through the listed support channels. After a trial, the EagleCast TV team confirms your device setup and activates your chosen plan.",
+      "Published pricing shows plan terms and prices, but this site does not currently publish a verified payment or activation contact route. Confirm fulfillment details with the operator before paying.",
   },
 ] as const;
 
@@ -70,7 +70,7 @@ export default function PricingPage() {
       <PageHero
         eyebrow="EagleCast TV plans"
         title="Simple, transparent IPTV subscription plans"
-        description="Choose the viewing term that fits your routine. Every plan includes the same full-service line-up: live TV, sports, movies, catch-up, multi-screen connections, and setup support."
+        description="Choose the viewing term that fits your routine. Every plan includes the same core line-up, one active connection, and setup support, with optional extra screens priced by term."
       >
         <Link
           href="/free-trial"
@@ -203,8 +203,8 @@ export default function PricingPage() {
                 Trial before you buy
               </h2>
               <p className="mt-3 text-sm leading-7 text-ink-muted">
-                Test live TV, sports, movies, catch-up, and multi-screen viewing
-                on your own screen before paying for a full term.
+                Test live TV, sports, movies, and catch-up on your own screen
+                before paying for a full term.
               </p>
             </article>
             <article className="border-t border-line pt-6">

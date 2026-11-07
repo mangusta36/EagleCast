@@ -1,14 +1,14 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { HEADER_NAV } from "@/data/navigation";
-import { contactInfo } from "@/data/contact";
 import { Tv, Menu, X, Zap } from "lucide-react";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +17,20 @@ export function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMobileMenuOpen(false);
+        mobileMenuButtonRef.current?.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isMobileMenuOpen]);
 
   return (
     <header className="sticky top-0 z-50 w-full transition-all duration-300">
@@ -31,14 +45,22 @@ export function Header() {
         <div className="site-container flex items-center justify-between gap-4">
           {/* Mobile menu trigger */}
           <button
+            ref={mobileMenuButtonRef}
+            type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-ink-muted hover:text-ink focus:outline-none"
-            aria-label="Toggle navigation menu"
+            className="rounded-lg p-2 text-ink-muted transition-colors hover:text-ink lg:hidden"
+            aria-label={
+              isMobileMenuOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+            }
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation"
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6" aria-hidden="true" />
             ) : (
-              <Menu className="w-6 h-6" />
+              <Menu className="w-6 h-6" aria-hidden="true" />
             )}
           </button>
 
@@ -60,7 +82,10 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-6">
+          <nav
+            aria-label="Primary navigation"
+            className="hidden items-center gap-6 lg:flex"
+          >
             {HEADER_NAV.map((item) => (
               <Link
                 key={item.label}
@@ -80,23 +105,27 @@ export function Header() {
             >
               View Packages
             </Link>
-            <a
-              href={contactInfo.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/free-trial"
               className="btn-emerald hidden px-4 py-2.5 text-xs shadow-emerald md:inline-flex lg:px-5 lg:text-sm"
             >
               <Zap className="w-4 h-4 fill-current" />
               <span>Get Trial</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[65px] bg-white/98 backdrop-blur-xl border-b border-line shadow-soft py-6 px-6 space-y-4 animate-slide-in-right z-40">
-          <nav className="flex flex-col space-y-4">
+        <div
+          id="mobile-navigation"
+          className="fixed inset-x-0 top-[65px] z-40 space-y-4 border-b border-line bg-white/98 px-6 py-6 shadow-soft backdrop-blur-xl lg:hidden"
+        >
+          <nav
+            aria-label="Mobile navigation"
+            className="flex flex-col space-y-4"
+          >
             {HEADER_NAV.map((item) => (
               <Link
                 key={item.label}
@@ -109,16 +138,14 @@ export function Header() {
             ))}
           </nav>
           <div className="pt-2 flex flex-col gap-3">
-            <a
-              href={contactInfo.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/free-trial"
               onClick={() => setIsMobileMenuOpen(false)}
               className="w-full btn-emerald justify-center text-sm py-3"
             >
               <Zap className="w-4 h-4 fill-current" />
               <span>Get Trial</span>
-            </a>
+            </Link>
             <Link
               href="/reseller"
               onClick={() => setIsMobileMenuOpen(false)}

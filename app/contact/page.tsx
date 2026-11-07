@@ -1,21 +1,14 @@
-import { MessageCircle } from "lucide-react";
 import Link from "next/link";
-import { ContactForm } from "@/components/forms/contact-form";
 import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/page-json-ld";
 import { ButtonLink } from "@/components/ui/button-link";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { buildWhatsappUrl } from "@/data/contact";
 import { SITE_URL } from "@/data/seo";
 import { buildMetadata } from "@/lib/seo";
-
-const supportWhatsappUrl = buildWhatsappUrl(
-  "Hi EagleCast TV, I need help with setup, account details, or streaming support.",
-);
 
 export const metadata = buildMetadata({
   title: "EagleCast TV Customer Service and IPTV Support",
   description:
-    "Contact EagleCast TV customer service for subscription, device setup, login, portal, buffering and reseller support through the official support options.",
+    "Find EagleCast TV setup, login, portal, buffering, and plan guidance. Verified customer-support contact details are not currently published.",
   pathname: "/contact",
 });
 
@@ -23,7 +16,7 @@ const supportFaqs = [
   {
     question: "How do I contact EagleCast TV customer service?",
     answer:
-      "Use the official email route on this page or chat with EagleCast TV on WhatsApp for setup and support questions.",
+      "This site does not currently publish a verified support email or messaging account. Use the setup and troubleshooting guides on this page while the operator confirms contact details.",
   },
   {
     question: "Where do I find my EagleCast TV login details?",
@@ -38,12 +31,12 @@ const supportFaqs = [
   {
     question: "Where do I get my EagleCast TV portal information?",
     answer:
-      "Portal information is provided through the official setup workflow when it applies to the device or player you are using.",
+      "Portal information is supplied with the relevant setup details when it applies to your device or player.",
   },
   {
     question: "Can EagleCast TV help me set up my Smart TV?",
     answer:
-      "Yes. Setup help is available for Smart TV, Fire TV, Android, iOS, Windows, and compatible boxes.",
+      "Review the device-specific setup guides before selecting a plan. Device compatibility must be confirmed before purchase.",
   },
   {
     question: "What should I do if my stream buffers?",
@@ -59,7 +52,7 @@ export default function ContactPage() {
     name: "EagleCast TV Customer Service",
     url: `${SITE_URL}/contact`,
     description:
-      "Official EagleCast TV customer support page for subscription help, device setup, login help, portal help, and streaming troubleshooting.",
+      "EagleCast TV guidance for device setup, login help, portal help, and streaming troubleshooting.",
     about: {
       "@type": "Organization",
       name: "EagleCast TV",
@@ -100,9 +93,9 @@ export default function ContactPage() {
             <p className="mt-5 max-w-2xl text-base leading-8 text-ink-muted sm:text-lg">
               Get help with package questions, activation details, device setup,
               login credentials, portal information, buffering issues, and
-              reseller support through the official EagleCast TV support
-              channels. For the service overview, plans, and trial path, start
-              from{" "}
+              reseller information. Verified external support contact details
+              are not currently published. For the service overview, plans, and
+              trial path, start from{" "}
               <Link
                 href="/"
                 className="font-semibold text-brand hover:text-brand-strong"
@@ -112,19 +105,6 @@ export default function ContactPage() {
               .
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href={supportWhatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-[#25D366] bg-[#25D366] px-5 py-3 text-[15px] font-semibold text-white shadow-[0_6px_18px_rgba(37,211,102,0.24)] transition hover:border-[#20bd5a] hover:bg-[#20bd5a]"
-              >
-                <MessageCircle
-                  size={18}
-                  aria-hidden="true"
-                  className="fill-current"
-                />
-                Chat with EagleCast TV on WhatsApp
-              </a>
               <ButtonLink href="/login-help" variant="secondary">
                 Login help
               </ButtonLink>
@@ -141,11 +121,10 @@ export default function ContactPage() {
                 How do I contact EagleCast TV customer service?
               </h2>
               <p className="mt-3 text-sm leading-7 text-ink-muted">
-                The official way to contact EagleCast TV customer service is
-                through the support email on this page or the WhatsApp support
-                button above. Use those support routes for subscription
-                questions, device setup, login details, portal help, buffering
-                issues, and reseller support.
+                This site does not currently publish a verified email, WhatsApp
+                number, Telegram account, or support-hours commitment. Use the
+                linked guides for device setup, login details, portal help, and
+                buffering checks while the operator confirms a contact route.
               </p>
             </div>
           </div>
@@ -157,7 +136,7 @@ export default function ContactPage() {
           <SectionHeading
             eyebrow="How can we help?"
             title="Support topics customers usually need most"
-            description="Use the official support channels for questions about your subscription, compatible devices, setup details, and troubleshooting."
+            description="Use the linked guidance for compatible devices, setup details, and troubleshooting while verified contact details are pending."
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             <article className="border-t border-line pt-5">
@@ -257,7 +236,13 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <ContactForm />
+      <section className="border-y border-line bg-canvas-alt">
+        <div className="site-container py-12 text-sm leading-7 text-ink-muted">
+          This site does not collect or transmit support requests while a
+          verified contact destination is pending. Use the guides above to
+          prepare device, app, and error details for a future verified route.
+        </div>
+      </section>
 
       <section className="bg-canvas">
         <div className="site-container section-pad">

@@ -30,11 +30,7 @@ export const contentInventory = {
     "What payment methods are available?",
     "What is the refund policy?",
   ],
-  preservedContactInfo: [
-    "support@eaglecast.tv",
-    "contact@eaglecast.tv",
-    "https://t.me/eaglecastnews",
-  ],
+  preservedContactInfo: ["https://t.me/eaglecastnews"],
   preservedBlogAndTutorialSlugs: [
     "diy-troubleshooting-guide",
     "getting-started-with-eaglecast-tv",

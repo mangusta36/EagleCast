@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Zap } from "lucide-react";
-import { contactInfo } from "@/data/contact";
 
 const trustItems = [
   "Trial Available",
   "Setup Support",
-  "4K Ready Where Sources Allow",
+  "Device & Playback Guides",
   "Multi-Format Login",
   "Clear Plans",
 ] as const;
@@ -43,21 +42,20 @@ export function HomeHero() {
           </p>
 
           <p className="mt-3 max-w-xl text-sm leading-6 text-ink-muted">
-            Compare plans, request a trial, and confirm your device setup with
-            EagleCast TV support before choosing a subscription term.
+            Compare published plans, explore device and player guides, and use
+            troubleshooting resources to prepare your setup before choosing a
+            subscription term.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a
-              href={contactInfo.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/free-trial"
               className="btn-emerald min-h-12 px-7 text-sm uppercase tracking-wide"
             >
               <Zap size={17} className="fill-current" aria-hidden="true" />
               Get Trial
               <ArrowRight size={17} aria-hidden="true" />
-            </a>
+            </Link>
             <Link
               href="/pricing"
               className="btn-secondary min-h-12 px-7 text-sm uppercase tracking-wide"
@@ -81,8 +79,14 @@ export function HomeHero() {
           </p>
 
           <p className="mt-4 text-xs font-semibold text-ink-subtle">
-            Need setup help first? Use the setup guides hub before choosing a
-            plan.
+            Need setup help first? Use the{" "}
+            <Link
+              href="/tutorials"
+              className="text-brand underline decoration-brand/30 underline-offset-4 hover:text-brand-strong"
+            >
+              setup guides hub
+            </Link>{" "}
+            before choosing a plan.
           </p>
         </div>
       </div>

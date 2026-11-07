@@ -34,6 +34,9 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
     description: post.metaDescription,
     pathname: `/blog/${post.slug}`,
     image: post.featuredImage.src,
+    openGraphType: "article",
+    publishedTime: new Date(post.publishedAt).toISOString(),
+    modifiedTime: new Date(post.updatedAt).toISOString(),
   });
 }
 
@@ -223,6 +226,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <h2 className="text-2xl font-semibold leading-tight text-ink sm:text-3xl">
                   {section.title}
                 </h2>
+                {section.image ? (
+                  <figure className="mt-6 overflow-hidden rounded-lg border border-line bg-panel">
+                    <Image
+                      src={section.image.src}
+                      alt={section.image.alt}
+                      width={800}
+                      height={500}
+                      sizes="(max-width: 1024px) 100vw, 800px"
+                      className="h-auto w-full object-cover"
+                    />
+                  </figure>
+                ) : null}
                 <div className="mt-4 space-y-4 text-base leading-8 text-ink-muted">
                   {section.paragraphs.map((paragraph) => (
                     <p key={paragraph}>{renderRichText(paragraph)}</p>
@@ -241,7 +256,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   </ul>
                 ) : null}
                 {section.table ? (
-                  <div className="mt-8 overflow-x-auto rounded-lg border border-line">
+                  <div
+                    className="mt-8 overflow-x-auto rounded-lg border border-line"
+                    role="region"
+                    aria-label={
+                      section.table.caption ?? `${section.title} data table`
+                    }
+                    tabIndex={0}
+                  >
                     <table className="min-w-full divide-y divide-line text-left text-sm">
                       {section.table.caption ? (
                         <caption className="border-b border-line bg-canvas-alt px-4 py-3 text-left text-xs font-semibold uppercase tracking-[0.14em] text-ink-subtle">
@@ -253,6 +275,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                           {section.table.columns.map((column) => (
                             <th
                               key={column}
+                              scope="col"
                               className="px-4 py-3 font-semibold"
                             >
                               {column}
@@ -297,7 +320,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <details key={faq.question} className="group p-5">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-base font-semibold text-ink">
                     {faq.question}
-                    <span className="text-brand transition group-open:rotate-45">
+                    <span
+                      className="text-brand transition group-open:rotate-45"
+                      aria-hidden="true"
+                    >
                       +
                     </span>
                   </summary>

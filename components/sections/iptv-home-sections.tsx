@@ -13,7 +13,6 @@ import {
   Zap,
   type LucideIcon,
 } from "lucide-react";
-import { contactInfo } from "@/data/contact";
 import { PRICING_PLANS } from "@/data/pricing";
 
 const overviewItems: readonly {
@@ -91,6 +90,10 @@ const faqItems = [
   [
     "Where can I find detailed setup guides?",
     "Use the tutorials hub for device-specific setup details. The homepage stays focused on the service, plans, and trial path.",
+  ],
+  [
+    "Where can I find guidance about IPTV player apps?",
+    "Use the player-app comparison guide to check device availability, login compatibility, and publisher information. This website does not host or claim ownership of third-party app downloads.",
   ],
 ] as const;
 
@@ -198,15 +201,13 @@ export function PackagesSection() {
                   </li>
                 ))}
               </ul>
-              <a
+              <Link
                 href={plan.ctaHref}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="mt-auto inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-brand bg-brand px-4 py-3 text-sm font-black text-white shadow-emerald transition hover:border-brand-strong hover:bg-brand-strong"
               >
                 {plan.ctaText}
                 <ArrowRight size={16} aria-hidden="true" />
-              </a>
+              </Link>
             </article>
           ))}
         </div>
@@ -225,13 +226,12 @@ export function IptvValueSection() {
               Why EagleCast TV
             </p>
             <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.15rem)] font-black leading-tight tracking-tight text-ink">
-              Why Choose EagleCast TV for Live TV, Sports & Entertainment
+              What You Can Explore on the EagleCast TV Website
             </h2>
             <p className="mt-4 text-base leading-7 text-ink-muted sm:text-lg">
-              EagleCast TV brings the main viewing experience, plan comparison,
-              trial path, and support route into one service homepage. Detailed
-              setup and troubleshooting live in the support hubs where they
-              belong.
+              Start with the service overview and published plans, then use the
+              linked device, player, login, portal, and troubleshooting guides
+              for the details that matter to your own setup.
             </p>
             <Link
               href="/services"
@@ -343,7 +343,10 @@ export function HowItWorksSection() {
         </div>
         <ol className="mt-10 grid gap-5 md:grid-cols-3">
           {steps.map(([count, title, body]) => (
-            <li key={title} className="rounded-lg border border-line bg-panel p-6">
+            <li
+              key={title}
+              className="rounded-lg border border-line bg-panel p-6"
+            >
               <p className="text-xs font-black uppercase tracking-[0.16em] text-brand-strong">
                 {count}
               </p>
@@ -387,9 +390,33 @@ export function SupportHelpSection() {
 export function ResourceHubSection() {
   const resources = [
     {
-      title: "Setup Guides",
-      body: "Device and app setup instructions for supported screens.",
+      title: "Plans & pricing",
+      body: "Compare published plan terms, included connection options, and pricing details.",
+      href: "/pricing",
+      icon: ShieldCheck,
+    },
+    {
+      title: "Getting started & setup guides",
+      body: "Start with device and app setup instructions for supported screens.",
       href: "/tutorials",
+      icon: Settings,
+    },
+    {
+      title: "Player-app guidance",
+      body: "Compare player availability, login compatibility, and publisher information before installing an app.",
+      href: "/blog/best-iptv-apps-comparison-tivimate-smarters-xciptv",
+      icon: PlayCircle,
+    },
+    {
+      title: "Login help",
+      body: "Find practical explanations of account details and common setup checks.",
+      href: "/login-help",
+      icon: MonitorSmartphone,
+    },
+    {
+      title: "Portal help",
+      body: "Learn what a portal field is and which details to check before changing a player setup.",
+      href: "/portal-help",
       icon: Settings,
     },
     {
@@ -414,14 +441,15 @@ export function ResourceHubSection() {
             Resources
           </p>
           <h2 className="mt-4 text-[clamp(2rem,4.5vw,3rem)] font-black leading-tight tracking-tight text-ink">
-            EagleCast TV Setup, Support & Resources
+            EagleCast TV Plans, Setup & Troubleshooting Guides
           </h2>
           <p className="mt-4 text-base leading-7 text-ink-muted">
-            The homepage stays focused on the service. Use these hubs for
-            setup, support, and deeper IPTV education.
+            Use these guides to compare published plans, prepare a device or
+            player, understand login and portal details, and troubleshoot common
+            viewing issues.
           </p>
         </div>
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {resources.map((resource) => {
             const Icon = resource.icon;
             return (
@@ -507,15 +535,13 @@ export function FinalConversionCta() {
             on your preferred device with setup support.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <a
-              href={contactInfo.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/contact"
               className="btn-emerald min-h-12 px-8 text-sm uppercase tracking-wide"
             >
               <Zap size={18} className="fill-current" aria-hidden="true" />
               Get Trial Now
-            </a>
+            </Link>
             <Link
               href="/pricing"
               className="btn-secondary min-h-12 px-8 text-sm uppercase tracking-wide"

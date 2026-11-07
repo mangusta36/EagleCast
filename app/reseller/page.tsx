@@ -3,7 +3,6 @@ import {
   ArrowDown,
   CheckCircle2,
   Headphones,
-  MessageCircle,
   Repeat2,
   Send,
   ShieldCheck,
@@ -14,7 +13,6 @@ import {
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/page-json-ld";
-import { buildWhatsappUrl } from "@/data/contact";
 import { FAQS } from "@/data/faqs";
 import { SITE_URL } from "@/data/seo";
 import { buildMetadata } from "@/lib/seo";
@@ -22,13 +20,9 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "EagleCast TV IPTV Reseller Program & Support",
   description:
-    "Start or grow your IPTV reselling business with EagleCast TV reseller access, customer workflows, setup guidance, renewals, and WhatsApp support.",
+    "Review EagleCast TV reseller information. Reseller availability, pricing, and fulfillment require operator confirmation.",
   pathname: "/reseller",
 });
-
-const resellerWhatsappUrl = buildWhatsappUrl(
-  "Hi EagleCast TV, I'm interested in your reseller program and would like more information about getting started.",
-);
 
 const audience = [
   {
@@ -60,7 +54,7 @@ const benefits = [
 const steps = [
   {
     title: "Contact EagleCast TV",
-    body: "Speak with us on WhatsApp and tell us what kind of reseller setup you need.",
+    body: "Reseller contact and setup details require operator confirmation.",
   },
   {
     title: "Choose Your Reseller Setup",
@@ -84,8 +78,8 @@ const trustItems = [
     icon: Smartphone,
   },
   {
-    title: "Direct WhatsApp communication",
-    body: "Ask questions before buying and continue the conversation during setup.",
+    title: "Confirmation required",
+    body: "Do not rely on unverified contact or payment instructions.",
     icon: Headphones,
   },
 ] as const;
@@ -96,7 +90,7 @@ const resellerFaqs = [
     id: "reseller-get-started",
     question: "How do I become an EagleCast TV reseller?",
     answer:
-      "Contact EagleCast TV on WhatsApp and tell us you are interested in reseller access. We will explain the available setup and credit package workflow.",
+      "Reseller access, setup, and credit-package details require operator confirmation before you make a purchase decision.",
   },
   {
     id: "reseller-experience",
@@ -108,13 +102,13 @@ const resellerFaqs = [
     id: "reseller-pricing",
     question: "How do I get reseller pricing?",
     answer:
-      "Reseller pricing depends on the setup and credit package. Ask EagleCast TV directly on WhatsApp for current reseller options.",
+      "Reseller pricing is not currently published as verified information. Confirm options with the operator before making a purchase decision.",
   },
   {
     id: "reseller-contact-before-buying",
     question: "Can I contact EagleCast TV before buying?",
     answer:
-      "Yes. WhatsApp is the best way to ask questions about reseller access before you purchase or set anything up.",
+      "No verified reseller contact route is currently published. Do not rely on unverified messages or payment instructions.",
   },
   {
     id: "reseller-setup-help",
@@ -130,7 +124,7 @@ const resellerFaqs = [
   },
 ] as const;
 
-function WhatsappButton({
+function ResellerStatusButton({
   children,
   className = "",
 }: {
@@ -138,15 +132,12 @@ function WhatsappButton({
   className?: string;
 }) {
   return (
-    <a
-      href={resellerWhatsappUrl}
-      target="_blank"
-      rel="noopener noreferrer"
+    <Link
+      href="/contact"
       className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-[#25D366] bg-[#25D366] px-5 py-3 text-[15px] font-semibold text-white shadow-[0_6px_18px_rgba(37,211,102,0.24)] transition hover:border-[#20bd5a] hover:bg-[#20bd5a] active:translate-y-px ${className}`}
     >
-      <MessageCircle size={18} aria-hidden="true" className="fill-current" />
       {children}
-    </a>
+    </Link>
   );
 }
 
@@ -218,14 +209,14 @@ export default function ResellerPage() {
                 businesses that want reseller access for customer onboarding,
                 renewals, and account workflows. It provides a practical route
                 for managing customer subscriptions with setup guidance and
-                direct support. To get started, contact EagleCast TV on WhatsApp
-                and explain the kind of reseller setup you need.
+                direct support. Reseller availability and a contact route
+                require operator confirmation before you proceed.
               </p>
             </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <WhatsappButton className="w-full sm:w-auto">
-                Talk to Us on WhatsApp
-              </WhatsappButton>
+              <ResellerStatusButton className="w-full sm:w-auto">
+                View contact status
+              </ResellerStatusButton>
               <Link
                 href="#how-it-works"
                 className="btn-secondary w-full sm:w-auto"
@@ -354,9 +345,9 @@ export default function ResellerPage() {
                 details.
               </p>
             </div>
-            <WhatsappButton className="w-full sm:w-auto">
-              Ask for Reseller Pricing on WhatsApp
-            </WhatsappButton>
+            <ResellerStatusButton className="w-full sm:w-auto">
+              View contact status
+            </ResellerStatusButton>
           </div>
         </div>
       </section>
@@ -429,10 +420,10 @@ export default function ResellerPage() {
                 understand the reseller options before you get started.
               </p>
             </div>
-            <WhatsappButton className="w-full sm:w-auto">
+            <ResellerStatusButton className="w-full sm:w-auto">
               <Send size={17} aria-hidden="true" />
-              Chat with Us on WhatsApp
-            </WhatsappButton>
+              View contact status
+            </ResellerStatusButton>
           </div>
         </div>
       </section>

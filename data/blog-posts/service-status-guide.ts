@@ -7,15 +7,15 @@ export const serviceStatusGuidePost: BlogPost = {
   title: "Is EagleCast TV Down? Service Status & Troubleshooting Guide",
   seoTitle: "Is EagleCast TV Down? Service Status & Troubleshooting Guide",
   excerpt:
-    "A support-focused guide for checking whether an EagleCast TV issue is local, account-related, device-specific, or something that needs official support confirmation.",
-  deck: "If EagleCast TV is not loading, the safest first step is to separate local connection, device, login, subscription, and broader service questions. This guide explains what you can check yourself and when to contact official support for current availability.",
+    "A guide for checking whether an EagleCast TV issue is local, account-related, device-specific, or needs operator confirmation.",
+  deck: "If EagleCast TV is not loading, first separate local connection, device, login, subscription, and broader service questions. This guide explains what you can check yourself; it does not provide live availability confirmation.",
   category: "Support",
   publishedAt: "September 24, 2026",
-  updatedAt: "September 24, 2026",
+  updatedAt: "November 6, 2026",
   author: editorialAuthor,
   readingTime: "10 min read",
   metaDescription:
-    "Wondering if EagleCast TV is down? Learn how to check local connection issues, login problems, subscription status, buffering, device-specific errors, and support options.",
+    "Check whether an EagleCast TV issue is local, account-related, device-specific, or needs operator confirmation for current availability.",
   primaryKeyword: "is eaglecast tv down",
   featuredImage: {
     src: "/images/blog/iptv-error-troubleshooting.webp",
@@ -24,10 +24,10 @@ export const serviceStatusGuidePost: BlogPost = {
     sourceUrl: "https://www.eaglecastv.online/",
   },
   quickAnswer:
-    "This page does not provide live EagleCast TV outage status. If EagleCast TV is not working for you, first check your internet connection, device or app, login details, subscription status, and whether the problem happens on one device or every device. Contact official EagleCast TV support for current service availability.",
+    "This page does not provide live EagleCast TV outage status. If EagleCast TV is not working for you, first check your internet connection, device or app, login details, subscription status, and whether the problem happens on one device or every device. A verified current-availability contact route is not published.",
   intro: [
     "Searches like “is EagleCast TV down” usually come from a frustrating moment: the app will not load, channels buffer, credentials fail, or a portal screen appears stuck. This guide helps [EagleCast TV](/) customers narrow the problem without pretending to show a live outage dashboard.",
-    "At the time this page was written, the website does not publish a real-time status page, uptime monitor, or live incident feed. For current availability, use the official [EagleCast TV support page](/contact). The checks below are meant to help you decide what information to gather before you contact support.",
+    "At the time this page was written, the website does not publish a real-time status page, uptime monitor, live incident feed, or verified current-availability contact route. The checks below help you gather useful troubleshooting information.",
   ],
   sections: [
     {
@@ -35,7 +35,7 @@ export const serviceStatusGuidePost: BlogPost = {
       title: "First: this page is not a live status monitor",
       paragraphs: [
         "A page can only claim that a service is online or offline when it has reliable real-time evidence. This guide does not have that evidence, so it does not say EagleCast TV is currently up or down. Instead, it explains the practical checks that help separate a local issue from a broader service question.",
-        "If you need a current answer, contact EagleCast TV through the official support route and describe what you see on screen. Include the device, app, error message, connection type, and whether the same issue happens on more than one device.",
+        "If you later use a verified contact route, describe what you see on screen. Include the device, app, error message, connection type, and whether the same issue happens on more than one device.",
       ],
       bullets: [
         "Use the official [contact page](/contact) for current availability questions.",
@@ -185,7 +185,7 @@ export const serviceStatusGuidePost: BlogPost = {
     {
       question: "Does EagleCast TV have a live service status page?",
       answer:
-        "The public pages reviewed for this guide do not show a real-time status page or uptime dashboard. Use official support for current availability questions.",
+        "The public pages reviewed for this guide do not show a real-time status page, uptime dashboard, or verified current-availability contact route.",
     },
   ],
   relatedSlugs: [

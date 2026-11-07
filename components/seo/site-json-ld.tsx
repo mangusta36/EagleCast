@@ -1,4 +1,3 @@
-import { contactInfo } from "@/data/contact";
 import { siteMetadata, SITE_URL } from "@/data/seo";
 
 const siteStructuredData = {
@@ -10,8 +9,6 @@ const siteStructuredData = {
       name: "EagleCast TV",
       url: `${SITE_URL}/`,
       logo: `${SITE_URL}/icon.svg`,
-      email: contactInfo.email,
-      sameAs: [contactInfo.telegram],
     },
     {
       "@type": "WebSite",

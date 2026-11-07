@@ -50,10 +50,11 @@ export function FaqSection() {
         <div className="mt-12 text-center bg-white/[0.045] rounded-lg p-6 max-w-xl mx-auto border border-white/10">
           <div className="flex items-center justify-center gap-2 text-sm font-bold text-white mb-1">
             <ShieldCheck className="w-5 h-5 text-emerald" />
-            <span>Still have a question? Our support team is online 24/7</span>
+            <span>Need more help?</span>
           </div>
           <p className="text-xs text-slate-400">
-            Email EagleCast TV support or request setup help through WhatsApp.
+            Use the setup and troubleshooting guides. Verified contact details
+            are not currently published.
           </p>
         </div>
       </div>

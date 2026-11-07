@@ -15,6 +15,33 @@ export const metadata = buildMetadata({
   pathname: "/tutorials",
 });
 
+const deviceGuides = [
+  {
+    title: "Smart TV setup",
+    description:
+      "Prepare the television, choose a compatible player, enter details safely, and test guide and playback behavior.",
+    href: "/blog/how-to-set-up-iptv-smart-tv",
+  },
+  {
+    title: "Fire TV and Firestick setup",
+    description:
+      "Check storage, network quality, player setup, remote navigation, and common Fire TV performance issues.",
+    href: "/blog/how-to-set-up-iptv-fire-tv",
+  },
+  {
+    title: "iPhone, iPad, and Apple TV setup",
+    description:
+      "Review Apple-platform app selection, account entry, playback testing, and device-specific troubleshooting.",
+    href: "/blog/how-to-set-up-iptv-iphone-ipad-apple-tv",
+  },
+  {
+    title: "Choose an IPTV player",
+    description:
+      "Compare player applications by supported platform, guide workflow, remote use, and account setup method.",
+    href: "/blog/best-iptv-apps-comparison-tivimate-smarters-xciptv",
+  },
+] as const;
+
 export default function TutorialsPage() {
   const [featured, ...rest] = tutorials;
 
@@ -44,6 +71,35 @@ export default function TutorialsPage() {
             <span className="text-xs text-ink-subtle">Support library</span>
           </div>
           <ArticleCard item={featured} type="tutorial" horizontal />
+        </div>
+      </section>
+
+      <section className="border-y border-line bg-panel">
+        <div className="site-container section-pad">
+          <SectionHeading
+            eyebrow="Device setup"
+            title="Choose the guide for your screen"
+            description="Start with the platform you plan to use. Player applications provide the viewing interface; EagleCast TV provides the authorized service details and account support."
+          />
+          <div className="mt-10 grid gap-5 sm:grid-cols-2">
+            {deviceGuides.map((guide) => (
+              <Link
+                key={guide.href}
+                href={guide.href}
+                className="group rounded-lg border border-line bg-canvas p-6 shadow-sm transition hover:border-brand/45 hover:shadow-soft"
+              >
+                <h2 className="text-xl font-semibold text-ink transition-colors group-hover:text-brand">
+                  {guide.title}
+                </h2>
+                <p className="mt-3 text-sm leading-7 text-ink-muted">
+                  {guide.description}
+                </p>
+                <span className="mt-5 inline-flex text-sm font-semibold text-brand">
+                  Open setup guide
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

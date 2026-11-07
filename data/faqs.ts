@@ -25,7 +25,7 @@ export const FAQS: FaqItem[] = [
     id: "faq-3",
     question: "How quickly is an EagleCast TV IPTV line activated?",
     answer:
-      "EagleCast TV line activation is near-instant. Once you submit your order or trial request on WhatsApp, the team sends your M3U playlist link, Xtream Codes credentials, and step-by-step setup guide within 2 to 5 minutes.",
+      "Activation timing depends on the request and setup path. Contact EagleCast TV support for the current timing and the access details that apply to your device and player.",
     category: "setup",
   },
   {
@@ -39,7 +39,7 @@ export const FAQS: FaqItem[] = [
     id: "faq-5",
     question: "How many devices can stream with one EagleCast TV subscription?",
     answer:
-      "Standard EagleCast TV subscription plans include 1 active connection. If you need multi-screen streaming for family members or multiple rooms, you can add extra connections during checkout or via WhatsApp support.",
+      "Standard EagleCast TV subscription plans include 1 active connection. If you need multi-screen streaming for family members or multiple rooms, ask support about the extra-screen price for your selected term before purchase.",
     category: "compatibility",
   },
   {

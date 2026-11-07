@@ -74,7 +74,7 @@ export function PricingCard({ plan }: PricingCardProps) {
               : "border-ink bg-ink text-white hover:border-brand hover:bg-brand"
           }`}
         >
-          Try EagleCast TV free
+          {plan.ctaText}
           <ArrowRight
             size={15}
             className="transition-transform group-hover:translate-x-0.5"

@@ -4,313 +4,211 @@ const editorialAuthor = "EagleCast TV Editorial Team";
 
 export const tivimateGuidePost: BlogPost = {
   slug: "tivimate-iptv-player-setup-guide",
-  title: "Tivimate IPTV Player Complete Setup & Configuration Guide (2026)",
-  seoTitle:
-    "Tivimate IPTV Player Setup Guide (2026): Xtream Codes, EPG & Firestick Setup",
+  title: "How to Set Up TiviMate on Android TV and Fire TV",
+  seoTitle: "TiviMate Setup Guide for Android TV and Fire TV",
   excerpt:
-    "A comprehensive, step-by-step masterclass on installing, configuring, and optimizing Tivimate IPTV Player on Firestick, Android TV, and Nvidia Shield for smooth 4K streaming.",
-  deck: "Tivimate IPTV Player is widely regarded as the most fluid, feature-rich, and visually polished IPTV interface available for Android-based streaming devices. This guide covers installation, playlist import, EPG integration, premium features, external USB storage recording, multi-playlist management, audio decoder settings, and key performance tweaks.",
+    "Set up TiviMate with a provider-supported playlist, API login, or portal, then verify the guide, playback, and account limits without exposing credentials.",
+  deck: "A practical TiviMate setup guide covering official installation, supported login methods, EPG checks, playback tests, and safe troubleshooting on television devices.",
   category: "Setup Guides",
   publishedAt: "August 31, 2026",
-  updatedAt: "August 31, 2026",
+  updatedAt: "November 6, 2026",
   author: editorialAuthor,
-  readingTime: "30 min read",
+  readingTime: "12 min read",
   metaDescription:
-    "Master Tivimate IPTV Player setup on Firestick, Android TV & Nvidia Shield. Learn Xtream Codes API login, EPG XMLTV integration, multi-screen, recording setup, and channel buffering fixes.",
-  primaryKeyword: "tivimate iptv player setup",
+    "Set up TiviMate on Android TV or Fire TV, add a supported playlist or login, refresh the EPG, test playback, and troubleshoot common setup issues.",
+  primaryKeyword: "TiviMate setup guide",
   featuredImage: {
     src: "/images/blog/tivimate-setup-guide.webp",
-    alt: "Tivimate IPTV Player interface displayed on a smart TV screen with Electronic Program Guide",
+    alt: "Television interface used to configure the TiviMate IPTV player",
     photographer: "EagleCast TV Tech Lab",
     sourceUrl: "https://www.eaglecastv.online/",
   },
   quickAnswer:
-    "To set up Tivimate IPTV Player, install it from an official source available to your device, launch the app, click 'Add Playlist', select your provider's supported login method, and enter the credentials exactly as supplied. Buffer and decoder settings can help on some devices, but the best choice depends on your network, hardware, and stream format.",
+    "Install TiviMate from an official store available on your device, then add the exact M3U URL, Xtream Codes-style login, or Stalker Portal details supplied by your provider. TiviMate is a player and does not include channels. After login, refresh the guide and test a few streams before changing advanced playback settings.",
   intro: [
-    "If you stream live television on an Amazon Firestick, Nvidia Shield Pro, Chromecast with Google TV, or another Android TV box, you may have encountered Tivimate IPTV Player. It is a popular option for its television-focused controls, Electronic Program Guide (EPG), and cable-like interface.",
-    "However, Tivimate is strictly a standalone video player engine—it does not provide channels, media content, or subscriptions on its own. To unlock its full capabilities, users must pair the app with a high-performance IPTV service that provides reliable playlist credentials, stable stream servers, and rich EPG data feeds.",
-    "In this definitive setup guide, we will walk you through every step required to install Tivimate, import your server credentials via Xtream Codes API or M3U playlist URLs, configure sub-second channel zapping, set up automated EPG updates, configure scheduled recording on external USB drives, aggregate multiple playlists, optimize internal video decoders, adjust surround sound audio passthrough, and troubleshoot common error codes. If you need the commercial overview before player setup, the [EagleCast TV IPTV service](/) page explains plans, trial access, and supported devices.",
-    "Tivimate's popularity is driven by its focus on living room ergonomics. Unlike mobile-oriented apps adapted for TV screens, Tivimate was coded specifically for television remote controls, supporting fast D-pad scrolling, channel number keypads, multi-screen grid layouts, and custom favorite categories.",
+    "TiviMate is a television-focused media player for Android TV devices. Its official Google Play listing describes support for M3U playlists, Xtream Codes-style logins, and Stalker Portal, along with guide, favorites, search, recording, parental-control, and multi-view features. The same listing also makes an important distinction: TiviMate does not provide television content.",
+    "That means a successful setup has two separate parts. First, install the genuine player from a trusted source. Second, use only the connection method and credentials supplied by the service you are authorized to access. This guide keeps those layers separate and avoids undocumented server addresses or universal settings that may not apply to your account.",
   ],
   sections: [
     {
-      id: "what-is-tivimate",
-      title:
-        "What Is Tivimate IPTV Player and Why Is It the Industry Gold Standard?",
+      id: "before-you-start",
+      title: "What you need before opening TiviMate",
       paragraphs: [
-        "Unlike generic media players that simply load video files, Tivimate was built from the ground up specifically for live Internet Protocol Television (IPTV) broadcasting. Its interface mirrors modern top-tier digital cable and satellite set-top boxes, featuring grid-style program guides, channel category filters, picture-in-picture modes, and fast channel switching.",
-        "When paired with a compatible service, Tivimate can organize live channels, catch-up access, and Video-on-Demand (VOD) libraries on Fire TV and Android TV devices. Available content and playback quality depend on the service, account, device, and connection.",
-        "Key architectural advantages that elevate Tivimate above competing apps like IPTV Smarters Pro or GSE Smart IPTV include native ExoPlayer video rendering, multi-playlist aggregation, auto-frame-rate (AFR) matching, customized channel sorting, and sub-second EPG parsing speeds.",
-        "Under the hood, Tivimate utilizes a custom TS (Transport Stream) demuxer pipeline that pre-buffers packet headers before video frames reach your GPU. This architectural approach prevents video stuttering during live sports broadcasts when switching between 1080p 60fps and 4K HDR streams.",
-        "In addition, Tivimate supports advanced ExoPlayer buffer tuning settings. By default, standard player applications assign a fixed 1-second RAM buffer that can easily exhaust during Wi-Fi signal drops. Tivimate allows users to define custom buffer thresholds (Small 2s, Medium 4s, Large 8s), enabling uninterrupted playback even across high-latency wireless connections.",
-        "Furthermore, Tivimate allows users to manage channel logos, custom category names, and guide sources without altering server-side settings. You can hide adult content, filter out unused international channel packs, and create a streamlined channel list tailored to your viewing preferences.",
-        "If you need assistance locating your login parameters, consult our dedicated [login help guide](/login-help) or review our [getting started tutorial](/tutorials/getting-started-with-eaglecast-tv).",
+        "Have the television device, its remote, a stable network connection, and the provider's setup message ready. The setup message should identify which login method to use. Do not convert one format into another or guess a server address; the values are service-specific.",
+        "Treat usernames, passwords, playlist URLs, and portal details as account credentials. Avoid screenshots that reveal them, do not paste them into public troubleshooting posts, and use the official [login help](/login-help) or [contact page](/contact) if a required value is missing.",
       ],
       bullets: [
-        "Native Cable-Style EPG Grid: Displays multi-day program schedules with visual timeline navigation.",
-        "Xtream Codes API & M3U8 Native Support: Seamless integration with modern IPTV subscription formats.",
-        "Multi-Screen Viewing Modes: View up to 9 live sports streams simultaneously on high-performance devices.",
-        "Catch-up & Replay Integration: Access past broadcasts directly from the program guide interface.",
-        "Custom Category Filtering: Hide unused channel packages, create custom favorites lists, and rename channels.",
-        "Cloud & Local Backups: Export your customized channels, groups, and settings to easily deploy on secondary TVs.",
-        "Auto Frame Rate (AFR): Matches output display refresh rate (50Hz / 60Hz) to prevent motion jitter during soccer and football matches.",
+        "M3U setup: one playlist URL and, where supplied separately, an EPG URL.",
+        "API-style setup: server address, username, and password.",
+        "Portal setup: portal address plus the account or device details specified by the provider.",
       ],
     },
     {
-      id: "hardware-requirements",
-      title: "System Requirements and Supported Hardware",
+      id: "install-official-app",
+      title: "Install TiviMate from an official source",
       paragraphs: [
-        "Before installing Tivimate, it is essential to verify hardware compatibility. Tivimate is engineered strictly for Android TV, Google TV, and Fire OS environments. It is NOT natively available on Apple iOS, tvOS, LG WebOS, Samsung Tizen, or Roku.",
-        "For optimal performance—especially when utilizing multi-screen playback or 4K Ultra HD streams—your device should meet or exceed the hardware specifications outlined in the table below.",
-        "While entry-level Firesticks can run Tivimate for basic single-stream viewing, power users who wish to record streams or use 4-screen multi-view should opt for devices with at least 3 GB of RAM and a quad-core 2.0 GHz processor.",
-        "Device memory management matters when handling large playlists. Entry-level streaming sticks with limited RAM may feel slow while importing guide data or loading artwork; a newer device can improve responsiveness, although results vary with playlist size and app settings.",
-        "When selecting hardware for Tivimate, GPU decoders should also be evaluated. Devices powered by modern Amlogic S905X4 or Apple A15 Bionic chips include hardware AV1 and H.265 decoding, resulting in up to 30% lower device operating temperatures compared to older 1st-generation streaming sticks.",
+        "On Android TV or Google TV, open Google Play, search for TiviMate, check the developer information, and install the listing intended for television devices. Google documents the normal Android TV process as opening Play Store, finding the app, and selecting Install.",
+        "Store availability can differ by device and region. On Fire TV, check the device's official app store first. If the app is unavailable, use only installation instructions published by the app developer; do not download an APK from an unverified mirror. This guide intentionally does not publish a third-party download code or file.",
+      ],
+    },
+    {
+      id: "add-login",
+      title: "Add the login method your provider supplied",
+      paragraphs: [
+        "Open TiviMate, choose Add playlist, and select the matching method. Enter the values exactly, including the URL scheme and any port shown in the provider's message. A television remote can make long strings error-prone, so review the entire value before continuing.",
+        "Give the playlist a recognizable local name, but do not put a password in that name. Initial loading time varies with the device, connection, playlist size, and guide data. Wait for the import to finish before deciding it failed.",
       ],
       table: {
-        caption: "Tivimate Hardware Compatibility & Performance Matrix",
-        columns: [
-          "Device Category",
-          "Recommended Hardware",
-          "Supported Features",
-          "Performance Score",
-        ],
+        caption: "TiviMate login methods and the information they require",
+        columns: ["Method", "Use when", "Check carefully"],
         rows: [
           [
-            "Flagship Android TV",
-            "Nvidia Shield TV Pro (2019)",
-            "4K HDR, 9-Screen Multi-View, AI Upscaling, USB Recording",
-            "10/10 (Flawless)",
+            "M3U playlist",
+            "The provider supplied a playlist URL",
+            "Full URL and optional EPG URL",
           ],
           [
-            "Premium Streaming Stick",
-            "Amazon Fire TV Stick 4K Max (2nd Gen)",
-            "4K HDR10+, 4-Screen Multi-View, Wi-Fi 6E, OTG USB Recording",
-            "9.5/10 (Excellent)",
+            "API-style login",
+            "The provider supplied a server, username, and password",
+            "Server scheme, port, capitalization, and spaces",
           ],
           [
-            "Mid-Range Google TV",
-            "Chromecast with Google TV (4K)",
-            "4K HDR, 2-Screen Multi-View, Standard EPG",
-            "8.5/10 (Very Good)",
-          ],
-          [
-            "Entry-Level Firestick",
-            "Fire TV Stick Lite / HD (2nd Gen)",
-            "1080p Full HD, Single Screen, Standard EPG",
-            "7.0/10 (Good)",
+            "Stalker Portal",
+            "The provider explicitly supplied portal instructions",
+            "Portal address and provider-specific authorization details",
           ],
         ],
       },
     },
     {
-      id: "installation-guide",
-      title: "Step-by-Step Installation Guide (Sideloading vs Google Play)",
+      id: "verify-epg",
+      title: "Verify channels and guide data before customizing",
       paragraphs: [
-        "Installing Tivimate varies depending on whether your device runs certified Google TV / Android TV (such as Nvidia Shield or Chromecast) or Amazon Fire OS (such as Firestick or Fire TV Cube).",
-        "If you are on an Android TV device with access to the Google Play Store, simply search for 'Tivimate IPTV Player' and click Install. However, for Amazon Firestick users, the app must be sideloaded using the free 'Downloader' app from the Amazon Appstore.",
-        "When sideloading on Amazon Fire OS 8 devices (such as the 2023+ Fire TV Stick 4K Max), ensure you grant Downloader explicit permission under 'Install Unknown Apps' within the Firestick Security settings menu.",
+        "Open several channel groups and confirm that names load. Then open the guide and check whether current and upcoming programs appear. A working playlist with an empty guide usually calls for an EPG refresh or provider check, not a complete reinstall.",
+        "If the schedule is present but shifted, first confirm that the device date, time, and time zone are correct. Only use an app-specific guide offset when the source instructions call for it; a broad offset can make already-correct listings wrong.",
       ],
       bullets: [
-        "Step 1: On your Firestick, navigate to Settings > My Fire TV > Developer Options. Enable 'Apps from Unknown Sources' (or 'Install Unknown Apps' for Downloader).",
-        "Step 2: Return to the Firestick Home screen, open the Amazon Appstore, search for 'Downloader', and download the app.",
-        "Step 3: Launch Downloader and enter the official Tivimate shortcode or URL into the address bar to initiate the APK download.",
-        "Step 4: Once the APK download completes, select 'Install'. After installation, open Tivimate to begin configuration.",
-        "Step 5: Move Tivimate to the front row of your Firestick home screen apps for quick one-click launching.",
+        "Refresh the playlist and EPG from TiviMate settings.",
+        "Leave the app open until the refresh completes.",
+        "Check more than one group before reporting missing data.",
+        "Record whether channels work even when guide data does not.",
       ],
+    },
+    {
+      id: "playback-test",
+      title: "Run a controlled playback test",
+      paragraphs: [
+        "Start with default playback settings. Test a few ordinary channels, then one higher-resolution stream if available. Note whether a problem affects one stream, one group, or everything. That pattern is more useful than changing several decoder and buffer options at once.",
+        "Channel switching time and motion quality depend on the stream, network path, device, display, and app version. No player setting can guarantee instant switching or buffer-free viewing. If playback is unstable, follow the [buffering guide](/blog/fix-iptv-buffering) and compare Ethernet or strong Wi-Fi on the same device.",
+      ],
+    },
+    {
+      id: "optional-features",
+      title: "Use optional features only after basic playback works",
+      paragraphs: [
+        "The official listing includes features such as favorites, search, catch-up, recording, parental controls, multiple playlists, picture-in-picture, and multi-view. Availability in practice can depend on the installed TiviMate version, the television device, account permissions, supplied guide data, and whether the source supports the feature.",
+        "Recording also depends on writable storage and enough uninterrupted space. Multi-view consumes more device and network resources and may count as multiple simultaneous streams under a service's connection rules. Confirm account limits before opening concurrent streams.",
+      ],
+    },
+    {
+      id: "troubleshooting",
+      title: "Troubleshoot the failing layer, not every setting",
+      paragraphs: [
+        "When setup fails, preserve the original credentials and test in a fixed order. Repeatedly editing the server address, clearing all app data, or installing unofficial builds can turn one diagnosable problem into several.",
+      ],
+      table: {
+        caption: "TiviMate setup symptoms and first checks",
+        columns: ["Symptom", "First check", "Next action"],
+        rows: [
+          [
+            "Login rejected",
+            "Recheck the supplied values and account status",
+            "Use login help without sharing the password",
+          ],
+          [
+            "Playlist loads, guide is blank",
+            "Refresh EPG and verify device time",
+            "Ask whether separate EPG details are required",
+          ],
+          [
+            "One channel fails",
+            "Test nearby channels in the same app",
+            "Report the exact channel and time",
+          ],
+          [
+            "All channels buffer",
+            "Compare the device network with Ethernet or a nearby access point",
+            "Follow the network troubleshooting guide",
+          ],
+          [
+            "Second screen fails",
+            "Close playback elsewhere and check the plan's connection limit",
+            "Contact support if the limit appears incorrect",
+          ],
+        ],
+      },
       cta: {
-        variant: "trial",
-        title: "Test Tivimate With EagleCast TV Credentials",
+        variant: "support",
+        title: "Still unable to complete setup?",
         description:
-          "Experience 6,000+ live channels and sub-second channel zapping on Tivimate with a 24-hour test playlist.",
-        href: "/free-trial",
-        label: "Get EagleCast TV trial playlist",
+          "Send support the device model, app version, login method, exact error wording, and tests already completed. Never include your password in a public message.",
+        href: "/contact",
+        label: "Contact EagleCast TV support",
       },
     },
     {
-      id: "playlist-setup",
-      title:
-        "How to Add Your IPTV Playlist: Xtream Codes API vs M3U URL vs Stalker",
+      id: "next-steps",
+      title: "Next steps after a successful setup",
       paragraphs: [
-        "When launching Tivimate for the first time, you will be prompted with a welcoming screen that says 'Add Playlist'. Tivimate supports three connection methods: Xtream Codes API, M3U Playlist URL, and Stalker Portal.",
-        "We strongly recommend using the **Xtream Codes API** method whenever possible. Xtream Codes logins are cleaner, load faster, automatically fetch VOD categories, and ensure your EPG auto-syncs without typing massive 100-character M3U URLs.",
-        "If your provider uses Stalker Portal MAC registration (common for MAG box accounts), select 'Stalker Portal', enter your Portal URL, and input your registered device MAC address (format: 00:1A:79:XX:XX:XX).",
-        "After entering your server credentials, Tivimate will connect to the provider's authentication portal and download your assigned channel list. You can verify connection status by checking the channel count displayed next to your playlist name.",
-      ],
-      bullets: [
-        "Selecting Xtream Codes API: Click 'Add Playlist', then select 'Xtream Codes API'.",
-        "Entering Server Details: Input your Server URL (e.g., http://line.eaglecast.tv:8080), Username, and Password exactly as provided in your active account email.",
-        "Enabling Include VOD: Toggle 'Include VOD' to automatically import movies and TV series libraries alongside live TV channels.",
-        "Configuring Playlist Name: Name your playlist (e.g., 'EagleCast TV Live') and click 'Done'. Tivimate will immediately analyze the server and parse all channel groups.",
-        "Setting Playlist Update Frequency: Set 'Update playlist on launch' to ON so channel list updates push to your TV automatically.",
-      ],
-    },
-    {
-      id: "epg-configuration",
-      title: "Configuring the Electronic Program Guide (EPG)",
-      paragraphs: [
-        "An IPTV player without an active EPG is like driving at night without headlights. The Electronic Program Guide provides real-time channel metadata, program descriptions, start/end timestamps, and episode titles.",
-        "When a login method supplies an EPG source, Tivimate can associate it with the playlist. You can also adjust update behavior or add a secondary XMLTV guide, but guide coverage still depends on the data supplied for each channel.",
-        "If you use custom M3U playlists, you can manually enter an external XMLTV URL (e.g., http://epg.eaglecast.tv/xmltv.php) in Settings > EPG > EPG Sources > Add Source.",
-        "For optimal performance, set EPG update intervals to 'Every 24 Hours' and enable 'Past days to keep EPG' to 2 days. This provides historical guide data needed for catch-up TV playback without bloating device storage.",
-        "For additional network diagnostic steps, read our detailed guide on [how to fix IPTV buffering](/blog/fix-iptv-buffering) and our breakdown of [playlist formats](/blog/iptv-playlist-formats-m3u-xtream-codes-guide).",
-      ],
-      bullets: [
-        "Auto-Update on Launch: Navigate to Settings > EPG > Auto-update EPG and select 'On app launch' and 'Every 24 hours'.",
-        "Manual EPG Refresh: If program listings appear blank ('No Information'), go to Settings > EPG > Update EPG to force a fresh data sync.",
-        "Time Offset Adjustment: If guide schedules are shifted by several hours, go to Settings > EPG > EPG Sources > Select Source > Time Offset and adjust the timezone (+1h, -5h, etc.) to match your local region.",
-        "Assigning EPG Sources Manually: If a specific channel lacks program data, long-press the Select button on the channel, choose 'Assign EPG', and search for the matching guide channel ID.",
-        "Clearing EPG Cache: If EPG guide entries become misaligned after daylight saving time changes, select 'Clear EPG' in settings and trigger a fresh update.",
-      ],
-    },
-    {
-      id: "tivimate-premium",
-      title: "Unlocking Tivimate Premium: Features and Multi-Device Management",
-      paragraphs: [
-        "While Tivimate offers a functional free version, unlocking Tivimate Premium ($9.99/year or $34.99 lifetime for 5 devices) elevates the app into an elite streaming software. Premium features include multi-screen viewing, unlimited favorites, scheduled recording, custom channel grouping, and remote management.",
-        "To activate Tivimate Premium, download the **Tivimate Companion** app from the Google Play Store on an Android phone/tablet (or use BlueStacks on PC), register an account, purchase a subscription, and log into your Tivimate app settings on your TV.",
-        "Tivimate Companion allows you to view all 5 activated streaming devices, revoke licenses from old streaming sticks, and rename active TV nodes (e.g., 'Living Room TV', 'Bedroom Firestick').",
-      ],
-      cta: {
-        variant: "packages",
-        title: "Maximize Multi-Screen Streaming with EagleCast TV",
-        description:
-          "Our 12-month and 24-month subscription plans include multi-room screen allowances perfect for Tivimate Premium setups.",
-        href: "/pricing",
-        label: "Explore Subscription Packages",
-      },
-    },
-    {
-      id: "recording-setup",
-      title: "Setting Up Scheduled DVR Recording on External Storage",
-      paragraphs: [
-        "One of Tivimate Premium's standout features is its ability to record live TV broadcasts directly to local storage or network-attached drives (NAS). Because Firesticks have limited internal storage (typically 8 GB or 16 GB), setting up external USB or SMB storage is mandatory for recording sports matches and movies.",
-        "To record on a Firestick, connect an OTG (On-The-Go) cable adapter, attach a USB 3.0 flash drive formatted to FAT32 or exFAT, and configure Tivimate's Recording Folder path in settings.",
-        "You can also schedule recurring weekly series recordings so that your favorite sports shows or news broadcasts are captured automatically every week.",
-        "When recording live streams, ensure your IPTV subscription plan permits at least 2 active connections if you intend to watch one channel while recording another.",
-      ],
-      bullets: [
-        "Configuring Local Recording Path: Go to Settings > Recording > Recording Folder > Select Folder. Browse to your external USB storage directory.",
-        "Configuring Network SMB Recording (NAS): Go to Settings > Recording > Recording Folder > Add SMB Server. Enter your NAS IP address, shared folder name, username, and password. This allows all TVs in your house to record to a central hard drive.",
-        "Scheduling a Recording: In the EPG program guide, highlight an upcoming show, long-press Select, and choose 'Record' or 'Record Series'. Tivimate will wake the video stream and capture the broadcast automatically.",
-        "Managing Recording Margins: In Settings > Recording, set 'Extra time before recording' to 2 minutes and 'Extra time after recording' to 10 minutes to ensure live sports overtime is never cut off.",
-        "Recording Quality: Tivimate records raw transport stream (.ts) data directly from the server with zero re-encoding loss, preserving full 1080p/4K 60fps video quality.",
-      ],
-    },
-    {
-      id: "managing-multiple-playlists",
-      title: "Managing Multiple Playlists and Custom Channel Grouping",
-      paragraphs: [
-        "Tivimate Premium allows users to add multiple IPTV playlists simultaneously. You can aggregate a primary subscription line with a backup server line, merge EPG guides, and create custom master channel groups.",
-        "Grouping channels across providers allows you to build a single consolidated 'Sports' folder containing your favorite regional, national, and international sports networks regardless of which server feeds them.",
-      ],
-      bullets: [
-        "Creating Custom Groups: Go to Settings > Groups > Manage Groups. You can create a master folder (e.g. 'US Live Sports') and copy channels from different playlists into a single unified directory.",
-        "Reordering Channels: Long-press any channel in the EPG and select 'Reorder Channels'. Move your most-watched channels to the top of the guide for instant access.",
-        "Hiding Categories: Clean up clutter by hiding international channel packages or languages you do not watch. Go to Settings > Playlists > Select Playlist > Manage Groups and toggle off unused categories.",
-        "Managing Backup Playlists: Configure secondary playlists to act as automatic fallbacks if a primary channel feed drops during a live broadcast.",
-      ],
-    },
-    {
-      id: "audio-decoder-settings",
-      title: "Configuring Audio Decoders & Surround Sound Passthrough",
-      paragraphs: [
-        "Audio playback issues—such as muted surround sound tracks or pitch distortion—can occur if Tivimate's internal audio player does not match your soundbar or AV receiver setup.",
-        "Navigate to Settings > Playback > Audio. Ensure 'Audio Output' is set to Auto (or Passthrough for HDMI eARC receivers). If a channel plays video without sound, switch Audio Decoder from Hardware to Software.",
-      ],
-      bullets: [
-        "Audio Passthrough: Enables Dolby Digital (AC3) and Dolby Digital Plus (EAC3) bitstream output to external AV receivers.",
-        "Software Audio Decoder: Decodes multi-channel audio directly on device CPU, resolving silent audio on channels with AAC or DTS audio tracks.",
-        "Audio Delay Offset: Adjust audio sync (-500ms to +500ms) in the OSD player menu if video lags behind voice tracks.",
-      ],
-    },
-    {
-      id: "advanced-performance-tweaks",
-      title: "Advanced Tivimate Performance Tweaks for Buffer-Free Playback",
-      paragraphs: [
-        "If you experience occasional buffering, frame drops, or audio desynchronization, adjusting Tivimate's internal player settings can eliminate playback latency entirely. These settings directly control how video streams are buffered into your device's RAM.",
-        "For 4K HDR streams on Firestick 4K Max or Nvidia Shield, enabling 'Tunnelled Playback' in Tivimate settings offloads frame rendering directly to the hardware display layer, reducing audio-to-video latency to under 50 milliseconds.",
-        "Setting 'Max Historical Days' to 2 and clearing player logs once a month prevents internal app storage bloat and keeps UI navigation snappy.",
-      ],
-      bullets: [
-        "Buffer Size Tuning: Go to Settings > Playback > Buffer Size. Set to 'Small' (1–2s) for instant channel switching on gigabit fiber, or 'Medium' (3–5s) for standard Wi-Fi setups.",
-        "Video Decoder Selection: Set Video Decoder to 'Hardware'. Hardware decoding offloads video processing to your streaming device's GPU, reducing CPU strain and heat throttling.",
-        "Stream Format Selection: Navigate to Settings > Playback > Stream Format. Switch between HLS (.m3u8) and MPEG-TS (.ts) based on your network stability. HLS is far more resilient against Wi-Fi packet jitter.",
-        "Auto Frame Rate (AFR): Enable AFR (Settings > Playback > Auto Frame Rate) to automatically match your TV screen refresh rate (50Hz / 60Hz / 24Hz) with the broadcast source stream, eliminating choppy camera movement during live soccer and football matches.",
-        "Tunnelled Playback (Android TV): Enable Tunnelled Playback in Settings > Playback to improve 4K HDR video rendering pipeline on supported Smart TVs.",
-      ],
-    },
-    {
-      id: "troubleshooting-errors",
-      title: "Troubleshooting Common Tivimate Errors",
-      paragraphs: [
-        "Despite Tivimate's reliability, configuration mistakes or network drops can trigger error notifications. Here is how to fix the most common Tivimate error codes:Systematic troubleshooting prevents unnecessary app reinstalls. Always check your account expiration date and network connection before modifying player configurations.",
-      ],
-      bullets: [
-        "Error 401 / 403 (Authorization Failed): Check your username and password for case-sensitivity errors or verify if your subscription period has expired.",
-        "Error 404 (Server Not Found): Verify your Server URL spelling, check if your subscription port is blocked by your ISP, or connect a VPN.",
-        "Parser Exception / Playlist Failed: Ensure your Server URL contains 'http://' or 'https://' correctly without spaces. Verify that your ISP is not blocking IPTV server IP ranges.",
-        "Audio/Video Sync Lag: Toggle Video Decoder from Hardware to Software temporarily, or set Audio Track offset (-200ms / +200ms) in the player control menu.",
-        "EPG 'No Information' Available: Clear Tivimate app cache (Firestick Settings > Applications > Tivimate > Clear Cache), then trigger a manual EPG update in Tivimate settings.",
-        "4K Video Stutter: Change Stream Format to HLS and ensure Auto Frame Rate (AFR) is toggled ON in Tivimate playback settings.",
+        "Once playback and the guide are stable, organize favorites and hide groups you do not use. Change one preference at a time so you can reverse it if navigation or playback becomes worse.",
+        "For a broader choice of players, see the [IPTV app comparison](/blog/best-iptv-apps-comparison-tivimate-smarters-xciptv). For the credentials and delivery methods those apps display, read the [playlist format guide](/blog/iptv-playlist-formats-m3u-xtream-codes-guide).",
       ],
     },
   ],
   faqs: [
     {
-      question: "Is Tivimate IPTV Player free to use?",
+      question: "Does TiviMate include channels?",
       answer:
-        "Tivimate offers a free version with basic single-playlist playback. However, Tivimate Premium unlocks essential features like multi-screen, unlimited playlists, EPG customization, recording, and cloud backups for a small annual or lifetime fee.",
+        "No. The official listing describes TiviMate as a player that does not provide television sources. You need authorized access details from a provider.",
     },
     {
-      question: "Does Tivimate come with live channels or subscription access?",
+      question: "Which TiviMate login method should I choose?",
       answer:
-        "No. Tivimate is strictly a video player application. You must purchase a separate subscription from a high-quality provider like EagleCast TV to obtain playlist login credentials.",
+        "Choose the method named in your provider's setup instructions. Do not guess or convert credentials between M3U, API-style, and portal methods.",
     },
     {
-      question: "Can I install Tivimate on a Samsung or LG Smart TV?",
+      question: "Why does the playlist load but the guide stay empty?",
       answer:
-        "No. Tivimate is designed exclusively for Android TV, Google TV, and Fire OS. For Samsung Tizen or LG WebOS Smart TVs, we recommend using apps like IPTV Smarters Pro, Smartone, or IBO Player.",
+        "Refresh the EPG, verify the device time zone, and check whether the provider supplied a separate guide URL. If channels play, report the issue as a guide-data problem.",
     },
     {
-      question: "How many devices can I use with Tivimate Premium?",
+      question: "Should I clear TiviMate data when login fails?",
       answer:
-        "A single Tivimate Premium account license permits installation on up to 5 concurrent streaming devices.",
+        "Not as a first step. Clearing app data removes local configuration. Recheck the exact credentials and account status first, and preserve a backup if your version supports it.",
     },
     {
-      question:
-        "Why are some channels buffering on Tivimate while others play smoothly?",
+      question: "Can multi-view exceed my account limit?",
       answer:
-        "Channel-specific buffering usually stems from temporary stream source congestion or local ISP throttling. Switching stream format from MPEG-TS to HLS in Tivimate settings usually resolves the issue.",
-    },
-    {
-      question: "How do I back up my Tivimate settings and playlists?",
-      answer:
-        "In Tivimate, go to Settings > Other > Back Up Data. You can save your entire configuration to internal storage or a USB drive to easily restore on other devices.",
-    },
-    {
-      question: "Can I record one channel on Tivimate while watching another?",
-      answer:
-        "Yes, provided your IPTV subscription plan supports 2 or more active connections. If your plan only permits 1 connection, recording one stream while watching another will trigger an Authorization Error.",
-    },
-    {
-      question: "What USB drive format is best for Firestick recording?",
-      answer:
-        "Format your USB drive as FAT32 or exFAT. FAT32 has a maximum single file size limit of 4 GB, which is sufficient for 2 hours of HD recording.",
+        "It can use more than one simultaneous stream. Confirm the service's connection rules before enabling concurrent playback.",
     },
   ],
   sources: [
     {
-      label: "Official Tivimate Google Play Store Page",
+      label: "TiviMate official Google Play listing",
       href: "https://play.google.com/store/apps/details?id=ar.tvplayer.tv",
     },
     {
-      label: "EagleCast TV Setup & Portal Support",
-      href: "https://www.eaglecastv.online/login-help",
+      label: "TiviMate official website",
+      href: "https://tivimate.com/",
+    },
+    {
+      label: "Google Android TV app installation help",
+      href: "https://support.google.com/androidtv/answer/6121463",
     },
   ],
   relatedSlugs: [
+    "best-iptv-apps-comparison-tivimate-smarters-xciptv",
     "how-to-set-up-iptv-fire-tv",
-    "best-devices-for-iptv",
     "fix-iptv-buffering",
     "what-is-iptv-epg",
     "iptv-playlist-formats-m3u-xtream-codes-guide",

@@ -36,7 +36,7 @@ export function PricingSection() {
         <div className="mt-7 flex flex-col gap-3 text-sm text-ink-muted sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-7">
           {[
             "trial first",
-            "3 connections included",
+            "Extra screens available",
             "No automatic renewal",
           ].map((item) => (
             <span key={item} className="flex items-center gap-2">

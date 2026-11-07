@@ -6,6 +6,7 @@ export interface TutorialItem {
   metaDescription: string;
   category: string;
   publishedAt: string;
+  updatedAt: string;
   readingTime: string;
 }
 
@@ -17,10 +18,11 @@ export const tutorials: TutorialItem[] = [
     excerpt:
       "A practical overview of the common issues customers encounter and the support steps EagleCast TV recommends for a smoother experience.",
     metaDescription:
-      "Troubleshoot common EagleCast TV issues by identifying your device and problem, sharing useful account context, contacting support and reviewing the trial.",
+      "Troubleshoot EagleCast TV login, buffering, guide and playback issues by isolating device, app, account and network causes before contacting support.",
     category: "Support",
     publishedAt: "October 3, 2025",
-    readingTime: "4 min read",
+    updatedAt: "November 6, 2026",
+    readingTime: "7 min read",
   },
   {
     slug: "getting-started-with-eaglecast-tv",
@@ -32,7 +34,8 @@ export const tutorials: TutorialItem[] = [
       "Get started with EagleCast TV by requesting a trial, choosing a supported device, reviewing setup guidance and comparing plan terms after testing.",
     category: "Getting Started",
     publishedAt: "September 8, 2025",
-    readingTime: "5 min read",
+    updatedAt: "November 6, 2026",
+    readingTime: "7 min read",
   },
   {
     slug: "catchup-and-replay-explained",
@@ -44,6 +47,7 @@ export const tutorials: TutorialItem[] = [
       "Understand EagleCast TV catch-up and replay, how the feature fits with live TV and sports, what access includes and where to get device-specific support.",
     category: "Features",
     publishedAt: "August 14, 2025",
-    readingTime: "3 min read",
+    updatedAt: "November 6, 2026",
+    readingTime: "5 min read",
   },
 ] as const;

@@ -2,14 +2,13 @@ import Link from "next/link";
 import { ArrowRight, Check, Mail, MessageCircleMore, Send } from "lucide-react";
 import { BreadcrumbJsonLd } from "@/components/seo/page-json-ld";
 import { ButtonLink } from "@/components/ui/button-link";
-import { contactInfo } from "@/data/contact";
 import { pricingPlans } from "@/data/pricing";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "EagleCast TV Free IPTV Trial | Test Before You Choose",
   description:
-    "Request an EagleCast TV free IPTV trial to test live TV, sports, movies, catch-up and multi-screen viewing on your device before selecting a plan.",
+    "Request an EagleCast TV free IPTV trial to test live TV, sports, movies and catch-up on your device before selecting a plan.",
   pathname: "/free-trial",
 });
 
@@ -17,7 +16,7 @@ const trialIncludes = [
   "Live TV with EPG",
   "Sports and PPV events",
   "Movies and series bundle",
-  "Catch-up and multi-screen access",
+  "Catch-up where available",
 ] as const;
 
 const steps = [
@@ -48,13 +47,6 @@ export default async function FreeTrialPage({
   const params = await searchParams;
   const planSlug = Array.isArray(params.plan) ? params.plan[0] : params.plan;
   const selectedPlan = pricingPlans.find((plan) => plan.slug === planSlug);
-  const subject = selectedPlan
-    ? `EagleCast TV trial request — ${selectedPlan.name}`
-    : "EagleCast TV trial request";
-  const body = selectedPlan
-    ? `Hello EagleCast TV team,\n\nI would like to request the EagleCast TV trial. I am interested in the ${selectedPlan.name} plan (${selectedPlan.price} one-time payment) if the trial is a good fit.\n\nMy preferred device is: `
-    : "Hello EagleCast TV team,\n\nI would like to request the EagleCast TV trial.\n\nMy preferred device is: ";
-  const trialEmailHref = `mailto:${contactInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
   return (
     <>
@@ -127,15 +119,16 @@ export default async function FreeTrialPage({
               Request your EagleCast TV trial
             </h2>
             <p className="mt-3 text-sm leading-7 text-ink-muted">
-              The button below opens a prepared email to {contactInfo.email}.
-              Add your device and any setup questions before sending.
+              A trial contact destination is not currently published because the
+              previously listed external channels have not been verified. Add
+              your device and any setup questions before sending.
             </p>
             <a
-              href={trialEmailHref}
+              href="/contact"
               className="group mt-6 flex min-h-13 w-full items-center justify-center gap-2 rounded-xl bg-brand px-5 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-brand-strong"
             >
               <Mail size={17} aria-hidden="true" />
-              Open trial request email
+              View trial contact status
               <ArrowRight
                 size={15}
                 className="transition-transform group-hover:translate-x-0.5"
@@ -155,13 +148,11 @@ export default async function FreeTrialPage({
                 EagleCast TV contact options
               </Link>
               <a
-                href={contactInfo.telegram}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/contact"
                 className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-line bg-panel px-4 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
               >
                 <Send size={16} aria-hidden="true" />
-                Telegram updates
+                Contact status
               </a>
             </div>
           </div>

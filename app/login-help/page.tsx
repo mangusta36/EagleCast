@@ -1,5 +1,6 @@
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ButtonLink } from "@/components/ui/button-link";
+import { BreadcrumbJsonLd } from "@/components/seo/page-json-ld";
 import { SITE_URL } from "@/data/seo";
 import { buildMetadata } from "@/lib/seo";
 
@@ -32,6 +33,12 @@ export default function LoginHelpPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(loginHelpJsonLd).replace(/</g, "\\u003c"),
         }}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", item: "/" },
+          { name: "Login help", item: "/login-help" },
+        ]}
       />
 
       <section className="bg-canvas">
@@ -114,7 +121,7 @@ export default function LoginHelpPage() {
                 Lost your login details?
               </h2>
               <p className="mt-3 text-sm leading-7 text-ink-muted">
-                Use the official support route to request help with account
+                Use a verified support route to request help with account
                 details. Do not share credentials publicly or store them in
                 insecure notes.
               </p>
